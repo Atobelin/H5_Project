@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="UTF-8">
+		<title>广州美莱医疗美容</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<!-- 公共样式 -->
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- 独立样式 -->
+	</head>
+
+	<body>
+		<script>
+			// 自适应REM
+			window.onload = function () {
+				getRem(640, 100)
+			};
+			window.onresize = function () {
+				getRem(640, 100)
+			};
+			getRem(640, 100);
+
+			function getRem(pwidth, prem) {
+				var html = document.getElementsByTagName("html")[0];
+				var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+				html.style.fontSize = oWidth / pwidth * prem + "px";
+			}
+		</script>
+		<img src="imgs/logo.png" alt="" class="logo">
+		<img class="music animated rotatemusic infinite" src="imgs/music.png">
+		<audio id="bgm" preload="auto" src="music/bgm.mp3"></audio>
+		<section class="page-5">
+			<img src="imgs/page-5-icon-2.png" alt="" class="icon-2">
+			<img src="imgs/page-5-icon-1.png" alt="" class="icon-1">
+			<img src="imgs/page-5-icon-3.png" alt="" class="icon-3 animated opacity_1 infinite">
+			<img src="imgs/page-5-icon-4.png" alt="" class="icon-4 animated opacity_1 infinite">
+			<img src="imgs/page-1-icon-2.png" alt="" class="icon-7 animated opacity_1 infinite">
+			<img src="imgs/page-1-icon-3.png" alt="" class="icon-8 animated opacity_2 infinite">
+			<img src="imgs/page-1-icon-4.png" alt="" class="icon-9 animated opacity_3 infinite">
+			<img src="imgs/page-1-icon-5.png" alt="" class="icon-10 animated opacity_3 infinite">
+			<div class="text-1 text">你就是<span class="js-name"></span>的锦鲤</div>
+			<div class="text-2 text">快助力帮Ta实现愿望</div>
+			<img src="imgs/page-5-icon-5.png" alt="" class="icon-5 js-help">
+			<img src="imgs/page-5-icon-7.png" alt="" class="icon-11 ">
+			<img src="imgs/page-5-icon-6.png" alt="" class="icon-6 js-go-index">			
+		</section>
+		<!-- 公共JS -->
+		<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>		
+		<script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+		<script>
+			// 授权
+			var openid = "slkdjsdjsd";
+			var nickname = "哈哈哈";
+			var headimg = "http://dsdsdsd.jpg";
+			var openid_h = "slkdjsss";
+			$(function() {							
+				// 播放音乐
+				audioAutoPlay();
+				$(".music").click(function() {
+					var audio = document.getElementById('bgm');
+					if (audio.paused) {
+						audio.play();
+						$(this).addClass('rotatemusic');
+					} else {
+						audio.pause();
+						$(this).removeClass('rotatemusic');
+					}
+				});		
+				// 名字替换
+				$(".js-name").append('图特尔')									
+			})			
+
+			function audioAutoPlay() {
+				var audio = document.getElementById('bgm');
+				audio.play();
+				document.addEventListener("WeixinJSBridgeReady", function() {
+					audio.play();
+				}, false);
+				audio.onended = function() {
+					audio.currentTime = 0
+					audio.play();
+				}
+			}							
+			
+			// 一键助力
+			$(".js-help").click(function() {
+				$.ajax({
+						url: 'http://api.hongyu.ren/meilai/help',
+						type: 'post',
+						data: {
+							openid:openid,
+							openid_h:openid_h
+						},
+						success: function(res) {
+							if (res.status==100) {
+								layer.msg(res.data.msg);
+							}else{
+								layer.msg(res.data.err_msg);
+							}															
+						},
+						error: function(data) {
+							layer.msg('请求超时');
+						}
+				})
+			});	
+			// 我也想许愿
+			$(".js-go-index").click(function() {
+				window.location.href="index.html";
+			});	
+		</script>
+	</body>	
+</html>

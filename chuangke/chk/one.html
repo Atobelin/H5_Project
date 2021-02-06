@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="UTF-8">
+		<title>名片</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<!-- 公共样式 -->
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/certify.css">
+		<link rel="stylesheet" type="text/css" href="css/one.css">
+		<!-- 独立样式 -->
+	</head>
+
+	<body>
+		<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<div class="full one">
+			<!-- logo -->
+			<img src="imgs/logo.png" alt="" class="logo">
+			<img src="imgs/under-text.png" alt="" class="under-text">
+			<img src="imgs/under-line.png" alt="" class="under-line">
+			<!-- 独立 -->
+			<img src="imgs/one-text-1.png" alt="" class="text-1">
+			<img src="imgs/one-text-2.png" alt="" class="text-2">
+			<img src="imgs/one-text-line.png" alt="" class="text-line">
+
+			<img src="imgs/one-icon-1.png" alt="" class="icon-1">
+			<img src="imgs/one-icon-2.png" alt="" class="icon-2">
+			<img src="imgs/star-left.png" alt="" class="star-left">
+			<img src="imgs/star-right.png" alt="" class="star-right">
+			<img src="imgs/one-text-bg.png" alt="" class="text-bg">
+			<div id="certify">
+				<div class="swiper-container">
+					<div class="swiper-wrapper" id="swiper">
+						<!-- <div class="swiper-slide">
+						<div class="slide-box">
+							<img src="imgs/card-bg.png" alt="" class="card-bg">
+							<img src="imgs/timg-1.png" alt="" class="person">
+							<div class="name-box">
+								<span>
+									蔚蓝客公关
+									<img src="imgs/card-1.png" alt="" class="card-1 card-1-left">
+									<img src="imgs/card-1.png" alt="" class="card-1 card-1-right">
+								</span>
+							</div>
+							<div class="job-box">
+								<div class="job-div">
+									<p>蔚蓝客小马姐</p>
+									<p>创始人</p>
+									<img src="imgs/card-2.png" alt="" class="card-2 card-2-top">
+									<img src="imgs/card-2.png" alt="" class="card-2 card-2-down">
+								</div>
+							</div>
+							<div class="job-box phone-box">
+								<div class="job-div">
+									<p>15087197531</p>
+									<img src="imgs/card-2.png" alt="" class="card-2 card-2-top">
+									<img src="imgs/card-2.png" alt="" class="card-2 card-2-down">
+								</div>
+							</div>							
+							<div class="job-box email-box">
+								<div class="job-div">
+									<p>529208505@qq.com</p>
+									<img src="imgs/card-2.png" alt="" class="card-2 card-2-top">
+									<img src="imgs/card-2.png" alt="" class="card-2 card-2-down">
+								</div>
+							</div>	
+							<span class="num-box">
+								NO.1
+							</span>						
+						</div>
+					</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script> -->
+		<script>
+					$.ajax({
+						type: 'POST',
+						url: 'http://api.hongyu.ren/zgc/list',
+						data: {
+		
+						},
+						dataType: 'json',
+						success: function(data) {
+							if (data.status == 100) {
+								// console.log(data);
+								for (var i = 0; i < data.data.list.length; i++) {
+									console.log(data);
+									var name = data.data.list[i].name
+									var phone = data.data.list[i].phone
+									var company = data.data.list[i].company
+									var duty = data.data.list[i].duty
+									var id = data.data.list[i].id
+									var img = data.data.list[i].headimg
+									// console.log(phone);
+									console.log(data.data.list[i]);
+									var html =
+										'<div class="swiper-slide">\
+				                       						<div class="slide-box">\
+				                       							 <img src="imgs/card-bg.png" alt="" class="card-bg">\
+				                       							 <img src="'+img+'" alt="" class="person">\
+				                       							 <div class="name-box">\
+				                       							 	 <span>\
+				                       							 	 	 ' +
+										company +
+										'\
+				                       							 	 	 <img src="imgs/card-1.png" alt="" class="card-1 card-1-left">\
+				                       							 	 	 <img src="imgs/card-1.png" alt="" class="card-1 card-1-right">\
+				                       							 	</span>\
+				                       							 </div>\
+				                       							 <div class="job-box">\
+				                       							 		 <div class="job-div">\
+				                       							 		 	 <p>' +
+										name +
+										'</p>\
+				                       							 		 	 <img src="imgs/card-2.png" alt="" class="card-2 card-2-top">\
+				                       							 		 	 <img src="imgs/card-2.png" alt="" class="card-2 card-2-down">\
+				                       							 		 </div>\
+				                       							 </div>\
+				                       							 <div class="job-box phone-box">\
+				                       							 		 <div class="job-div">\
+				                       							 		 	 <p>' +
+										phone +
+										'</p>\
+				                       							 		 	 <img src="imgs/card-2.png" alt="" class="card-2 card-2-top">\
+				                       							 		 	 <img src="imgs/card-2.png" alt="" class="card-2 card-2-down">\
+				                       							 		 </div>\
+				                       							 </div>\
+				                       							 <div class="job-box email-box">\
+				                       							 		 <div class="job-div">\
+				                       							 		 	 <p>' +
+										duty +
+										'</p>\
+				                       							 		 	 <img src="imgs/card-2.png" alt="" class="card-2 card-2-top">\
+				                       							 		 	 <img src="imgs/card-2.png" alt="" class="card-2 card-2-down">\
+				                       							 		 </div>\
+				                       							 </div>\
+				                       							 <span class="num-box">NO.' +
+										id + '</span>\
+				                       					     </div>\
+				                       					</div>'
+									$("#swiper").append(html)
+								}
+								initSwiper1()
+							} else {
+								console.log(data);
+							}
+						},
+						error: function(data) {
+							console.log('请求超时');
+						}
+					})
+		
+					function initSwiper1() {
+						certifySwiper = new Swiper('#certify .swiper-container', {
+							watchSlidesProgress: true,
+							slidesPerView: 'auto',
+							centeredSlides: true,
+							loop: true,
+							loopedSlides: 5,
+							autoplay: {
+							    delay: 7000,//1秒切换一次
+							  },
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev',
+							},
+							pagination: {
+								el: '.swiper-pagination',
+								//clickable :true,
+							},
+							on: {
+								progress: function(progress) {
+									for (i = 0; i < this.slides.length; i++) {
+										var slide = this.slides.eq(i);
+										var slideProgress = this.slides[i].progress;
+										modify = 1;
+										if (Math.abs(slideProgress) > 1) {
+											modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+										}
+										translate = slideProgress * modify * 2.9 + 'rem';
+										scale = 1 - Math.abs(slideProgress) / 5;
+										zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+										slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+										slide.css('zIndex', zIndex);
+										slide.css('opacity', 0.4);
+										if (Math.abs(slideProgress) > 1) {
+											slide.css('opacity', 0);
+										}
+									}
+								},
+								setTransition: function(transition) {
+									for (var i = 0; i < this.slides.length; i++) {
+										var slide = this.slides.eq(i)
+										slide.transition(transition);
+									}
+		
+								}
+							}
+		
+						})
+					}
+				</script>
+	</body>
+
+</html>

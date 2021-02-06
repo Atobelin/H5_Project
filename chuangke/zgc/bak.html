@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>中关村创客节</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/wiper.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- 独立样式 -->
+</head>
+
+<body>
+<!-- 公共JS -->
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<!-- wow -->
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<!-- 轮播 -->
+<script src="js/swiper.min.js"></script>
+<script src="js/share.js"></script>
+<!-- 文字 -->
+<script src="https://cdn.bootcss.com/FitText.js/1.2.0/jquery.fittext.js"></script>
+<script src="https://cdn.bootcss.com/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+<script src="https://cdn.bootcss.com/textillate/0.4.0/jquery.textillate.min.js"></script>
+
+<script>
+    (function(doc, win, undefined) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (clientWidth === undefined) return;
+                docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+            };
+        if (doc.addEventListener === undefined) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false)
+    })(document, window);
+</script>
+<img class="music animated infinite  rotatemusic" src="imgs/music.png">
+<audio id="bgm" preload="auto" src="http://hongyu-static.oss-cn-beijing.aliyuncs.com/shx/bgm.mp3"></audio>
+<div class="page page-1" >
+    <!-- 公共 -->
+    <img src="imgs/logo.png" alt="" class="logo">
+    <img src="imgs/down-text.png" alt="" class="down-text">
+    <img src="imgs/down-line.png" alt="" class="down-line">
+    <img src="imgs/page-1-star-1.png" alt="" class="page-1-star-1">
+    <img src="imgs/page-1-star-2.png" alt="" class="page-1-star-2">
+    <!-- 独立 -->
+    <div class="js-welcome-page">
+        <img src="imgs/page-1-logo-1.png" alt="" class="page-1-logo-1">
+        <img src="imgs/page-1-logo-2.png" alt="" class="page-1-logo-2">
+        <img src="imgs/page-1-text-1.png" alt="" class="page-1-text-1 animated bounceInDown">
+        <img src="imgs/page-1-text-2.png" alt="" class="page-1-text-2 animated bounceInDown">
+        <img src="imgs/page-1-text-line.png" alt="" class="page-1-text-line">
+        <img src="imgs/page-1-text-bg.png" alt="" class="page-1-text-bg">
+        <div class="welcome js-welcome">欢迎你</div>
+        <div class="button js-go-page-2">
+            <div class="button-box">
+                <img src="imgs/page-1-button-bg.png" alt="" class="button-bg">
+                <div class="text">开启</div>
+            </div>
+        </div>
+        <div class="detail js-go-detail">查看详情</div>
+    </div>
+
+    <!-- 详情 -->
+    <div class="flow-box">
+        <img src="imgs/flow-1.png" alt="" class="flow-1">
+        <img src="imgs/page-1-logo-1.png" alt="" class="flow-icon-1">
+        <img src="imgs/page-1-logo-2.png" alt="" class="flow-icon-2">
+        <div class="flow-text-1 flow-text">
+        	<div class="relative">
+        		<img src="imgs/flow-2.png" alt="" style="width: 0.61rem;left: -0.6rem;top: 0.2rem">
+				<div class="tlt tlt-1" data-in-effect="zoomInRight" data-initialdelay="0">13:00-14:00 <span>签到</span>
+				</div>
+        	</div>
+   		</div>
+        <div class="flow-text-2 flow-text">
+        	<div class="relative" >
+        		<img src="imgs/flow-3.png" alt="" style="width: 0.35rem;left: -0.35rem;top: 0.2rem;">
+				<div class="tlt tlt-2" data-in-effect="zoomInRight" data-initialdelay="200">14:00-14:30 <span>创客小镇一周年成果展示</span>
+				</div>
+        	</div>
+        </div>
+        <div class="flow-text-3 flow-text">
+        	<div class="relative">
+        		<img src="imgs/flow-4.png" alt="" style="width: 0.46rem;left: -0.46rem;top: 0.2rem">
+				<div class="tlt tlt-3" data-in-effect="zoomInRight" data-initialdelay="400">14:50-15:00 <span>中关村创客节开幕</span></span>
+				</div>
+       		</div>
+       	</div>
+        <div class="flow-text-4 flow-text">
+        	<div class="relative">
+        		<img src="imgs/flow-5.png" alt="" style="width: 0.3rem;left: -0.2rem;top: -0.25rem">
+        		<div class="tlt tlt-4" data-in-effect="zoomInRight" data-initialdelay="600">16:10-17:30 <span>创客论坛</span>
+        		</div>
+        	</div>
+        </div>
+        <div class="flow-text-5 flow-text">
+        	<div class="relative">
+        		<img src="imgs/flow-6.png" alt="" style="width:0.29rem;left: -0.29rem;top: -0.2rem">
+	        	<div class="tlt tlt-5" data-in-effect="zoomInRight" data-initialdelay="800">15:00-16:10 <span>创客分享演讲</span>
+	        	</div>
+        	</div>
+        </div>
+    </div>
+    <div class="button js-go-page-1 button-detail">
+        <div class="button-box">
+            <img src="imgs/page-1-button-bg.png" alt="" class="button-bg">
+            <div class="text">返回首页</div>
+        </div>
+    </div>
+</div>
+<div class="page page-2" style="display: none;">
+    <!-- 公共 -->
+    <img src="imgs/logo.png" alt="" class="logo">
+    <img src="imgs/down-text.png" alt="" class="down-text">
+    <img src="imgs/down-line.png" alt="" class="down-line">
+    <!-- 独立 -->
+    <p class="page-2-title">请填写您的信息</p>
+    <div class="information">
+        <div class="list">
+            <span class="list-left">姓&nbsp;&nbsp;&nbsp;名:</span>
+            <input type="text" class="js-name-input">
+        </div>
+        <div class="list">
+            <span class="list-left">手机号:</span>
+            <input type="text" class="js-tel-input">
+        </div>
+        <div class="list">
+            <span class="list-left">公&nbsp;&nbsp;&nbsp;司:</span>
+            <input type="text" class="js-company-input">
+        </div>
+        <div class="list">
+            <span class="list-left">职&nbsp;&nbsp;&nbsp;务:</span>
+            <input type="text" class="js-job-input" placeholder="（选填）">
+        </div>
+    </div>
+    <div class="textarea-box">
+        <p>你认为“创客”有什么样的特质?</p>
+        <textarea placeholder="一句话描述......" class="js-dictation-input"></textarea>
+    </div>
+    <div class="button">
+        <div class="button-box js-submit">
+            <img src="imgs/page-1-button-bg.png" alt="" class="button-bg">
+            <div class="text">提交资料</div>
+        </div>
+    </div>
+    <!-- <p class="add_text">分享我的资料至参会人员</p> -->
+    <!-- 弹出框-->
+    <div class="tan-box" style="display: none;">
+        <div class="tan-text-box">
+            <img src="imgs/pop-box.png" alt="">
+            <div class="text-box">
+                <img src="imgs/pop-icon-box.png" alt="" class="pop-icon-box">
+                <img src="imgs/pop-icon-1.png" alt="" class="pop-icon-1">
+                <img src="imgs/pop-icon-2.png" alt="" class="pop-icon-2">
+                <div class="pop-line-box">
+                    <img src="imgs/pop-line-box.png" alt="" class="pop-line-box-bg">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-1">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-2">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-3">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-4">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-5">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-6">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-7">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-8">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-9">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-10">
+                    <img src="imgs/pop-line.png" alt="" class="pop-line pop-line-11">
+                </div>
+                <p>正在生成你的邀请函......</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page page-3" style="display: none;">
+    <!-- <canvas width="640" height="1136"></canvas> -->
+    <img id="createImg" src="" />
+    <!-- 公共 -->
+    <img src="imgs/logo.png" alt="" class="logo">
+    <img src="imgs/down-text.png" alt="" class="down-text">
+    <img src="imgs/down-line.png" alt="" class="down-line">
+    <!-- 独立	 -->
+    <p class="page-3-title">诚挚恭迎您的到来</p>
+    <div class="text-box">
+        <div class="relative" id="text-box">
+        </div>
+    </div>
+    <div class="photo-box">
+        <img src="imgs/page3-box.png" alt="" class="page3-box">
+        <!-- <img src="imgs/q-1.png" alt="" class="q-1"> -->
+        <img src="imgs/people.png" alt="" class="photo" id="phone">
+    </div>
+    <div class="name-box">
+				<span class="name">
+					<span>
+					<span id="name"></span>
+					<img src="imgs/page-3-icon-2.png" alt="" class="icon-left icon">
+					<img src="imgs/page-3-icon-2.png" alt="" class="icon-right icon">
+					</span>
+				</span>
+    </div>
+    <img src="imgs/page-3-icon-1.png" alt="" class="icon-1">
+    <p class="time-place">时 间：2018 / 11 / 24</p>
+    <p class="time-place">地 点：北京市中关村创客小镇</p>
+    <p class="more js-more">查看更多创客</p>
+    <p class="save">长按保存邀请函</p>
+</div>
+<div class="page page-1 page-4" style="display: none">
+    <!-- 公共 -->
+    <img src="imgs/logo.png" alt="" class="logo">
+    <img src="imgs/down-text.png" alt="" class="down-text">
+    <img src="imgs/down-line.png" alt="" class="down-line">
+    <!-- 独立 -->
+    <!-- <img src="imgs/page-1-logo-1.png" alt="" class="page-1-logo-1"> -->
+    <img src="imgs/page-1-logo-2.png" alt="" class="page-1-logo-2">
+    <!-- 轮播		 -->
+    <div id="certify">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="swiper">
+            </div>
+        </div>
+    </div>
+		<div class="button" id="back_3">
+            <div class="button-box">
+                <img src="imgs/page-1-button-bg.png" alt="" class="button-bg">
+                <div class="text">返回</div>
+            </div>
+        </div>    
+</div>
+</body>
+<script>
+    var openid = "o6dlvwkfP4-i352TD3T3I7d8ouEw";
+    var headimg = "http://thirdwx.qlogo.cn/mmopen/vi_32/xGdbYxYh4gktia72nalQFJ58iciazeibstyoicODzOiaeCJZjxTLxicYshvGaSdhWHSKxibAleziazQTAgibHh9mwribPy5Uw/132";
+    $('.tlt').textillate();
+    $(".js-go-detail").click(function() {
+        $(".js-welcome-page").fadeOut(0)
+        $(".flow-box").fadeIn(300)
+        $(".js-go-page-1").fadeIn(300)
+        $(".flow-text-1").css({display: 'block',});
+        $('.tlt-1').textillate('in');
+	    setTimeout(function(){ 
+	    	$('.tlt-2').textillate('in');
+	    	$(".flow-text-2").css({display: 'block',});
+	     }, 1500); 
+		setTimeout(function(){ 
+	    	$('.tlt-3').textillate('in');
+	    	$(".flow-text-3").css({display: 'block',});
+	     }, 3000); 	     
+		setTimeout(function(){ 
+	    	$('.tlt-4').textillate('in');
+	    	$(".flow-text-4").css({display: 'block',});
+	     }, 4500); 	     
+		setTimeout(function(){ 
+	    	$('.tlt-5').textillate('in');
+	    	$(".flow-text-5").css({display: 'block',});
+	     }, 6000); 	         
+    });
+    $(".js-go-page-1").click(function() {
+        $(".js-welcome-page").fadeIn(300)
+        $(".flow-box").fadeOut(0)
+        $(".js-go-page-1").fadeOut(0)
+        $(".flow-text").css({display: 'none',});
+    });
+    $(".js-go-page-2").click(function() {
+        $(".page-1").fadeOut(0)
+        $(".page-2").fadeIn(500)
+    });
+    $("#back_3").click(function() {
+    	$(".page-4").fadeOut(0)
+        $(".page-3").fadeIn(500)
+    });
+    // 轮播文字动画
+    
+    (function videoautoplay() {
+        var bgm = document.getElementById('bgm');
+        bgm.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            bgm.play();
+        }, false);
+        bgm.onended = function() {
+            bgm.currentTime = 0;
+            bgm.play();
+        }
+        $(".music").click(function() {
+            var audio = document.getElementById('bgm');
+            if(audio.paused) {
+                audio.play();
+                $(this).addClass('rotatemusic');
+            } else {
+                audio.pause();
+                $(this).removeClass('rotatemusic');
+            }
+        });
+    })();
+    var arr = [
+        {size:0.5,top:0.4,bottom:'auto',left:0.8,right:'auto',width:0},
+        {size:0.24,top:0.2,bottom:'auto',left:0.6,right:'auto',width:'auto'},
+        {size:0.27,top:0.37,bottom:'auto',left:'auto',right:0.3,width:'auto'},
+        {size:0.8,top:1.04,bottom:'auto',left:'auto',right:0,width:'auto'},
+        {size:0.29,top:'auto',bottom:0,left:'auto',right:0.16,width:'auto'}
+    ]
+    var content = ['创业时代','敢为人先', '科技之美','筑梦者', '孵化梦想', '助力创业',
+        '燃', '勇敢攀登', '逆流而上', '永不服输']
+    for(var i = 0;i < 5;i++){
+        // console.log(i);
+        var num = parseInt(Math.random()*10)
+        var text = content[num]
+        var p_size = arr[i].size
+        var p_top = arr[i].top
+        var p_bottom = arr[i].bottom
+        var p_left = arr[i].left
+        // console.log(text);
+        var p_right = arr[i].right
+        var p_width = arr[i].width
+        var html = '<p class="shan_text_'+i+'" style="font-size:'+p_size+'rem;top:'+p_top+'rem;left:'+p_left+'rem;bottom:'+p_bottom+'rem;right:'+p_right+'rem;width:'+p_width+'rem">'+text+'</p>'
+        $("#text-box").append(html)
+    }
+    function test(){
+        $(".page-2").fadeOut(0)
+        $(".page-3").fadeIn(500)
+    }
+    $(".js-submit").click(function () {
+        var name = $(".js-name-input").val()
+        var tel = $(".js-tel-input").val()
+        var company = $(".js-company-input").val()
+        var job = $(".js-job-input").val()
+        var dictation = $(".js-dictation-input").val()
+        if (name == '') {
+            layer.msg('姓名不能为空！');
+            $('.js-name-input').focus();
+            return false;
+        }
+        if (tel == '') {
+            layer.msg('手机号码不能为空！');
+            $('.js-tel-input').focus();
+            return false;
+        }
+        if (!(/^1\d{10}$/.test(tel))) {
+            layer.msg('手机号码不合法！');
+            $('.js-tel-input').focus();
+            return false;
+        }
+        if (company == '') {
+            layer.msg('公司不能为空！');
+            $('.js-company-input').focus();
+            return false;
+        }
+        // if (job == '') {
+        //     layer.msg('职务不能为空！');
+        //     $('.js-job-input').focus();
+        //     return false;
+        // }
+        if (dictation == '') {
+            layer.msg('您认为"创客有什么样的特质？"');
+            $('.js-dictation-inputt').focus();
+            return false;
+        }
+        $.ajax({
+            type: 'POST',
+            url: 'http://api.hongyu.ren/zgc/save',
+            data: {
+                duty : job,
+                name : name,
+                company : company,
+                phone: tel,
+                brife: dictation,
+                openid: openid,
+                headimg: headimg
+            },
+            dataType: 'json',
+            success: function(data){
+                if (data.status == 100) {
+                    // console.log(data.data);
+                    $(".tan-box").fadeIn(500)
+                    $(".tan-box .pop-line").addClass('animate-pop-line')
+                    $("#createImg").attr("src", data.data.url)
+                    $("#phone").attr("src", headimg)
+                    var text_name = $(".js-name-input").val()
+                    // console.log(text_name);
+                    $("#name").append(text_name)
+                    // createimage()
+
+                    setTimeout('test()',2500);
+                }else{
+                    layer.msg(data.data.err_msg);
+                    console.log(data.data.err_msg);
+                }
+            },
+            error: function(data){
+                console.log('请求超时');
+            }
+        })
+    })
+    function initSwiper() {
+        $.ajax({
+            type: 'POST',
+            url: 'http://api.hongyu.ren/zgc/list',
+            data: {
+
+            },
+            dataType: 'json',
+            success: function(data) {
+                if (data.status == 100) {
+                    // console.log(data);
+                    for (var i = 0; i < data.data.list.length; i++) {
+                        // console.log(data);
+                        var name = data.data.list[i].name
+                        var phone = data.data.list[i].phone
+                        var company = data.data.list[i].company
+                        var duty = data.data.list[i].duty
+                        var id = data.data.list[i].id
+                        var img = data.data.list[i].headimg
+                        // console.log(phone);
+                        // console.log(data.data.list[i]);
+                        var html =
+                            '<div class="swiper-slide">\
+                                                   <div class="slide-box">\
+                                                        <img src="imgs/card-bg.png" alt="" class="card-bg">\
+                                                        <img src="'+img+'" alt="" class="person">\
+				                       							 <div class="name-box">\
+				                       							 	 <span>\
+				                       							 	 	 ' +
+                            company +
+                            '\
+                                                                  <img src="imgs/card-1.png" alt="" class="card-1 card-1-left">\
+                                                                  <img src="imgs/card-1.png" alt="" class="card-1 card-1-right">\
+                                                            </span>\
+                                                        </div>\
+                                                        <div class="job-box">\
+                                                                 <div class="job-div">\
+                                                                      <p>' +
+                            name +
+                            '</p>\
+                                                                      <img src="imgs/card-2.png" alt="" class="card-2 card-2-top">\
+                                                                      <img src="imgs/card-2.png" alt="" class="card-2 card-2-down">\
+                                                                 </div>\
+                                                        </div>\
+                                                        <div class="job-box phone-box">\
+                                                                 <div class="job-div">\
+                                                                      <p>' +
+                            phone +
+                            '</p>\
+                                                                      <img src="imgs/card-2.png" alt="" class="card-2 card-2-top">\
+                                                                      <img src="imgs/card-2.png" alt="" class="card-2 card-2-down">\
+                                                                 </div>\
+                                                        </div>\
+                                                        <div class="job-box email-box">\
+                                                                 <div class="job-div">\
+                                                                      <p>' +
+                            duty +
+                            '</p>\
+                                                                      <img src="imgs/card-2.png" alt="" class="card-2 card-2-top">\
+                                                                      <img src="imgs/card-2.png" alt="" class="card-2 card-2-down">\
+                                                                 </div>\
+                                                        </div>\
+                                                        <span class="num-box">NO.' +
+                            id + '</span>\
+				                       					     </div>\
+				                       					</div>'
+                        $("#swiper").append(html)
+                    }
+                    initSwiper1()
+                } else {
+                    console.log(data);
+                }
+            },
+            error: function(data) {
+                console.log('请求超时');
+            }
+        })
+    }
+    $(".js-more").click(function() {
+        $(".page-3").fadeOut(0)
+        $(".page-4").fadeIn(300)
+        initSwiper()
+        // initSwiper1()
+    });
+    function initSwiper1() {
+        certifySwiper = new Swiper('#certify .swiper-container', {
+            watchSlidesProgress: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            loopedSlides: 5,
+            autoplay: true,
+            direction: 'vertical',
+            on: {
+                progress: function(progress) {
+                    for (i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i);
+                        var slideProgress = this.slides[i].progress;
+                        modify = 1;
+                        if (Math.abs(slideProgress) > 1) {
+                            modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                        }
+                        translate = slideProgress * modify * 1.2 + 'rem';
+                        scale = 1 - Math.abs(slideProgress) / 5;
+                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                        slide.transform('translateY(' + translate + ') scale(' + scale + ')');
+                        // slide.transform('translateY(0) scale(' + scale + ')');
+                        slide.css('zIndex', zIndex);
+                        slide.css('opacity', 0.4);
+                        if (Math.abs(slideProgress) > 1) {
+                            slide.css('opacity', 0);
+                        }
+                    }
+                },
+                setTransition: function(transition) {
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides.eq(i)
+                        slide.transition(transition);
+                    }
+
+                }
+            }
+
+        })
+    }
+    // 		function createimage () {
+    // 			// 图片合成
+    // 			var canvas = $(".page-3 canvas")[0]
+    // 			var ctx = canvas.getContext("2d")
+    // 			var imgbg = new Image()
+    // 			imgbg.src = "imgs/canvasbg.jpg"
+    // 			var avat = new Image()
+    // 			avat.src = JSON.parse(sessionStorage.getItem('userInfo')).headimgurl + '?v=' + Math.random()
+    // 			avat.crossOrigin = "*"
+    // 			var avab = new Image()
+    // 			avab.src = "imgs/avaborder.png"
+    // 			// 画背景
+    // 			imgbg.onload = function () {
+    // 				ctx.drawImage(imgbg, 0, 0, 640, 1136)
+    // 				if(avat.complete){
+    // 					drawavat()
+    // 				}else{
+    // 					avat.onload = function () {
+    // 						drawavat()
+    // 					}
+    // 				}
+    // 			}
+    // 			// 画头像
+    // 			function drawavat() {
+    // 				ctx.save()
+    // 				ctx.beginPath()
+    // 				ctx.arc(318, 449, 119, 0, Math.PI * 2, false)
+    // 				ctx.clip()
+    // 				ctx.drawImage(avat, 200, 331, 238, 238)
+    // 				ctx.restore()
+    // 				if(avab.complete){
+    // 					drawavab()
+    // 				}else{
+    // 					avab.onload = function () {
+    // 						drawavab()
+    // 					}
+    // 				}
+    // 				drawtext()
+    // 			}
+    // 			// 画头像边框
+    // 			function drawavab() {
+    // 				ctx.drawImage(avab, 123, 290, 362, 326)
+    // 			}
+    // 			// 画昵称
+    // 			function drawtext() {
+    // 				ctx.fillStyle="#ffffff"
+    // 				ctx.font="31px Arial"
+    // 				ctx.textAlign="center"
+    // 				ctx.fillText($(".js-name-input").val(),320,628)
+    // 				alert(canvas.toDataURL())
+    // 				$("#createImg").attr("src", canvas.toDataURL())
+    // 			}
+    // 		}
+</script>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>渠道分发</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>
+
+<body>
+    <!-- 导航 -->
+    <header class="bar bar-nav">
+      <h1 class="title">渠道分发</h1>
+      <span class="iconfont icon-fanhui js-back"></span>
+    </header>
+    <!-- 主要内容 -->
+    <div class="dispense">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <p>产品目录</p>
+            </div>
+            <div class="weui-cell__ft"><input type="" name="" placeholder="未填写" id="catalog"></div>
+            </div>
+            <div class="weui-cell">
+            <div class="weui-cell__bd">
+                 <p>产品</p>
+            </div>
+            <div class="weui-cell__ft"><input type="" name="" placeholder="未填写"  id="product"></div>
+            </div>
+            <div class="weui-cell">
+
+             <div class="weui-cell__bd">
+                 <p>渠道</p>
+             </div>
+                <div class="weui-cell__ft"><input type="" name="" placeholder="未填写"  id="ditch"></div>
+            </div>
+            <div class="weui-cell">
+             <div class="weui-cell__bd">
+                 <p>权重</p>
+             </div>
+                <div class="weui-cell__ft"><input type="number" name="" placeholder="未填写" ></div>
+            </div>
+        </div>
+        <a href="dispense_list.html" title="" class="common_b">保存</a>
+    <!-- 公共js -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- 独立js -->
+    <script type="text/javascript">
+        // 产品目录
+        $("#catalog").picker({
+          title: "请选择渠道",
+          cols: [
+            {
+              textAlign: 'center',
+              values: ['支付宝','支付宝1','支付宝2']
+            }
+          ]
+        });
+        // 产品
+        $("#product").picker({
+          title: "请选择渠道",
+          cols: [
+            {
+              textAlign: 'center',
+              values: ['支付宝','支付宝1','支付宝2']
+            }
+          ]
+        });
+        // 渠道
+         $("#ditch").picker({
+          title: "请选择渠道",
+          cols: [
+            {
+              textAlign: 'center',
+              values: ['DM-(140053)-支付宝条码','DM-(140053)-支付宝条码','DM-(140053)-支付宝条码']
+            }
+          ]
+        });
+    </script>
+</body>
+
+</html>

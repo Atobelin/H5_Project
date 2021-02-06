@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>市场分析</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>
+ 
+<body>
+    <!-- 背景 -->
+    <img src="img/bg-move.png" alt="" class="bg-move">
+	<img src="img/bg-move.png" alt="" class="bg-move delay1500">
+	<!-- 大标题 -->
+    <img src="img/title-all.png" alt="" class="title-all">
+    <!-- 综合指数 -->
+    <img src="img/c-bg.png" alt="" class="c-1">
+    <img src="img/c-2.png" alt="" class="c-2">
+    <img src="img/c-3.png" alt="" class="c-3">
+    <img src="img/c-4.png" alt="" class="c-4">
+    <img src="img/c-5.png" alt="" class="c-5">
+    <img src="img/c-6.png" alt="" class="c-6">
+    <img src="img/c-7.png" alt="" class="c-7">
+    <div class="canvasbody">
+        <canvas id="canvas" width="600" height="600"></canvas>
+    </div>      
+    <p class="c-text-1">197.8</p>
+    <p class="c-text-2">2018年综合指数</p>
+    <p class="c-text-3">同比<img src="img/icon-jt.png" alt="" class="c-text-4"><span class="c-text-5">88.88%</span></p>
+    <!-- 市场流动性指数 -->
+    <img src="img/box.png" alt="" class="box-ld">
+    <img src="img/box-title.png" alt="" class="box-title-ld">
+    <img src="img/ld.png" alt="" class="title-ld">
+    <img src="img/text-1.png" alt="" class="text-all-1 text-all">
+    <p class="text-ld text-common">代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代</p>
+    <img src="img/icon-dx-1.png" alt="" class="ld-icon-1">
+    <!-- 市场活跃度指数 -->
+    <img src="img/box.png" alt="" class="box-hy">
+    <img src="img/box-title.png" alt="" class="box-title-hy">
+    <img src="img/hy.png" alt="" class="title-hy">
+    <img src="img/text-2.png" alt="" class="text-all-2 text-all">
+    <p class="text-hy text-common">代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代</p> 
+    <img src="img/icon-shu-2.png" alt="" class="ld-icon-2">
+    <img src="img/icon-dx-4.png" alt="" class="ld-icon-2-2">
+    <!-- 市场竞争指数    -->
+    <img src="img/box.png" alt="" class="box-jingz">
+    <img src="img/box-title.png" alt="" class="box-title-jingz">
+    <img src="img/jingz.png" alt="" class="title-jingz">
+    <img src="img/text-3.png" alt="" class="text-all-3 text-all">
+    <p class="text-jingz text-common">代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代</p>
+    <img src="img/icon-dx-1.png" alt="" class="ld-icon-3">
+    <!-- 市场集中指数    -->
+    <img src="img/box.png" alt="" class="box-jz">
+    <img src="img/box-title.png" alt="" class="box-title-jz">
+    <img src="img/jz.png" alt="" class="title-jz">
+    <img src="img/text-4.png" alt="" class="text-all-4 text-all">
+    <p class="text-jz text-common">代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代</p> 
+    <img src="img/icon-shu-2.png" alt="" class="ld-icon-4">
+    <img src="img/icon-shu-2.png" alt="" class="ld-icon-4-1"> 
+    <!-- 市场开放指数   -->
+    <img src="img/box.png" alt="" class="box-kf">
+    <img src="img/box-title.png" alt="" class="box-title-kf">
+    <img src="img/kf.png" alt="" class="title-kf">
+    <img src="img/text-5.png" alt="" class="text-all-5 text-all">
+    <p class="text-kf text-common">代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代用字代</p>   
+    <img src="img/icon-dx-1.png" alt="" class="ld-icon-5">
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+            var colors = ["#11cccc", "#2ad3ce", "#3dd8d0", "#50d8ce", "#66ddd2", "#6de2cf", "#64e8d8", "#7aede5", "#9bf9f4", "#bbfffd"];
+            var datas = ['-20%', '100%', '80%', '40%', '-40%', '70%', '60%', '10%', '-10%', '-50%', '100%', '100%'];
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            
+            ctx.lineWidth=6;
+            for(var j=0; j<12; j++){
+                var data = parseInt(datas[j]) / 20 + 5
+                console.log(data)
+				for(var i=0; i<data; i++){
+					ctx.strokeStyle = colors[i];
+					ctx.beginPath();
+					ctx.arc(300, 300, 155 + i*10, Math.PI/6 * j - Math.PI/2, (Math.PI/6 * (j + 1) - 0.03 - Math.PI/2));
+					ctx.stroke();
+				}
+            }       
+    </script>
+</body>
+
+</html>

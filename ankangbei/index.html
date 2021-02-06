@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link href="css/light7.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>
+
+<body>
+    <div class="index page">
+    	<img src="imgs/index-1.png" alt="" class="title-img">
+    	<!-- 填写内容 -->
+    	<div class="write">
+    		<div class="write-list">
+    			<span>姓名</span>
+    			<input type="text" placeholder="请填写姓名" class="input">
+    		</div>
+			<div class="write-list">
+			    <span>是否为丰台区工会会员</span>
+				<div class="label-box">
+                    <label class="js-huiyuan"><input name="Fruit" type="radio" value="" /><span>是</span></label> 
+                    <label class="js-huiyuan"><input name="Fruit" type="radio" value="" /><span>否</span></label>                    
+                </div> 
+			</div>    		
+			<div class="write-list">
+			    <span>单位</span>
+			    <input type="text" placeholder="产业工会" class="input" id="labor">
+                <img src="imgs/icon.png" alt="" class="icon-img">
+			 </div>    		
+			<div class="write-list">
+    			<span>手机号</span>
+    			<input type="text" placeholder="请填写手机号码" class="input">
+    		</div>
+    		<div class="write-list">
+    			<a href="question.html" class="button sure">确认信息</a>    	
+    		</div>	
+    	</div>
+        <img src="imgs/people.png" alt="" class="people">
+    </div>    
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/light7/0.4.3/js/light7.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script>
+    $("#labor").picker({
+      toolbarTemplate: '<header class="bar bar-nav">\
+      <button class="button button-link pull-left">按钮</button>\
+      <button class="button button-link pull-right close-picker">确定</button>\
+      <h1 class="title">请选择单位</h1>\
+      </header>',
+      cols: [
+        {
+          textAlign: 'center',
+          values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+        }
+      ]
+    });
+    </script>
+</body>
+
+</html>

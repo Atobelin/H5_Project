@@ -1,0 +1,49 @@
+/**index.wxss**/
+.index-box{
+  position:absolute;
+  z-index:5;
+  left:0;
+  width:640rpx;
+  right:0;
+  margin:auto;
+  top:315rpx;
+}
+.go-box{
+  position:absolute;
+  left:299rpx;
+  top:619rpx;
+  z-index:6;
+  margin:auto;
+  width:155rpx;
+  display:block;
+  border-radius:200rpx;
+  overflow: hidden;
+}
+.go-box .go{
+  width: 100%;
+}
+    .rotate{
+            animation: rotate 3s linear infinite;
+            -moz-animation: rotate 3s linear infinite;
+            -webkit-animation: rotate 3s linear infinite;
+        }
+			@keyframes rotate{
+				0%{
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100%{
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			@-webkit-keyframes rotate{
+				0%{
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+				100%{
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}

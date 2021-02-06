@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>惠普</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>  
+
+<body>
+	<div class="input section">
+		<!-- logo -->
+		<img src="imgs/logo.png" alt="" class="logo">
+		<!-- input内容 -->
+		<div class="box">
+			<img src="imgs/input-text.png" alt="" class="text animated zoomIn">
+			<div class="input-box animated zoomIn d1">
+				<input type="text" placeholder="填写手机号" id="tel">
+			</div>
+			<div class="input-box animated zoomIn d15">
+				<input type="text" placeholder="填写验证码" id="number">
+				<span class="number js-number">发送验证码</span>
+			</div>		
+			<a href="javascript:;"  class="button  animated zoomIn d2 js-finish-yz">完成验证</a>			
+		</div>
+	</div>
+	<!-- 公共JS -->
+	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="js/common.js"></script>
+    <!-- 独立JS -->
+    <script>     
+    	  // 发送验证码
+        var clickstatus = 0
+        var code = '' 
+    	  $('.js-number').click(function(){
+            if (clickstatus == 1) {
+                return
+            }
+            clickstatus = 1
+    		    var tel = $("#tel").val()
+            console.log(tel);
+    			  if (tel == '') {
+            		layer.tips('手机号码不能为空!', '#tel', {
+                		tips: [1, '#007598'] //还可配置颜色
+            		});
+            		$('#tel').focus();
+            		return false;
+        	  }
+        	  if ( !(/^1\d{10}$/.test(tel)) ) {
+            		layer.tips('手机号码不合法!', '#tel', {
+              		tips: [1, '#007598'] //还可配置颜色
+                });
+                $('#tel').focus();
+                return false;
+            }
+            $(this).addClass('active')
+            //开启定时
+            begintime();    
+            $.ajax({
+                type: 'POST',
+                url: 'http://hpapi.hongyu.ren/site/sms',
+                data: {phone:tel},
+                dataType: 'json',
+                success: function(data){
+                    if (data.status == 100) {
+                        code = data.data.code
+                        console.log(code);
+                    }else{
+                         layer.msg(data.data.err_msg)
+                    }
+                },
+                error: function(xhr, type){
+                    // layer.msg('请求超时!');
+                    console.log('请求超时');
+                }
+            })
+    	  });
+    		//注册定时器
+			  function begintime(){
+			      var num = 60;
+			      var i = setInterval(function() {
+			           num--;
+			           $('.js-number').text('重新发送('+num+')');
+			               if (num < 1){
+			                   clearInterval(i);
+			                   // 禁止事件
+                         clickstatus = 0 
+                         $('.js-number').text('重新发送');
+                         $(".js-number").removeClass('active')
+			               }
+			      }, 1000);
+			  }
+
+		    // 完成验证
+    	  $(".js-finish-yz").click(function() {
+    		    var tel = $("#tel").val()
+    		    var num = $("#number").val()
+    		    if (tel == '') {
+        			  layer.tips('手机号码不能为空!', '#tel', {
+            		    tips: [1, '#007598'] //还可配置颜色
+        		    });
+        		    $('#tel').focus();
+        		    return false;
+    		    }
+    		    if ( !(/^1\d{10}$/.test(tel)) ) {
+        			  layer.tips('手机号码不合法!', '#tel', {
+          			   tips: [1, '#007598'] //还可配置颜色
+        		    });
+        		    $('#tel').focus();
+        		    return false;
+    		    }
+			      if (num == '') {
+        			  layer.tips('验证码不能为空!', '#number', {
+            		    tips: [1, '#007598'] //还可配置颜色
+        		    });
+        		    $('#number').focus();
+        		    return false;
+    		    }
+            if (num != code) {
+                layer.tips('验证码输入错误!', '#number', {
+                    tips: [1, '#007598'] //还可配置颜色
+                });
+                $('#number').focus();
+                return false;
+            }    		
+    		    window.location.href = "place.html?phone="+tel;
+    	  });
+    </script>
+</body>
+
+</html>

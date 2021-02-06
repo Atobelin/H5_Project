@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>基因图谱</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/certify.css">
+    <link rel="stylesheet" type="text/css" href="css/one.css?v=1.1">
+    <!-- 独立样式 -->
+</head>
+ 
+<body>
+	<div class="full one two">
+		<!-- logo -->
+    	<img src="imgs/logo.png" alt="" class="logo">
+    	<img src="imgs/under-text.png" alt="" class="under-text">
+    	<img src="imgs/under-line.png" alt="" class="under-line">  
+    	<!-- 独立  	 -->
+    	<img src="imgs/two-text-2.png" alt="" class="two-text-2">
+		<img src="imgs/two-text-1.png" alt="" class="two-text-1">
+		<img src="imgs/two-icon.png" alt="" class="two-icon two-icon-1">
+		<img src="imgs/two-icon.png" alt="" class="two-icon two-icon-2">
+
+    	<img src="imgs/one-icon-1.png" alt="" class="icon-1">
+    	<img src="imgs/one-icon-2.png" alt="" class="icon-2">
+    	<img src="imgs/star-left.png" alt="" class="star-left">
+    	<img src="imgs/star-right.png" alt="" class="star-right">
+    	<img src="imgs/one-text-bg.png" alt="" class="text-bg"> 
+    	<img src="imgs/two-x-3.png" alt="" class="two-x-3">   	
+    	<img src="imgs/two-x-2.png" alt="" class="two-x-2">
+    	<img src="imgs/two-x-1.png" alt="" class="two-x-1">
+		
+		<!-- 随机文字 -->
+        <div id="content">
+            <!-- <p style="font-size:1rem;top:1.4rem;left:0rem;right:0rem;width:auto;opacity: 1" class="">创客</p> -->
+            <!-- <p>洒水大所</p> -->
+        </div>
+	</div>
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script>
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://api.hongyu.ren/zgc/items',
+                        data: {
+        
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            if (data.status == 100) {
+                                // console.log(data.data);
+                                    function getSize(){
+                                       return Math.floor(Math.random() * (70 - 10) + 10);
+                                    }
+                                    function getNum(){
+                                       return Math.floor(Math.random() * 6 + 1);
+                                    }        
+                                    var math = 0
+                                    // 36
+                                    var arr = [
+                                        {size:1,top:1.4,left:0,right:0,width:'auto'},
+                                        {size:0.36,top:1.51,left:3.69,right:'auto',width:'auto'},
+                                        {size:0.4,top:0.9,left:4.16,right:'auto',width:'auto'},
+                                        {size:0.3,top:1.08,left:6.54,right:'auto',width:'auto'},  
+                                        {size:0.38,top:0.47,left:1.65,right:'auto',width:'auto'},  
+                                        {size:0.23,top:3.43,left:'auto',right:0.55,width:'auto'},                               
+                                        {size:0.27,top:4.5,left:2.29,right:'auto',width:'auto'},  
+                                        {size:0.16,top:0.11,left:2.85,right:0,width:0},  
+                                        {size:0.35,top:0.29,left:'auto',right:0.58,width:0},  
+                                        {size:0.25,top:4.2,left:'auto',right:0,width:'auto'},  
+                                        {size:0.27,top:0.26,left:6.23,right:'auto',width:0},  
+                                        {size:0.09,top:0.82,left:0.56,right:'auto',width:'auto'},  
+                                        {size:0.22,top:2.93,left:0,right:'auto',width:'auto'},  
+                                        {size:0.09,top:2.23,left:'auto',right:0.02,width:'auto'},  
+                                        {size:0.17,top:3.61,left:5.2,right:'auto',width:'auto'},  
+                                        {size:0.12,top:1.59,left:3.67,right:'auto',width:0},    
+                                        {size:0.09,top:4.55,left:5.3,right:'auto',width:'auto'},  
+                                        {size:0.18,top:3.24,left:7.52,right:'auto',width:'auto'},  
+                                        {size:0.3,top:3.3,left:0.83,right:'auto',width:0},  
+                                        {size:0.17,top:2.81,left:4.09,right:'auto',width:'auto'},  
+                                        {size:0.15,top:2.54,left:3.93,right:'auto',width:0}, 
+                                        {size:0.33,top:1.18,left:1.42,right:'auto',width:'auto'}, 
+                                        {size:0.33,top:1.7,left:0.86,right:'auto',width:'auto'},  
+                                        {size:0.09,top:2.68,left:0.52,right:'auto',width:'auto'}, 
+                                        {size:0.28,top:3.37,left:1.5,right:'auto',width:'auto'}, 
+                                        {size:0.25,top:3.97,left:1.32,right:'auto',width:'auto'}, 
+                                        {size:0.38,top:3.42,left:2.6,right:'auto',width:'auto'}, 
+                                        {size:0.17,top:4.28,left:2.99,right:'auto',width:'auto'}, 
+                                        {size:0.27,top:3.36,left:4.41,right:'auto',width:0}, 
+                                        {size:0.38,top:2.86,left:5.72,right:'auto',width:'auto'},
+                                        {size:0.3,top:1.69,left:'auto',right:1.39,width:'auto'},
+                                        {size:0.12,top:3.87,left:'auto',right:2.15,width:'auto'},
+                                        {size:0.3,top:2.3,left:'auto',right:0.36,width:'auto'},
+                                        {size:0.15,top:0,left:0,right:'auto',width:'auto'},
+                                        {size:0.3,top:4.4,left:6.5,right:'auto',width:'auto'},
+                                        {size:0.2,top:0,left:8.72,right:'auto',width:'auto'}
+
+                                    ]                                                
+                                for (var i = 0; i < data.data.length; i++){
+                                    // console.log(data.data[i]);
+                                    // 获取相关元素
+                                    math++
+                                    // console.log(math);
+                                    var content = document.getElementById("content"); 
+                                    // var size = getSize()
+                                    var num = getNum()   
+                                    // console.log(size);
+                                    var topValue = parseInt(Math.random()*5)   
+                                    var leftValue = parseInt(Math.random()*10)
+                                    // console.log(num);
+                                    var style_math = Math.floor((Math.random()*arr.length)); 
+                                    var p_size = arr[i].size
+                                    var p_top = arr[i].top
+                                    var p_left = arr[i].left 
+                                    var p_right = arr[i].right
+                                    var p_width = arr[i].width
+
+                                    // console.log(arr[style_math].size);
+                                    // p_text_'+math+'
+                                    html='<p style="font-size:'+p_size+'rem;top:'+p_top+'rem;left:'+p_left+'rem;right:'+p_right+'rem;width:'+p_width+'" class="jy_'+num+' animated delay_'+num+'">'+data.data[i]+'</p>'
+                                    $("#content").append(html)                              
+                                }                               
+                            } else {
+                                console.log(data);
+                            }
+                        },
+                        error: function(data) {
+                            console.log('请求超时');
+                        }
+                    })        
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>名片</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/certify.css">
+    <link rel="stylesheet" type="text/css" href="css/one.css">
+    <!-- 独立样式 -->
+</head>
+ 
+<body>
+	<div class="full one three">
+        <img src="imgs/dian.png" alt="" class="dian-1 dian">
+        <img src="imgs/dian.png" alt="" class="dian-2 dian">
+        <img src="imgs/dian.png" alt="" class="dian-3 dian">
+        <img src="imgs/dian.png" alt="" class="dian-4 dian">        
+        <img src="imgs/dian.png" alt="" class="dian-5 dian">
+        <img src="imgs/dian.png" alt="" class="dian-6 dian">        
+    	<!-- logo -->
+    	<img src="imgs/logo.png" alt="" class="logo">
+    	<img src="imgs/under-text.png" alt="" class="under-text">
+    	<img src="imgs/under-line.png" alt="" class="under-line">
+    	<!-- 独立 -->
+		<img src="imgs/one-text-1.png" alt="" class="text-1">
+    	<img src="imgs/one-text-2.png" alt="" class="text-2">
+    	<img src="imgs/one-text-line.png" alt="" class="text-line">    	
+		<img src="imgs/one-icon-1.png" alt="" class="icon-1">
+    	<img src="imgs/one-icon-2.png" alt="" class="icon-2">
+    	<img src="imgs/star-left.png" alt="" class="star-left">
+    	<img src="imgs/star-right.png" alt="" class="star-right">
+    	<img src="imgs/one-text-bg.png" alt="" class="text-bg">    	
+		
+		<img src="imgs/three-line.png" alt="" class="three-line">
+		<div id="text">
+         <!--    <div class="three-text animated three_text_1 three-text-1">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_2 three-text-2">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_1 three-text-3">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_3 three-text-4">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_4 three-text-5">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_1 three-text-6">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_5 three-text-7">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_2 three-text-8">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_6 three-text-9">创客小镇真的很棒!</div>
+            <div class="three-text animated three_text_4 three-text-10">创客小镇真的很棒!</div>    -->         
+        </div>
+	</div>
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>        
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://api.hongyu.ren/zgc/chats',
+                        data: {
+                            index : 1
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            if (data.status == 100) {
+                                for (var i = 0; i < data.data.length; i++){
+                                    // console.log(data);
+                                    var num = Math.round(Math.random()*5+1)
+                                    // console.log(num);
+                                    var x = i+1
+                                    // console.log(x);
+                                    var html = '<div class="three-text animated three_text_'+num+' three-text-'+x+'">'+data.data[i]+'</div>'
+                                    // console.log(html);
+                                    $("#text").append(html)
+                                }
+                            } else {
+                                console.log(data);
+                            }
+                        },
+                        error: function(data) {
+                            console.log('请求超时');
+                        }
+                    })       
+                    var index = 2  
+                setInterval(function working(){ 
+                    $(".three-text").fadeOut()
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://api.hongyu.ren/zgc/chats',
+                        data: {
+                            index : index
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            console.log(index);
+                            if (data.status == 100) {
+                                index ++
+                                // console.log(index);
+                                for (var i = 0; i < data.data.length; i++){
+                                    console.log(data);
+                                    var num = Math.round(Math.random()*5+1)
+                                    // console.log(num);
+                                    var x = i+1
+                                    // console.log(x);
+                                    var html = '<div class="three-text animated three_text_'+num+' three-text-'+x+'">'+data.data[i]+'</div>'
+                                    // console.log(html);
+                                    $("#text").append(html)
+                                }
+                            } else {
+                                console.log(data);
+                            }
+                        },
+                        error: function(data) {
+                            console.log('请求超时');
+                        }
+                    }) 
+                    // 
+                },10000);         
+    </script>
+</body>
+
+</html>

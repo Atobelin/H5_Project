@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "郑庆科黄油体";
+    src: url("郑庆科黄油体.eot"); /* IE9 */
+    src: url("郑庆科黄油体.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("郑庆科黄油体.woff") format("woff"), /* chrome、firefox */
+    url("郑庆科黄油体.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("郑庆科黄油体.svg#郑庆科黄油体") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

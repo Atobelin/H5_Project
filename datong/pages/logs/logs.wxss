@@ -1,0 +1,177 @@
+.log-text{
+  position:absolute;
+  left:0rpx;
+  right:0rpx;
+  margin:auto;
+  z-index:1;
+  top:245rpx;
+  width:585rpx;
+}
+.log-box{
+  position:absolute;
+  top:290rpx;
+  z-index:2;
+  left:0;
+  right:0;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  width:600rpx;
+}
+.log-box-list{
+  width:185rpx;
+  margin-bottom:16rpx;
+  position: relative
+}
+.log-box-list .log-bg{
+  width: 100%;
+}
+.log-box-list-last{
+  width:69%;
+  display:flex;
+  justify-content:space-around;
+  margin:auto;
+}
+.log-box-list .list-title{
+  color:#012f85;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  margin:auto;
+  font-size:20rpx;
+  text-align:center;
+  width:100%;
+  line-height:24rpx;
+}
+.check-box{
+  position:absolute;
+  top:40rpx;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  width:82%;
+  margin:auto;
+}
+.check-list{
+  width: 45%;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+.check-list .country{
+  width: 100%
+}
+.check-list .lian{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.check-text{
+  text-align:center;
+  font-size:12rpx;
+  line-height:18rpx;
+  color:#fff;
+  padding-top:4rpx;
+}
+.text{
+  width: 100%;
+}
+.text .times{
+  text-align:center;
+  border:1px solid #fff;
+  color:#000;
+  width:28%;
+  line-height:44rpx;
+  font-size:24rpx;
+  font-weight:bold;
+  margin:auto;
+  position:relative;
+  padding:4rpx;
+}
+.text .number{
+  width:100%;
+  color:#f09700;
+  line-height:54rpx;
+  font-size:50rpx;
+  text-align:center;
+  padding-top:6rpx;
+}
+.text .times view{
+  background:#cf8103;
+}
+
+      /* 转动 */
+      .animated {
+			    -webkit-animation-duration: 1s;
+			    animation-duration: 1s;
+			    -webkit-animation-fill-mode: both;
+			    animation-fill-mode: both;
+			}
+			.flipOut{
+				animation-name: flipOut;
+				-webkit-animation-name: flipOut;
+				animation-timing-function: linear;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-duration: 0.3s;
+				animation-duration: 0.3s;
+			}
+			@keyframes flipOut{
+				0%{
+					-webkit-transform: rotateY(0deg);
+					transform: rotateY(0deg);
+				}
+				100%{
+					-webkit-transform: rotateY(90deg);
+					transform: rotateY(90deg);
+				}
+			}
+			@-webkit-keyframes flipOut{
+				0%{
+					-webkit-transform: rotateY(0deg);
+					transform: rotateY(0deg);
+				}
+				100%{
+					-webkit-transform: rotateY(90deg);
+					transform: rotateY(90deg);
+				}
+			}
+			.flipIn{
+				animation-name: flipIn;
+				-webkit-animation-name: flipIn;
+				animation-timing-function: linear;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-duration: 0.3s;
+				animation-duration: 0.3s;
+			}
+			@keyframes flipIn{
+				0%{
+					-webkit-transform: rotateY(-90deg);
+					transform: rotateY(-90deg);
+				}
+				100%{
+					-webkit-transform: rotateY(0deg);
+					transform: rotateY(0deg);
+				}
+			}
+			@-webkit-keyframes flipIn{
+				0%{
+					-webkit-transform: rotateY(-90deg);
+					transform: rotateY(-90deg);
+				}
+				100%{
+					-webkit-transform: rotateY(0deg);
+					transform: rotateY(0deg);
+				}
+			}
+			.delay300{
+				animation-delay: 0.3s;
+				-webkit-animation-delay: 0.3s;
+			}
+      .show{ 
+        display: block;
+        }

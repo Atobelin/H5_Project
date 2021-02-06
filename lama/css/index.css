@@ -1,0 +1,130 @@
+.buttonMove {
+    -webkit-animation-name: buttonMove;
+    animation-name: buttonMove;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@keyframes buttonMove {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes buttonMove {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+
+/* 第五页 */
+.p5-onemore-btn {
+    height: 0.4rem;
+    margin-left: 0.2rem;
+}
+
+.p5 .chouJ {
+    height: 0.4rem;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.p5 .fenX {
+    height: 0.4rem;
+    margin-right: 0.2rem;
+}
+
+.p5 .button-box {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.p5 .share {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none
+}
+
+/* 第六页 */
+.p6 .img-1 {
+    width: 2.6rem;
+    display: block;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+.p6 .img-box {
+    display: flex;
+    width: 2.9rem;
+    border-radius: 50px;
+    border: 1.5px solid #fff;
+    margin: auto;
+    position: relative;
+    margin-top: 0.15rem;
+}
+
+.p6 .img-box img {
+    width: auto;
+    height: 0.18rem;
+    position: absolute;
+    padding-top: 0.11rem;
+    padding-left: 0.1rem;
+}
+
+.p6 .img-box input {
+    height: 0.4rem;
+    width: 100%;
+    padding-left: 0.8rem;
+    background: #fff0;
+    border: 0;
+    font-size: 0.18rem;
+    padding-right: 0.2rem;
+}
+
+.p6 .img-5 {
+    width: 1.4rem;
+    margin: auto;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.p6 .img-10 {
+    width: 3.2rem;
+    display: block;
+    margin: auto;
+    margin-top: 0.2rem;
+}
+
+.p6 .img-8 {
+    width: 3.2rem;
+    display: block;
+    margin: auto;
+    margin-top: 0.2rem;
+}
+
+.p6 .img-9 {
+    display: block;
+    margin: auto;
+    width: 2.6rem;
+    margin-top: 0.2rem;
+}

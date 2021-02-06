@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>美的星座测试</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="https://img.songjiang.xyz/normal/star/css/animate.css">
+    <!-- 独立样式 -->
+    <link rel="stylesheet" type="text/css" href="https://img.songjiang.xyz/normal/star/css/index.css">
+</head>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b0aa1be4ca136de5f905dbd803b558a4";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<body>
+    <script>
+        //  alert('宽' + document.documentElement.clientWidth + '高' + document.documentElement.clientHeight)
+        // 自适应REM
+        window.onload = function () {
+            getRem(640, 100)
+        };
+        window.onresize = function () {
+            getRem(640, 100)
+        };
+        getRem(640, 100);
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <!-- 加载页 -->
+    <!-- <section class="page-loading"></section> -->
+    <!-- page-1 -->
+
+    <img class="music animated  infinite" src="https://img.songjiang.xyz/normal/star/imgs/music.png">
+    <audio id="bgm" preload="auto" loop
+        src="https://songjiang-web.oss-cn-beijing.aliyuncs.com/active/music/1468706Preview.mp3"></audio>
+    <section class="page-1">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-1-bg.gif" alt="" class="bg">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-1-button.png" alt="" class="button js-go-page-2">
+    </section>
+    <!-- page-2 -->
+    <section class="page-2">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-bg.png" alt="" class="bg">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img1.png" alt="" class="img-1">
+        <div class="card-box viewport-flip">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img2.png" alt="" class="js-card flip"
+                data-name="baiyang">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img4.png" alt="" class="js-card flip"
+                data-name="jinniu">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img6.png" alt="" class="js-card flip"
+                data-name="shuangzi">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img8.png" alt="" class="js-card flip"
+                data-name="juxie">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img10.png" alt="" class="js-card flip"
+                data-name="shizi">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img12.png" alt="" class="js-card flip"
+                data-name="chunv">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img3.png" alt="" class="js-card flip"
+                data-name="tiancheng">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img5.png" alt="" class="js-card flip"
+                data-name="tianxie">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img7.png" alt="" class="js-card flip"
+                data-name="sheshou">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img9.png" alt="" class="js-card flip"
+                data-name="mojie">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img11.png" alt="" class="js-card flip"
+                data-name="shuiping">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-img13.png" alt="" class="js-card flip"
+                data-name="shuangyu">
+        </div>
+    </section>
+    <!-- page-3 -->
+    <section class="page-3">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-bg.png" alt="" class="bg">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-3-img1.png" alt="" class="img-1">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-3-img2.png" alt="" class="img-2 opacityBg">
+        <div class="title js-title"></div>
+        <div class="text">
+            <div class="js-page-3-text"></div>
+        </div>
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-3-button.png" alt="" class="js-go-page-4 button">
+    </section>
+    <!-- page-4 -->
+    <section class="page-4">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-2-bg.png" alt="" class="bg">
+        <img src="" alt="" class="img-1 js-question-bg">
+        <div class="question-box">
+            <div class="question-title js-question-title"></div>
+            <div class="question-answer js-question-answer">
+
+            </div>
+        </div>
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-4-button.png" alt="" class="button js-sendQuestion">
+        <div class="tan-box js-tan-box">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-4-right.png" alt=""
+                class="img-right js-rigth-box">
+            <div class="erro-box js-erro-box">
+                <img src="https://img.songjiang.xyz/normal/star/imgs/erro-box.png" alt="">
+                <div class="js-right-title" style="font-size: 0.26rem;
+                font-stretch: normal;
+                letter-spacing: 0;
+                color: #000000;
+                position: absolute;
+                font-weight: bold;
+                width: 3.2rem;
+                right: 0;
+                margin: auto;
+                left: 0;
+                text-align: center;
+                top: 1.3rem;"></div>
+                <p class="js-right-answer"></p>
+            </div>
+            <img src="https://img.songjiang.xyz/normal/star/imgs/page-4-next.png" alt="" class="js-next next-button">
+        </div>
+    </section>
+    <!-- page-5 -->
+    <section class="page-5">
+        <img src="" alt="" class="bg js-page-5-bg">
+        <div class="text-box">
+            <div class="text-1 js-page-5-text-1"></div>
+            <div class="text-2 js-page-5-text-2"></div>
+            <div class="text-3 ">小Tips:</div>
+            <div class="text-4 js-page-5-text-4"></div>
+            <div class="text-5 js-page-5-text-5"></div>
+        </div>
+        <img src="https://img.songjiang.xyz/normal/star/imgs/long.png" alt="" class="press-img"
+            style="top: 9.5rem;position: absolute;left: 0;right: 2.5rem;margin: auto;width: 2.31rem;">
+        <img src="https://img.songjiang.xyz/normal/star/imgs/page-5-againButton.png" alt="" style="
+        top: 9.5rem;position: absolute;left: 0;right: -2.5rem;margin: auto;width: 2.31rem;z-index: 1;"
+            class="again-button-1 js-again">
+        <img src="" alt="" class="js-long-press"
+            style="position: absolute;width: 100%;height: 100%;top: 0;opacity: 0;left:0">
+        <!-- 弹窗 -->
+        <div class="result-box" style="z-index:2">
+            <div class="relative">
+                <div class="img-box">
+                    <div class="relative">
+                        <img src="https://img.songjiang.xyz/normal/star/imgs/close.png" alt=""
+                            style="position: absolute;width: 0.71rem;right: 0.15rem;top: 0.34rem;opacity: 0.7;"
+                            class="js-close">
+                        <img src="https://img.songjiang.xyz/normal/star/imgs/page-5-quan.png" alt="" class="box-bg">
+                        <div class="p-box js-p-box">
+                        </div>
+                        <p class="search-tianmao js-search-title"></p>
+                        <div class="search-box">
+                            <div class="relative">
+                                <img src="https://img.songjiang.xyz/normal/star/imgs/page-5-search.png" alt="">
+                                <div class="text js-search-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://img.songjiang.xyz/normal/star/imgs/page-5-shareButton.png" alt=""
+                    class="share-button js-share">
+                <img src="https://img.songjiang.xyz/normal/star/imgs/page-5-againButton.png" alt=""
+                    class="again-button js-again">
+
+            </div>
+        </div>
+        <div class="share-img-box">
+            <img src="https://img.songjiang.xyz/normal/star/imgs/share.png" alt="" class="share-img js-share-img">
+        </div>
+    </section>
+    <!-- 公共JS -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+    <script src="https://img.songjiang.xyz/normal/star/js/jweixin-1.0.0.js"></script>
+    <script src="https://img.songjiang.xyz/normal/star/js/wechat.js"></script>
+
+    <script>
+        var audio = document.getElementById('bgm');
+        $(".music").click(function () {
+            if (audio.paused) {
+                audio.play()
+                $(this).addClass('rotatemusic');
+            } else {
+                audio.pause()
+                $(this).removeClass('rotatemusic');
+            }
+        });
+
+        function audioAutoPlay() {
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+            audio.onended = function () {
+                audio.currentTime = 0
+                audio.play();
+            }
+        }
+        audioAutoPlay();
+        var TDBox
+        var chooseCord
+        var chooseCordName
+        var questions
+        var answer
+        var answer_desc
+        var rightNum = 0
+        var choose
+        // page-1
+        $(".js-go-page-2").click(function () {
+            $.ajax({
+                url: 'https://vivo.songjiang.xyz/xingzuo/xingzuo/get_features',
+                type: 'get',
+                success: function (res) {
+                    // console.log(res)
+                    if (res.code == 1) {
+                        TDBox = res.data
+                        console.log(TDBox)
+                        $(".page-1").fadeOut(0)
+                        $(".page-2").fadeIn(300)
+                        audio.play()
+                        $(".music").addClass('rotatemusic');
+                    } else {
+                        layer.msg(res.message)
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            })
+        })
+        // page-2
+        $(".js-card").click(function () {
+            $(this).addClass('out')
+            chooseCord = $(this).data("name")
+            if (chooseCord == 'chunv') {
+                $(".js-title").html('处女座')
+                chooseCordName = '处女座'
+            } else if (chooseCord == 'baiyang') {
+                $(".js-title").html('白羊座')
+                chooseCordName = '白羊座'
+            } else if (chooseCord == 'jinniu') {
+                $(".js-title").html('金牛座')
+                chooseCordName = '金牛座'
+            } else if (chooseCord == 'juxie') {
+                $(".js-title").html('巨蟹座')
+                chooseCordName = '巨蟹座'
+            } else if (chooseCord == 'mojie') {
+                $(".js-title").html('摩羯座')
+                chooseCordName = '摩羯座'
+            } else if (chooseCord == 'sheshou') {
+                $(".js-title").html('射手座')
+                chooseCordName = '射手座'
+            } else if (chooseCord == 'shizi') {
+                $(".js-title").html('狮子座')
+                chooseCordName = '狮子座'
+            } else if (chooseCord == 'shuangyu') {
+                $(".js-title").html('双鱼座')
+                chooseCordName = '双鱼座'
+            } else if (chooseCord == 'shuangzi') {
+                $(".js-title").html('双子座')
+                chooseCordName = '双子座'
+            } else if (chooseCord == 'shuiping') {
+                $(".js-title").html('水瓶座')
+                chooseCordName = '水瓶座'
+            } else if (chooseCord == 'tiancheng') {
+                $(".js-title").html('天秤座')
+                chooseCordName = '天秤座'
+            } else if (chooseCord == 'tianxie') {
+                $(".js-title").html('天蝎座')
+                chooseCordName = '天蝎座'
+            }
+            $(".js-page-3-text").html(TDBox[chooseCord])
+            $(".page-2").fadeOut(300)
+            $(".page-3").fadeIn(300)
+        })
+        // page-3
+        $(".js-go-page-4").click(function () {
+            $.ajax({
+                url: 'https://vivo.songjiang.xyz/xingzuo/xingzuo/get_questions',
+                type: 'get',
+                data: {
+                    xingzuo: chooseCord
+                },
+                success: function (res) {
+                    // console.log(res)
+                    if (res.code == 1) {
+                        answer = res.data.answer
+                        answer_desc = res.data.answer_desc
+                        questions = res.data.questions
+                        console.log(questions)
+                        // console.log(answer)
+                        $(".js-question-bg").attr('src',
+                            'https://img.songjiang.xyz/normal/star/imgs/page-4-' + chooseCord +
+                            '.png');
+                        var Arry = []
+                        var ArryDes = []
+                        var questionsArry = []
+                        for (var index in questions) {
+                            Arry.push(answer[index])
+                            ArryDes.push(answer_desc[index])
+                            questionsArry.push(questions[index])
+                        }
+                        // 正确答案数组
+                        console.log(Arry)
+                        console.log(questionsArry)
+                        console.log(ArryDes)
+                        var num = 0
+                        if (Arry.length > 0) {
+                            $(".js-question-title").html(num + 1 + '、' + questionsArry[num].stem)
+                            $(".js-question-answer").html('')
+                            for (var zm in questionsArry[num].option) {
+                                // console.log(zm)
+                                $(".js-question-answer").append(
+                                    '<p class="js-option" data-id=' + zm + '>' + zm + '.' +
+                                    questionsArry[
+                                        num]
+                                    .option[zm] + '</p>')
+                            }
+                        }
+                        // 提交答案
+                        $(".js-sendQuestion").click(function () {
+                            if (choose) {
+                                $(".js-tan-box").fadeIn(300)
+                                if (choose == Arry[num]) {
+                                    // 正确 
+                                    $(".js-rigth-box").fadeIn(300)
+                                    rightNum++
+                                } else {
+                                    // 错误
+                                    $(".js-erro-box").fadeIn(300)
+                                    $(".js-right-answer").html('正确答案:' + ArryDes[num])
+                                    $(".js-right-title").html('你还不够了解' + chooseCordName +
+                                        '星座哦')
+                                }
+                            } else [
+                                layer.msg('请选择！')
+                            ]
+                        })
+                        // 下一题
+                        $(".js-next").click(function () {
+                            num++
+                            if (num < Arry.length) {
+                                $(".js-tan-box").fadeOut(0)
+                                $(".js-erro-box").fadeOut(0)
+                                $(".js-rigth-box").fadeOut(0)
+                                $('.js-option').removeClass('active')
+                                choose = ''
+                                $(".js-question-title").html(num + 1 + '、' + questionsArry[
+                                    num].stem)
+                                $(".js-question-answer").html('')
+                                for (var zm in questionsArry[num].option) {
+                                    // console.log(zm)
+                                    $(".js-question-answer").append(
+                                        '<p class="js-option" data-id=' + zm + '>' +
+                                        zm + '.' +
+                                        questionsArry[
+                                            num]
+                                        .option[zm] + '</p>')
+                                }
+                                // 选择
+                                $(".js-option").click(function () {
+                                    $('.js-option').removeClass('active')
+                                    $(this).addClass('active')
+                                    choose = $(this).data("id")
+                                    console.log(choose)
+                                })
+                            } else {
+                                $.ajax({
+                                    url: 'https://vivo.songjiang.xyz/xingzuo/xingzuo/submit_question',
+                                    type: 'get',
+                                    data: {
+                                        xingzuo: chooseCord,
+                                        current_num: rightNum
+                                    },
+                                    success: function (res) {
+                                        console.log(res)
+                                        if (res.code == 1) {
+                                            $(".page-4").fadeOut(0)
+                                            $(".page-5").fadeIn(300)
+                                            $(".js-page-5-bg").attr('src',
+                                                'https://img.songjiang.xyz/normal/star/imgs/page-5-' +
+                                                chooseCord + '.jpg');
+                                            $(".js-page-5-text-1").html('答对' +
+                                                rightNum + '题')
+                                            $(".js-page-5-text-2").html(res.data
+                                                .result)
+                                            $(".js-page-5-text-4").html(res.data
+                                                .title)
+                                            $(".js-page-5-text-5").html(res.data
+                                                .answer)
+                                            $(".js-long-press").attr('src', res
+                                                .data.down)
+                                            // 弹框内容
+                                            $(".js-p-box").html(res.data.mark
+                                                .desc)
+                                            $(".js-search-box").html(res.data
+                                                .mark.shop)
+                                            $(".js-search-title").html(res.data
+                                                .plate)
+                                            setTimeout(function () {
+                                                $(".page-5 .result-box ")
+                                                    .fadeIn()
+                                            }, 12000);
+                                        } else {
+                                            layer.msg(res.message)
+                                        }
+                                    },
+                                    error: function (data) {
+                                        console.log(data);
+                                    }
+                                })
+                            }
+                        })
+                        // 选择
+                        $(".js-option").click(function () {
+                            $('.js-option').removeClass('active')
+                            $(this).addClass('active')
+                            choose = $(this).data("id")
+                            console.log(choose)
+                        })
+                        $(".page-3").fadeOut(0)
+                        $(".page-4").fadeIn(300)
+                    } else {
+                        layer.msg(res.message)
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            })
+        })
+        // page-5
+        $(".js-again").click(function () {
+            window.location.reload()
+        })
+        $(".js-share").click(function () {
+            $(".page-5 .share-img-box").fadeIn(300)
+        })
+        $(".page-5 .share-img-box").click(function () {
+            $(".page-5 .share-img-box").fadeOut(300)
+        })
+        $(".js-close").click(function () {
+            $(".result-box").fadeOut(0)
+        })
+    </script>
+
+
+</body>
+
+</html>

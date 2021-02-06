@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>惠普</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>  
+
+<body>
+	<div class="resultS section">
+		<!-- logo -->
+		<img src="imgs/logo.png" alt="" class="logo">
+		<!-- resultS内容 -->
+		<div class="box">
+			<div class="flex">
+				<img src="imgs/result-line-1.png" alt="" class="line-1">
+				<a href=""><img src="imgs/resultS-1.png" alt="" class="bg"><img src="imgs/click.png" alt="" class="click"></a>
+				<a href=""><img src="imgs/resultS-2.png" alt="" class="bg"><img src="imgs/click.png" alt="" class="click"></a>
+			</div>
+			<div class="text-box">
+				<img src="imgs/resultS-text.png" alt="" class="text">
+			</div>
+		</div>
+		<a href="javascript:;" class="button js-button">下一步</a>
+	</div>
+	<!-- 公共JS -->
+	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+		var Ohref=window.location.href;
+		var arrhref=Ohref.split("?code=");
+		var code = arrhref[1] 
+		$(".js-button").click(function() {
+			location.href="end.html?code="+code;
+		});   	
+    </script>
+</body>
+
+</html>

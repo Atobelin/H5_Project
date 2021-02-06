@@ -1,0 +1,10 @@
+<!--pages/grade/grade.wxml-->
+<view class="grade content">
+  <image src='../../imgs/bg.png' class='bg-img'></image>
+  <image src='../../imgs/title.png' class='all-title' mode="widthFix"></image>
+  <image src='../../imgs/logo.png'  mode="widthFix" class='logo'></image>
+  <image src='../../imgs/grade.png' class='grade-box' mode="widthFix"></image>
+  <image src='../../imgs/grade-1.png' class='grage-img' mode="widthFix" wx:if="{{statue < 0}}"></image>
+  <image src='../../imgs/grade-2.png' class='grage-img' mode="widthFix" wx:else></image>
+  <view class='grade-text'><view>{{rightnum}}</view>个</view>
+</view>

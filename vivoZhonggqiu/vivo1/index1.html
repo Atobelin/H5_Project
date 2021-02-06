@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   <meta http-equiv="X-UA-Compatible" content="UTF-8">
+   <title>中秋万店礼遇</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <!-- 公共样式 -->
+   <link rel="stylesheet" href="css/animate.css">
+   <!-- 独立样式 -->
+   <link rel="stylesheet" type="text/css" href="css/index1.css">
+</head>
+
+<body>
+   <script>
+      // 自适应REM
+      window.onload = function () {
+         getRem(1080, 100)
+      };
+      window.onresize = function () {
+         getRem(1080, 100)
+      };
+      getRem(1080, 100);
+
+      function getRem(pwidth, prem) {
+         var html = document.getElementsByTagName("html")[0];
+         var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+         html.style.fontSize = oWidth / pwidth * prem + "px";
+      }
+   </script>
+   <section class="page-1 js-page-1">
+      <img src="imgs/page-1/1.jpg" alt="" class="bg">
+      <img src="imgs/page-1/4.png" alt="" class="img-1">
+      <img src="imgs/page-1/5.png" alt="" class="img-2">
+      <img src="imgs/page-1/6.png" alt="" class="img-3 moonOpacity">
+      <img src="imgs/page-1/7.png" alt="" class="img-4">
+      <img src="imgs/page-1/7-1.png" alt="" class="img-5 animated fadeInRight du1000 delay500">
+      <img src=" imgs/page-1/7-2.png" alt="" class="img-6 animated fadeInLeft du1000">
+      <img src="imgs/page-1/7-3.png" alt="" class="img-7 animated fadeInLeft du1000">
+      <img src="imgs/page-1/8-1.png" alt="" class="img-8 animated fadeInRight du1000 delay500">
+      <img src="imgs/page-1/8-2.png" alt="" class="img-9 animated fadeInLeft du1000 ">
+      <img src="imgs/page-1/8-3.png" alt="" class="img-10 animated fadeIn du1000">
+      <img src="imgs/page-1/8-4.png" alt="" class="img-11">
+      <img src="imgs/page-1/8-5.png" alt="" class="img-12 animated fadeIn du1000 ">
+      <img src="imgs/page-1/12.png" alt="" class="img-13 animated zoomIn du500 delay1000">
+      <img src="imgs/page-1/13.png" alt="" class="img-14">
+      <img src="imgs/page-1/14.png" alt="" class="img-15">
+      <img src="imgs/page-1/21.png" alt="" class="img-16">
+      <img src="imgs/page-1/25.png" alt="" class="img-17 pButtonMove js-go-page-2">
+      <img src="imgs/page-1/26.png" alt="" class="img-18">
+      <img src="imgs/page-1/234.png" alt="" class="img-19 animated fadeInLeft du1000 delay800">
+      <img src="imgs/page-1/title/1.png" alt="" class="text-1">
+      <img src="imgs/page-1/title/2.png" alt="" class="text-2">
+      <img src="imgs/page-1/title/3.png" alt="" class="text-3">
+      <img src="imgs/page-1/title/4.png" alt="" class="text-4">
+      <img src="imgs/page-1/title/5.png" alt="" class="text-5">
+      <img src="imgs/page-1/title/6.png" alt="" class="text-6">
+      <img src="imgs/page-1/title/7.png" alt="" class="text-7">
+   </section>
+   <section class="page-2 js-page-2" style="display:none">
+      <img src="imgs/page-2/1.jpg" alt="" class="bg">
+      <img src="imgs/page-2/2.png" alt="" class="img-1">
+      <img src="imgs/page-2/3.png" alt="" class="img-2">
+      <img src="imgs/page-2/4.png" alt="" class="img-3">
+      <img src="imgs/page-2/5.png" alt="" class="img-4">
+      <img src="imgs/page-2/6.png" alt="" class="img-5">
+      <img src="imgs/page-2/7.png" alt="" class="img-6">
+      <img src="imgs/page-2/8.png" alt="" class="img-7">
+      <img src="imgs/page-2/11.png" alt="" class="img-10">
+      <img src="imgs/page-2/12.png" alt="" class="img-11">
+      <div class="page-2-box">
+         <img src="imgs/page-2/13.png" alt="" class="img-12">
+         <div class="relative js-storList"></div>
+      </div>
+      <div class="img-8-box">
+         <img src="imgs/page-2/9.1.png" alt="" class="img-8">
+         <div class="relative" style="color:#ff9200;">
+            <div class="place-box sheng">
+               <div class="relative">
+                  <select class="select js-sheng-select">
+                     <option value="" style="font-family: SourceHanSansCN-Regular;
+                     font-size: 0.5rem;
+                     color: #ff9200;">省</option>
+                  </select>
+                  <img src="imgs/page-2/10.png" alt="" class="img-9 js-img-9">
+               </div>
+            </div>
+            <div class="place-box shi">
+               <div class="relative">
+                  <select class="select js-shi-select">
+                     <option value="" style="font-family: SourceHanSansCN-Regular;
+                     font-size: 0.5rem;
+                     color: #ff9200;">市</option>
+                  </select>
+                  <img src="imgs/page-2/10.png" alt="" class="img-9 js-img-9">
+               </div>
+            </div>
+            <div class="place-box qu">
+               <div class="relative">
+                  <select class="select js-qu-select">
+                     <option value="" style="font-family: SourceHanSansCN-Regular;
+                     font-size: 0.5rem;
+                     color: #ff9200;">区</option>
+                  </select>
+                  <img src="imgs/page-2/10.png" alt="" class="img-9 js-img-9">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="page-2 page-3 js-page-3" style="display: none">
+      <img src="imgs/page-3/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-2/4.png" alt="" class="img-3">
+      <img src="imgs/page-2/5.png" alt="" class="img-4">
+      <img src="imgs/page-2/6.png" alt="" class="img-5">
+      <img src="imgs/page-2/7.png" alt="" class="img-6">
+      <img src="imgs/page-3/1.png" alt="" class="img-13">
+      <img src="imgs/page-3/2.png" alt="" class="img-14">
+      <img src="imgs/page-3/8.png" alt="" class="img-15">
+      <img src="imgs/page-3/9.png" alt="" class="img-16 js-go-page-4">
+      <img src="imgs/page-3/10.png" alt="" class="img-17">
+      <img src="imgs/page-3/16.png" alt="" class="img-18">
+      <img src="imgs/page-3/17.png" alt="" class="img-19">
+      <img src="imgs/page-3/18.png" alt="" class="img-20">
+      <div class="page-3-box">
+         <div class="relative">
+            <div class="list">
+               <img src="imgs/page-3/3.png" alt="" class="img">
+               <input type="text" id="storName" disabled>
+            </div>
+            <div class="list">
+               <img src="imgs/page-3/4.png" alt="" class="img">
+               <!-- <input type="text" id="storPlace" disabled> -->
+               <span id="storPlace"></span>
+            </div>
+            <div class="list">
+               <img src="imgs/page-3/5.png" alt="" class="img">
+               <input type="text" id="storTel" disabled>
+            </div>
+            <div class="list">
+               <img src="imgs/page-3/6.png" alt="" class="img">
+               <input type="text" id="storJW" disabled>
+            </div>
+            <div class="list">
+               <img src="imgs/page-3/7.png" alt="" class="img">
+               <input type="number" placeholder="请填写门店编码" id="storNum">
+            </div>
+         </div>
+      </div>
+      <img src="imgs/page-3/tip-text.png" alt="" class="tip-text">
+   </section>
+   <section class="page-2 page-4 js-page-4" style="display: none">
+      <img src="imgs/page-2/1.png" alt="" class="bg">
+      <img src="imgs/page-2/4.png" alt="" class="img-3">
+      <img src="imgs/page-2/5.png" alt="" class="img-4">
+      <img src="imgs/page-2/6.png" alt="" class="img-5">
+      <img src="imgs/page-2/7.png" alt="" class="img-6">
+      <img src="imgs/page-4/1.png" alt="" class="img-13">
+      <img src="imgs/page-4/2.png" alt="" class="img-14">
+      <img src="imgs/page-4/3.png" alt="" class="img-15">
+      <img src="imgs/page-4/4.png" alt="" class="img-16">
+      <img src="imgs/page-4/8.png" alt="" class="img-20">
+      <img src="imgs/page-4/9.png" alt="" class="img-21 js-go-page-5">
+      <div class="page-4-box">
+         <div class="relative">
+            <img src="imgs/page-4/5.png" alt="" class="img-17">
+            <img src="imgs/page-4/6.png" alt="" class="img-18">
+            <img src="imgs/page-4/7.png" alt="" class="img-19">
+            <img src="imgs/page-4/10.png" alt="" class="img-22">
+            <div class="relative js-gift-list"></div>
+         </div>
+      </div>
+      <!-- 弹框 -->
+      <div class="tan-bg js-tan-bg">
+         <div class="tan-box">
+            <div class="relative">
+               <div class="js-text-title"
+                  style="position: absolute;top: 1.55rem;left: 3.8rem;font-family: VCustom-FontS-Medium--GB1-0;font-size: 0.58rem;font-weight: bold;font-stretch: normal;color: #ffffff;">
+               </div>
+               <img src="imgs/page-4/15.png" alt="" class="img1">
+               <img src="imgs/page-4/16.png" alt="" class="img2 js-close-page-4-tan-box">
+               <img src="imgs/page-4/17.png" alt="" class="img3 js-save-page-4-tan-box">
+               <div class="text">
+                  <span>请输入内容：</span>
+                  <input type="text" maxlength="30" class="js-gift-input">
+                  <div class="icon">(30字以内)</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="page-5 js-page-5" style="display: none;overflow: scroll;line-height: 0">
+      <!-- 放图片 -->
+   </section>
+   <!-- 公共JS -->
+   <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js">
+   </script>
+   <script src="https://cdn.bootcss.com/layer/2.3/layer.js">
+   </script>
+   <script src="https://webapi.amap.com/maps?v=1.4.15&key=ab2b451a35b0fd8ba2567a62e8990fd1">
+   </script>
+   <script src="js/index.js"></script>
+
+</body>
+
+</html>

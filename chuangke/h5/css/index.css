@@ -1,0 +1,588 @@
+@charset "UTF-8";
+/*@import url('//at.alicdn.com/t/font_704525_dhomo5z5i6s.css');*/
+
+
+html{overflow-y: auto;overflow-x: hidden}
+body{overflow-x:hidden;width: 100%;font-family: "Helvetica neue", Helvetica, "lantinghei sc", 'Microsoft Yahei', '微软雅黑', sans-serif !important;;font-size: 16px;-ms-overflow-style: scrollbar;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-weight:normal;}
+input,button,select,textarea{outline:none}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+li{list-style:none}
+caption,th{text-align:left}
+th{vertical-align:baseline}
+*{outline:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;}
+a{text-decoration:none;color: #575757;font-size: 16px;}
+a:hover{text-decoration:none;}
+.tr3{-webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {position: relative; min-height: 1px; padding-right: 0; padding-left: 0; }
+.btn-group-vertical>.btn-group::after, .btn-group-vertical>.btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {display: none}
+/* -------------------------------------------公共---------------------------------*/
+body{
+	background-image: url(../imgs/bg.jpg);
+	width: 100vw;
+	height: 100vh;
+	overflow:hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow:hidden;
+}
+.page{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.logo{
+	width: 2.48rem;
+	height: 0.54rem;
+	position: absolute;
+	top: 0.51rem;
+	left: 0.41rem;
+}
+.down-text{
+	width: 3.27rem;
+	height: 0.15rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 9.95rem;
+	z-index: 2
+}
+.down-line{
+	width: 5.86rem;
+    height: 0.84rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 9.85rem;
+    z-index: 1;
+}
+/*动画*/
+@keyframes shan
+{
+	0%{opacity: 1}
+	50%{opacity: 0}
+	100%{opacity: 1}
+}
+@-moz-keyframes shan/* Firefox */
+{
+	0%{opacity: 1}
+	50%{opacity: 0}
+	100%{opacity: 1}
+}
+@-webkit-keyframes shan/* Safari 和 Chrome */
+{
+	0%{opacity: 1}
+	50%{opacity: 0}
+	100%{opacity: 1}
+}
+@keyframes line_shan
+{
+	0%{opacity: 1;transform: scale(0.8);}
+	50%{opacity: 0.8;transform: scale(1.1);}
+	100%{opacity: 1;transform: scale(0.8);}
+}
+@-moz-keyframes line_shan/* Firefox */
+{
+	0%{opacity: 1;transform: scale(0.8);}
+	50%{opacity: 0.8;transform: scale(1.1);}
+	100%{opacity: 1;transform: scale(0.8);}
+}
+@-webkit-keyframes line_shan/* Safari 和 Chrome */
+{
+	0%{opacity: 1;transform: scale(0.8);}
+	50%{opacity: 0.8;transform: scale(1.1);}
+	100%{opacity: 1;transform: scale(0.8);}
+}
+/*page-1*/
+.page-1-logo-1{
+	width: 3.25rem;
+	height: 3.08rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 2.43rem;
+	animation: shan 0.8s linear infinite;
+    -moz-animation: shan 0.8s linear infinite;
+    -webkit-animation: shan 0.8s linear infinite;
+}
+.page-1-logo-2{
+	width: 3.25rem;
+	height: 3.08rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 2.43rem;
+}
+.page-1-star-1{
+	width: 2.33rem;
+	height: 2.13rem;
+	position: absolute;
+	left: 0;
+	top: 2.74rem;
+	animation: shan 5s linear infinite;
+    -moz-animation: shan 5s linear infinite;
+    -webkit-animation: shan 5s linear infinite;
+}
+.page-1-star-2{
+	width: 2.76rem;
+	height: 2.24rem;
+	position: absolute;
+	right: 0.11rem;
+	top: 4.4rem;
+	animation: shan 3s linear infinite;
+    -moz-animation: shan 3s linear infinite;
+    -webkit-animation: shan 3s linear infinite;
+}
+.page-1-text-1{
+	width: 4.95rem;
+	height: 0.6rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 3.46rem;
+	z-index: 3
+}
+.page-1-text-2{
+	width: 3.3rem;
+	height: 0.3rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 4.27rem;
+	z-index: 3
+}
+.page-1-text-line{
+	    width: 5.36rem;
+    height: 1.21rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 3.5rem;
+    z-index: 1;
+	animation: line_shan 3s linear infinite;
+    -moz-animation: line_shan 3s linear infinite;
+    -webkit-animation: line_shan 3s linear infinite;    
+}
+.page-1-text-bg{
+	    width: 3.03rem;
+    height: 1.84rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 3.29rem;
+}
+.page-1 .welcome{
+	font-family: SourceHanSansCN-Normal;
+    font-size: 0.47rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0.06rem;
+    color: #299bbe;
+    position: absolute;
+    top: 6.69rem;
+    text-align: center;
+    width: 100%;
+	animation: line_shan 2s linear infinite;
+    -moz-animation: line_shan 2s linear infinite;
+    -webkit-animation: line_shan 2s linear infinite;     
+}
+.page-1 .button{
+	width: 2.19rem;
+	height: 0.8rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 7.83rem;
+	z-index: 5
+}
+.page-1 .button .button-box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.page-1 .button .button-box .button-bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.page-1 .button .button-box .text{
+	width: 1.96rem;
+	height: 0.64rem;
+	background-color: rgba(0, 135, 174, 0.28);
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.36rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 0.6rem;
+	letter-spacing: 0.05rem;
+	color: #ffffff;
+	text-align: center;
+	margin: auto;
+}
+.page-1 .detail{
+	    font-family: SourceHanSerifCN-Regular;
+    font-size: 0.2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0.02rem;
+    color: #299bbe;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    right: 0;
+    margin: auto;
+    top: 8.81rem;
+    text-decoration: underline;
+    text-align: center;
+    z-index: 5
+}
+.page-1 .detail-table{
+	color: #299bbe;
+	font-family: SourceHanSansCN-Light;
+	font-size: 0.19rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.02rem;
+	color: #299bbe;
+	width: 3.8rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 6.55rem;
+	text-align: center;
+}
+.page-1 .detail-text{
+	width: 3.63rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 6.54rem;
+    display: none;
+}
+.page-1 .button-detail{
+	width: 1.69rem;
+	height: 0.6rem;
+	top: 8.5rem;
+	display: none;
+}
+.page-1 .button-detail .button-box  .text{
+	    width: 1.47rem;
+    height: 0.44rem;
+    font-size: 0.2rem;
+    letter-spacing: 0.05rem;
+    line-height: 0.44rem;
+}
+
+
+/*page-2*/
+.page-2 .page-2-title{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.37rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.01rem;
+	color: #299bbe;
+	margin-top: 2.26rem;
+	text-align: center;
+}
+.page-2 .information{
+	width: 3.8rem;
+	margin: auto;
+	margin-top: 0.44rem;
+}
+.page-2 .information .list{
+	display: flex;
+	justify-content: space-around;
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.26rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.01rem;
+	color: #299bbe;
+	margin-bottom: 0.3rem;
+}
+.page-2 .information .list .list-left{
+	display: inline-block;
+	width: 0.9rem;
+	text-align: justify;
+}
+.page-2 .information .list input{
+	border: 0;
+    background: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid #299bbe;
+    width: 2.6rem;
+    color: #299bbe;
+}
+.page-2 .textarea-box{
+	width: 4.43rem;
+	margin: auto;
+	margin-top: 0.66rem;
+}
+.page-2 .textarea-box p{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.22rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.02rem;
+	color: #299bbe;
+}
+.page-2 .textarea-box textarea{
+	resize:none;
+	width: 100%;
+	height: 1.81rem;
+	padding:0.17rem;
+	margin-top: 0.18rem;
+	border: 0;
+	color: #fff;
+	font-size: 0.19rem;
+	line-height:0.3rem;
+	border-radius:0.05rem;
+	background-color: rgba(41, 155, 190, 0.2);
+}
+.page-2 .textarea-box textarea::-webkit-input-placeholder{
+	color:#e1e1e1
+}
+.page-2 .button{
+    width: 1.76rem;
+    height: 0.65rem;
+    margin: auto;
+    margin-top: 0.3rem;
+}
+.page-2 .button .button-box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.page-2 .button .button-box .button-bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.page-2 .button .button-box .text{
+	width: 1.57rem;
+	height: 0.52rem;
+	background-color: rgba(0, 135, 174, 0.28);
+	font-family: SourceHanSansCN-Normal;
+	font-weight: normal;
+	font-stretch: normal;
+	 font-size: 0.2rem;
+    letter-spacing: 0.05rem;
+    line-height: 0.44rem;
+	color: #ffffff;
+	text-align: center;
+	margin: auto;
+}
+@media screen and (max-height: 630px){
+	.down-text{
+		width: 3.27rem;
+		height: 0.15rem;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: 9.25rem;
+		z-index: 2
+	}
+	.down-line{
+		width: 5.86rem;
+	    height: 0.84rem;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    margin: auto;
+	    top: 9.1rem;
+	    z-index: 1;
+	}
+	.page-2 .page-2-title{
+	   margin-top: 1.5rem;
+	}
+}
+.page-2 .tan-box{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../imgs/tan-box.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	z-index: 7
+}
+.page-2 .tan-text-box{
+	position: relative;
+	width: 5.26rem;
+    height: 4.7rem;
+	margin: auto;
+	margin-top: 2.75rem;
+	overflow:hidden;
+}
+.page-2 .tan-text-box img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.page-2 .tan-text-box .p-1,.page-2 .tan-text-box .p-2{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.46rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.03rem;
+	color: #ffffff;
+	text-align: center;
+	position: relative;
+	line-height: 0.7rem;
+}
+.page-2 .tan-text-box .p-1,.page-2 .tan-text-box .text-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.page-2 .tan-text-box .p-3{
+	    font-family: SourceHanSansCN-Normal;
+    font-size: 0.18rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0.05rem;
+    line-height: 0.3rem;
+    color: #ffff;
+    position: relative;
+    text-align: center;
+    margin-top: 0.1rem;
+}
+
+/*page-3*/
+/* .page-3 canvas{
+		width: 100%;
+		height: 100%;
+} */
+.page-3 #createImg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	opacity: 0;
+}
+
+.page-3-title{
+	font-family: SourceHanSansCN-Normal;
+	font-size: 0.34rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.02rem;
+	color: #299bbe;
+	padding-top: 2rem;
+	width: 100%;
+	text-align: center;
+}
+.page-3 .photo-box{
+	width: 3.62rem;
+    height: 3.26rem;
+    position: relative;
+    margin-left: 1.35rem;
+    margin-top: 0.4rem;
+}
+.page-3 .photo-box .page3-box{
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1
+}
+.page-3 .photo-box .photo{
+	position: absolute;
+    top: 0.4rem;
+    left: 0.75rem;
+    width: 2.37rem;
+    height: 2.37rem;
+    border-radius: 10rem;
+}
+.page-3 .name-box{
+	position: relative;
+}
+.page-3 .name{
+	position: absolute;
+    display: inline-block;
+    font-family: SourceHanSansCN-Normal;
+    font-size: 0.3rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0.01rem;
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.page-3 .name span{
+	display: inline-block;
+	position: relative;
+}
+.page-3 .name .icon{
+	position: absolute;
+	width: 0.71rem;
+}
+.page-3 .name .icon-left{
+	    left: -0.9rem;
+    top: 0.15rem;
+}
+.page-3 .name .icon-right{
+	    right: -0.8rem;
+    top: 0.15rem;
+}
+.page-3 .icon-1{
+	width: 0.42rem;
+    display: block;
+    margin: auto;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem
+}
+.page-3 .time-place{
+	    font-family: SourceHanSansCN-Normal;
+    font-size: 0.19rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0.01rem;
+    color: #299bbe;
+    text-align: left;
+    width: 100%;
+    margin: auto;
+    line-height: 0.35rem;
+    padding-left: 1.8rem;
+}
+.page-3 .save{
+	    font-family: SourceHanSerifCN-Regular;
+    font-size: 0.2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0.02rem;
+    color: #299bbe;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+}

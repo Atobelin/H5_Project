@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   <meta http-equiv="X-UA-Compatible" content="UTF-8">
+   <title>凤凰网</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <!-- 公共样式 -->
+   <link rel="stylesheet" href="css/animate.css">
+   <link href="css/swiper.min.css" rel="stylesheet">
+   <!-- 独立样式 -->
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+   <script>
+      // 自适应REM
+      window.onload = function () {
+         getRem(640, 100)
+      };
+      window.onresize = function () {
+         getRem(640, 100)
+      };
+      getRem(640, 100);
+
+      function getRem(pwidth, prem) {
+         var html = document.getElementsByTagName("html")[0];
+         var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+         html.style.fontSize = oWidth / pwidth * prem + "px";
+      }
+   </script>
+   <!-- 加载页 -->
+   <section class="page-loading">
+      <!-- logo -->
+      <img src="./imgs/global/logo.png" alt="" class="logo1">
+      <!-- 背景 -->
+      <img src="./imgs/global/bg.png" alt="" class="bg">
+      <!-- 加载动画 -->
+      <div class="load-box common-middle ">
+         <div>
+            <div class="img-box">
+               <img src="./imgs/loading/load1.png" alt="" class="img scaleA animate">
+               <img src="./imgs/loading/load2.png" alt="" class="img rotateA animate">
+               <img src="./imgs/loading/load3.png" alt="" class="img rotateB animate">
+               <img src="./imgs/loading/load4.png" alt="" class="img rotateC animate">
+               <img src="./imgs/loading/img1.png" alt="" class="yy">
+               <div class="text" id="percent"></div>
+            </div>
+            <div class="text-box">loading...</div>
+         </div>
+      </div>
+   </section>
+   <!-- 凤凰网首页 -->
+   <section class="page-index" style="display: none;">
+      <!-- logo -->
+      <img src="./imgs/global/logo.png" alt="" class="logo1">
+      <!-- 背景 -->
+      <img src="./imgs/global/bg.png" alt="" class="bg1">
+      <!-- 内容 -->
+      <img src="./imgs/index/circle6.png" alt="" class="circle6 scaleA">
+      <img src="./imgs/index/circle8.png" alt="" class="circle8 scaleB">
+      <img src="./imgs/index/circle2.png" alt="" class="circle2 blink">
+      <img src="./imgs/index/circle1.png" alt="" class="circle1 rotateB">
+      <img src="./imgs/index/circle7.png" alt="" class="circle7 fudong1">
+      <img src="./imgs/index/circle5.png" alt="" class="circle5 rotateA">
+      <img src="./imgs/index/title.png" alt="" class="title animated fadeInDown">
+      <img src="./imgs/index/title2.png" alt="" class="title2 animated fadeInDown delay500">
+      <img src="./imgs/index/text.png" alt="" class="text animated fadeInUpBig delay800">
+      <!-- 下部房子 -->
+      <img src="./imgs/index/houce7.png" alt="" class="houce7 animated fadeInUpBig delay500">
+      <img src="./imgs/index/houce1.png" alt="" class="houce1 animated fadeInUpBig delay800">
+      <img src="./imgs/index/houce10.png" alt="" class="houce10 animated fadeInUpBig delay500">
+      <img src="./imgs/index/houce6.png" alt="" class="houce6 animated fadeInUpBig delay800">
+      <img src="./imgs/index/houce2.png" alt="" class="houce2 animated fadeInUpBig delay1000">
+      <div class=" tiaodong1">
+         <img src="./imgs/index/houce4.png" alt="" class="houce4 animated fadeInUpBig  delay1000">
+      </div>
+      <div class=" tiaodong">
+         <img src="./imgs/index/houce5.png" alt="" class="houce5 animated fadeInUpBig delay800">
+      </div>
+      <div class=" tiaodong">
+         <img src="./imgs/index/houce3.png" alt="" class="houce3 animated fadeInUpBig delay500">
+      </div>
+      <div class=" tiaodong1">
+         <img src="./imgs/index/houce8.png" alt="" class="houce8 animated fadeInUpBig delay800">
+      </div>
+      <img src="./imgs/index/dec.png" alt="" class="dec animated fadeIn delay1500">
+      <img src="./imgs/index/car1.png" alt="" class="car1 animated bounceInLeft delay2000">
+      <img src="./imgs/index/car2.png" alt="" class="car2 animated bounceInRight delay2000">
+      <img src="./imgs/index/circle3.png" alt="" class="circle3 animated fadeIn delay1500">
+      <img src="./imgs/index/circle4.png" alt="" class="circle4 animated fadeIn delay1500">
+      <img src="./imgs/index/computer.png" alt="" class="computer animated fadeInUpBig delay1000">
+      <div class="rotateE">
+         <img src="./imgs/index/person.png" alt="" class="person animated fadeInUpBig delay1200">
+      </div>
+      <div class="opacityA">
+         <img src="./imgs/index/light1.png" alt="" class="js-go-page-page3 light1 animated bounceIn delay2000">
+         <img src="./imgs/index/light2.png" alt="" class="light2 animated bounceIn delay2000">
+         <img src="./imgs/index/light3.png" alt="" class="light3 animated bounceIn delay2000">
+         <img src="./imgs/index/light4.png" alt="" class="light4 animated bounceIn delay2000">
+         <img src="./imgs/index/light5.png" alt="" class="light5 animated bounceIn delay2000">
+         <img src="./imgs/index/light6.png" alt="" class="light6 animated bounceIn delay2000">
+         <img src="./imgs/index/light7.png" alt="" class="light7 animated bounceIn delay2000">
+         <img src="./imgs/index/light8.png" alt="" class="light8 animated bounceIn delay2000">
+         <img src="./imgs/index/light9.png" alt="" class="light9 animated bounceIn delay2000">
+      </div>
+      <div class="quan move"></div>
+      <div class="dian dian1 move delay200"> </div>
+      <div class="dian dian2 move delay400"></div>
+      <div class="dian dian3 move delay600"></div>
+   </section>
+   <!-- 加载页2 -->
+   <section class="page-page1" style="display: none;">
+      <!-- logo -->
+      <img src="./imgs/global/logo.png" alt="" class="logo1">
+      <!-- 背景 -->
+      <img src="./imgs/global/bg.png" alt="" class="bg1">
+      <!-- 内容 -->
+      <img src="./imgs/page1/circle1.png" alt="" class="circle1r blink">
+      <img src="./imgs/page1/circle3.png" alt="" class="circle3 rotateB">
+      <img src="./imgs/page1/text.png" alt="" class="text animated zoomIn delay800">
+      <img src="./imgs/page1/circle1.png" alt="" class="circle1l fudong">
+      <img src="./imgs/page1/circle5.png" alt="" class="circle5 scaleB">
+      <img src="./imgs/page1/circle4.png" alt="" class="circle4 scaleA">
+      <img src="./imgs/page1/circle2.png" alt="" class="circle2 rotateA">
+      <img src="./imgs/page1/house.png" alt="" class="house animated fadeInUp">
+      <div class="opacityA">
+         <img src="./imgs/page1/light1.png" alt="" class="light1 animated fadeIn delay500">
+      </div>
+      <div class="opacityA">
+         <img src="./imgs/page1/light2.png" alt="" class="light2 animated fadeIn delay800">
+      </div>
+      <div class="tiaodong1">
+         <img src="./imgs/page1/person.png" alt="" class="person animated zoomIn delay1000">
+      </div>
+   </section>
+   <!-- 加载页3 -->
+   <section class="page-page2" style="display: none;">
+      <!-- logo -->
+      <img src="./imgs/global/logo.png" alt="" class="logo1">
+      <!-- 背景 -->
+      <img src="./imgs/global/bg.png" alt="" class="bg1">
+      <!-- 内容 -->
+      <img src="./imgs/page2/bg.png" alt="" class="bg-red">
+      <img src="./imgs/page2/line.png" alt="" class="line blink">
+      <img src="./imgs/page2/text1.png" alt="" class="text1 animated fadeInLeft">
+      <img src="./imgs/page2/text2.png" alt="" class="text2 animated fadeInRight delay500">
+      <div class="common-middle center-box">
+         <div class="box animated fadeIn delay1200 js-go-page-index">
+            <div class="circle1 c3 move1 delay200"></div>
+            <div class="circle1 c4 move1 delay400"></div>
+            <div class="circle1 c1 move1 delay600"></div>
+            <img src="./imgs/page2/circle2.png" alt="" class="circle2 opacityA">
+            <div class="circle1 c2 move2 delay200"></div>
+            <div class="circle1 c4 move2 delay400"></div>
+            <div class="circle1 c1 c3 move2 delay600"></div>
+            <div class="">
+               <div class="text animated fadeInUp delay1200">点击进行链接</div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 加载页4 -->
+   <section class="page-page3" style="display: none;">
+      <!-- logo -->
+      <img src="./imgs/global/logo.png" alt="" class="logo1">
+      <!-- 背景 -->
+      <img src="./imgs/global/bg.png" alt="" class="bg1">
+      <!-- 内容 -->
+      <img src="./imgs/page3/circlebg.png" alt="" class="circlebg scaleB">
+      <div class="common-middle center-box">
+         <div class="box">
+            <img src="./imgs/page3/title.png" alt="" class="title animated fadeInDownBig">
+            <div class="flex-box">
+               <img src="./imgs/page3/card1.png" alt="" class="js-go-page-long3 card animated fadeInLeft delay500">
+               <img src="./imgs/page3/card2.png" alt="" class="js-go-page-long1 card animated fadeInRight delay800">
+               <img src="./imgs/page3/card3.png" alt="" class="js-go-page-long4 card animated fadeInLeft delay1000">
+               <img src="./imgs/page3/card4.png" alt="" class="js-go-page-long2 card animated fadeInRight delay1000">
+               <img src="./imgs/page3/card5.png" alt="" class="js-go-page-long5 card animated fadeInLeft delay1200">
+               <img src="./imgs/page3/card6.png" alt="" class="js-go-page-long6 card animated fadeInRight delay1500">
+            </div>
+            <div class="opacityA">
+               <img src="./imgs/page3/more.png" alt="" class="more animated fadeInUpBig delay1600">
+            </div>
+            <div class="animated fadeInLeft delay200">
+               <img src="./imgs/page3/de1.png" alt="" class="de1 rotateD">
+            </div>
+            <img src="./imgs/page3/de2.png" alt="" class="de2 fudong">
+            <div class="animated fadeInUpBig delay600">
+               <img src="./imgs/page3/de3.png" alt="" class="de3 rotateA">
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 长图1 -->
+   <section class="page-long1" style="display: none;">
+      <div class="long-box miwow-box1">
+         <!-- logo -->
+         <img src="./imgs/global/logo.png" alt="" class="logo2">
+         <!-- 背景 -->
+         <img src="./imgs/long1/bg.png" alt="" class="bg1">
+         <!-- 返回按钮 -->
+         <img src="./imgs/global/back.png" alt="" class="back">
+         <div class="common-box">
+            <!-- 内容 -->
+            <img src="./imgs/long1/title.png" alt="" class="long-1-title miwow zoomIn" data-miwow-duration="1s"
+               data-miwow-delay="0">
+            <div class="box-1">
+               <div class="relative">
+                  <img src="./imgs/long1/rect2.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long1/le2.png" alt="" class="box-1-img-2">
+                  <img src="./imgs/long1/rect1.png" alt="" class="box-1-img-3 miwow fadeInLeft" data-miwow-duration="1s"
+                     data-miwow-delay="0.8s">
+                  <img src="./imgs/long1/le1.png" alt="" class="box-1-img-4 miwow fadeIn" data-miwow-duration="1s"
+                     data-miwow-delay="1.6s">
+                  <img src="./imgs/long1/text1.png" alt="" class="box-1-img-5 miwow fadeInRight"
+                     data-miwow-duration="1s" data-miwow-delay="1.2s">
+                  <img src="./imgs/long1/p1.png" alt="" class="box-1-img-6">
+               </div>
+            </div>
+            <div class="box-2">
+               <div class="relative">
+                  <img src="./imgs/long1/rect3.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long1/rect4.png" alt="" class="box-1-img-2 miwow fadeInRight"
+                     data-miwow-duration="1s" data-miwow-delay="0">
+                  <img src="./imgs/long1/text3.png" alt="" class="box-1-img-3">
+                  <img src="./imgs/long1/p3.png" alt="" class="box-1-img-4 miwow fadeInLeft" data-miwow-duration="1s"
+                     data-miwow-delay="0.3s">
+                  <img src="./imgs/long1/text2.png" alt="" class="box-1-img-5 miwow bounceIn" data-miwow-duration="1s"
+                     data-miwow-delay="0">
+               </div>
+            </div>
+            <div class="box-3">
+               <div class="relative">
+                  <img src="./imgs/long1/text4.png" alt="" class="box-1-img-1 miwow bounceIn" data-miwow-duration="1s"
+                     data-miwow-delay="0">
+                  <img src="./imgs/long1/p2.png" alt="" class="box-1-img-2 miwow bounceInRight" data-miwow-duration="1s"
+                     data-miwow-delay="0.3s">
+                  <img src="./imgs/long1/le3.png" alt="" class="box-1-img-3 animate  rotateE">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 长图2 -->
+   <section class="page-long2" style="display: none;">
+      <div class="long-box miwow-box2">
+         <!-- logo -->
+         <img src="./imgs/global/logo.png" alt="" class="logo2">
+         <!-- 背景 -->
+         <img src="./imgs/long2/bg.png" alt="" class="bg1">
+         <!-- 返回按钮 -->
+         <img src="./imgs/global/back.png" alt="" class="back">
+         <div class="common-box">
+            <!-- 内容 -->
+            <img src="./imgs/long2/title0.png" alt="" class="long-1-title miwow zoomIn" data-miwow-duration="1s"
+               data-miwow-delay="0">
+            <img src="./imgs/long2/title.png" alt="" class="long-1-title2 miwow zoomIn" data-miwow-duration="1s"
+               data-miwow-delay="0.2s">
+            <div class="box-1">
+               <div class="relative">
+                  <img src="./imgs/long2/0.png" alt="" class="box-1-img-1 miwow bounceInRight" data-miwow-duration="1s"
+                     data-miwow-delay="0.5s">
+                  <img src="./imgs/long2/p1.png" alt="" class="box-1-img-2 miwow bounceInRight" data-miwow-duration="1s"
+                     data-miwow-delay="0.5s">
+                  <img src="./imgs/long2/text.png" alt="" class="box-1-img-3 miwow bounceInLeft"
+                     data-miwow-duration="1s" data-miwow-delay="0.7s">
+               </div>
+            </div>
+            <div class="box-2">
+               <div class="relative  miwow bounceInRight" data-miwow-duration="1s" data-miwow-delay="0">
+                  <img src="./imgs/long2/text1.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long2/title1.png" alt="" class="box-1-img-2">
+                  <img src="./imgs/long2/le1.png" alt="" class="box-1-img-3">
+                  <img src="./imgs/long2/p3.png" alt="" class="box-1-img-4  miwow bounceIn" data-miwow-duration="1s"
+                     data-miwow-delay="0.6s">
+               </div>
+            </div>
+            <div class="box-3">
+               <div class="relative miwow bounceInLeft" data-miwow-duration="1s" data-miwow-delay="0">
+                  <img src="./imgs/long2/text2.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long2/title2.png" alt="" class="box-1-img-2">
+                  <img src="./imgs/long2/p2.png" alt="" class="box-1-img-3 miwow bounceIn" data-miwow-duration="1s"
+                     data-miwow-delay="0.6s">
+                  <img src="./imgs/long2/cube.png" alt="" class="box-1-img-4 animate scaleB">
+                  <img src="./imgs/long2/cube2.png" alt="" class="box-1-img-5 animate rotateD">
+                  <img src="./imgs/long2/car.png" alt="" class="box-1-img-6 animate blink">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 长图3 -->
+   <section class="page-long3" style="display: none;">
+      <div class="long-box miwow-box3">
+         <!-- logo -->
+         <img src="./imgs/global/logo.png" alt="" class="logo2">
+         <!-- 背景 -->
+         <img src="./imgs/long3/bg.png" alt="" class="bg1">
+         <!-- 返回按钮 -->
+         <img src="./imgs/global/back.png" alt="" class="back">
+         <div class="common-box">
+            <!-- 内容 -->
+            <img src="./imgs/long3/title.png" alt="" class="long-1-title  miwow zoomIn" data-miwow-duration="1s"
+               data-miwow-delay="0">
+            <div class="box-1">
+               <div class="relative">
+                  <img src="./imgs/long3/house.png" alt="" class="box-1-img-1  miwow bounceInDown"
+                     data-miwow-duration="1s" data-miwow-delay="0.6s">
+                  <img src="./imgs/long3/vedio.png" alt="" class="box-1-img-2 miwow bounceIn" data-miwow-duration="1s"
+                     data-miwow-delay="0.4s">
+                  <img src="./imgs/long3/p1.png" alt="" class="box-1-img-3 miwow bounceIn" data-miwow-duration="1s"
+                     data-miwow-delay="0.4s">
+               </div>
+            </div>
+            <div class=" box-2">
+               <img src="./imgs/long3/logo.png" alt="" class="box-1-img-1 miwow bounceInLeft" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long3/ques.png" alt="" class="box-1-img-2 miwow bounceInRight" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+            </div>
+            <div class="box-3">
+               <div class="relative miwow bounceIn" data-miwow-duration="1s" data-miwow-delay="0">
+                  <img src="./imgs/long3/text1.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long3/p2.png" alt="" class="box-1-img-2">
+               </div>
+            </div>
+            <div class="box-4">
+               <div class="relative miwow bounceIn" data-miwow-duration="1s" data-miwow-delay="0">
+                  <img src="./imgs/long3/text2.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long3/p3.png" alt="" class="box-1-img-2">
+               </div>
+            </div>
+            <div class="box-5">
+               <img src="./imgs/long3/text.png" alt="" class="box-1-img-1 miwow bounceIn" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 长图4 -->
+   <section class="page-long4" style="display: none;">
+      <div class="long-box miwow-box4">
+         <!-- logo -->
+         <img src="./imgs/global/logo.png" alt="" class="logo2">
+         <!-- 背景 -->
+         <img src="./imgs/long4/bg.png" alt="" class="bg1">
+         <!-- 返回按钮 -->
+         <img src="./imgs/global/back.png" alt="" class="back">
+         <div class="common-box">
+            <!-- 内容 -->
+            <img src="./imgs/long4/title.png" alt="" class="long-1-title miwow zoomIn" data-miwow-duration="1s"
+               data-miwow-delay="0">
+            <div class="box-1">
+               <div class="relative">
+                  <img src="./imgs/long4/video.png" alt="" class="box-1-img-1 miwow fadeIn" data-miwow-duration="1s"
+                     data-miwow-delay="0.4s">
+                  <img src="./imgs/long4/p1.png" alt="" class="box-1-img-2 miwow fadeIn" data-miwow-duration="1s"
+                     data-miwow-delay="0.4s">
+               </div>
+            </div>
+            <div class="box-2">
+               <div class="relative miwow bounceIn" data-miwow-duration="1s" data-miwow-delay="0.6s">
+                  <img src="./imgs/long4/ques.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long4/p2.png" alt="" class="box-1-img-2">
+                  <img src="./imgs/long4/p3.png" alt="" class="box-1-img-3">
+               </div>
+            </div>
+            <div class="box-3">
+               <img src="./imgs/long4/wine1.png" alt="" class="box-1-img-4 animate opacityA">
+               <img src="./imgs/long4/wine2.png" alt="" class="box-1-img-5 animate rotateE">
+               <img src="./imgs/long4/text1.png" alt="" class="box-1-img-1 miwow bounceInRight" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long4/text2.png" alt="" class="box-1-img-2 miwow bounceInLeft" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long4/end.png" alt="" class="box-1-img-3 miwow bounceIn" data-miwow-duration="1s"
+                  data-miwow-delay="0.6s">
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 长图5 -->
+   <section class="page-long5" style="display: none;">
+      <div class="long-box miwow-box5">
+         <!-- logo -->
+         <img src="./imgs/global/logo.png" alt="" class="logo2">
+         <!-- 背景 -->
+         <img src="./imgs/long5/bg.png" alt="" class="bg1">
+         <!-- 返回按钮 -->
+         <img src="./imgs/global/back.png" alt="" class="back">
+         <div class="common-box">
+            <!-- 内容 -->
+            <img src="./imgs/long5/de1.png" alt="" class="de1">
+            <img src="./imgs/long5/title.png " alt="" class="long-1-title miwow zoomIn" data-miwow-duration="1s"
+               data-miwow-delay="0">
+            <div class="box-1">
+               <div class="relative">
+                  <img src="./imgs/long5/de2.png" alt="" class="box-1-img-3 miwow bounceInRight"
+                     data-miwow-duration="1s" data-miwow-delay="0.7s">
+                  <img src="./imgs/long5/video.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long5/ques.png" alt="" class="box-1-img-4 ">
+                  <img src="./imgs/long5/swiper2.png" alt="" class="box-1-img-2">
+               </div>
+            </div>
+            <div class="swiper1-box">
+               <div class="relative">
+                  <!-- Swiper -->
+                  <div class="swiper1-container">
+                     <div class="swiper-wrapper">
+                        <img src="./imgs/long5/s1.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/s2.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/s3.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/s4.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/s5.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/s6.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/s7.jpg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/s8.jpeg" alt="" class="swiper-slide">
+                     </div>
+                  </div>
+                  <img class="swiper1-left" src="imgs/long5/left.png" />
+                  <img class="swiper1-right" src="imgs/long5/right.png" />
+               </div>
+            </div>
+            <div class="box-2">
+               <div class="relative">
+                  <img src="./imgs/long5/le1.png" alt="" class="box-1-img-2 animate rotateD">
+                  <img src="./imgs/long5/le2.png" alt="" class="box-1-img-3 animate blink">
+                  <img src="./imgs/long5/text.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long5/person2.png" alt="" class="box-1-img-4 animate opacityA">
+               </div>
+            </div>
+            <div class="swiper2-box">
+               <div class="relative">
+                  <!-- Swiper -->
+                  <div class="swiper2-container">
+                     <div class="swiper-wrapper">
+                        <img src="./imgs/long5/l1.jpeg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/l2.jpeg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/l3.jpeg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/l4.jpeg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/l5.jpeg" alt="" class="swiper-slide">
+                        <img src="./imgs/long5/l6.jpeg" alt="" class="swiper-slide">
+                     </div>
+                  </div>
+                  <img class="swiper2-left" src="imgs/long5/left.png" />
+                  <img class="swiper2-right" src="imgs/long5/right.png" />
+               </div>
+            </div>
+            <div class="box-3">
+               <div class="relative">
+                  <img src="./imgs/long5/end.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long5/person1.png" alt="" class="box-1-img-2 animate rotateE">
+                  <img src="./imgs/long5/rocket.png" alt="" class="box-1-img-3 animate scaleB">
+                  <div class="img-box">
+                     <img src="./imgs/long5/e1.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 长图6 -->
+   <section class="page-long6" style="display: none;">
+      <div class="long-box miwow-box6">
+         <!-- logo -->
+         <img src="./imgs/global/logo.png" alt="" class="logo2">
+         <!-- 背景 -->
+         <img src="./imgs/long6/bg.png" alt="" class="bg1">
+         <!-- 返回按钮 -->
+         <img src="./imgs/global/back.png" alt="" class="back">
+         <div class="common-box">
+            <!-- 内容 -->
+            <img src="./imgs/long6/de2.png" alt="" class="de1">
+            <img src="./imgs/long6/title.png" alt="" class="long-1-title miwow zoomIn" data-miwow-duration="1s"
+               data-miwow-delay="0">
+            <div class="box-1">
+               <div class="relative">
+                  <img src="./imgs/long6/video.png" alt="" class="box-1-img-1">
+                  <img src="./imgs/long6/p1.png" alt="" class="box-1-img-2">
+                  <img src="./imgs/long6/de1.png" alt="" class="box-1-img-3 animate rotateE">
+                  <img src="./imgs/long6/de4.png" alt="" class="box-1-img-4 animate scaleB">
+               </div>
+            </div>
+            <div class="box-2">
+               <img src="./imgs/long6/ques.png" alt="" class="box-1-img-1 miwow bounceInLeft" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long6/p3.png" alt="" class="box-1-img-2 miwow bounceInRight" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long6/title1.png" alt="" class="box-1-img-3 miwow bounceInLeft" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long6/text1.png" alt="" class="box-1-img-4 miwow bounceInRight" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long6/title2.png" alt="" class="box-1-img-5 miwow bounceInLeft" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long6/text2.png" alt="" class="box-1-img-6 miwow bounceInRight" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long6/p2.png" alt="" class="box-1-img-7 miwow bounceInLeft" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long6/text3.png" alt="" class="box-1-img-8 miwow bounceInRight" data-miwow-duration="1s"
+                  data-miwow-delay="0">
+               <img src="./imgs/long6/de5.png" alt="" class="box-1-img-9 animate rotateE">
+               <img src="./imgs/long6/de3.png" alt="" class="box-1-img-10 animate scaleB">
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- 结果页 -->
+   <section class="page-end" style="display: none;">
+      <!-- logo -->
+      <img src="./imgs/global/logo.png" alt="" class="logo1">
+      <!-- 背景 -->
+      <img src="./imgs/global/bg.png" alt="" class="bg">
+      <div class="box-1">
+         <div class=" tiaodong">
+            <img src="./imgs/end/house2.png" alt="" class="img-1 animated fadeInUpBig ">
+         </div>
+         <div class=" tiaodong1">
+            <img src="./imgs/end/house1.png" alt="" class="img-4 animated fadeInUpBig  delay200">
+         </div>
+         <div class=" tiaodong1">
+            <img src="./imgs/end/house3.png" alt="" class="img-5 animated fadeInUpBig  delay400">
+         </div>
+         <div class="opacityA">
+            <img src="./imgs/end/light.png" alt="" class="img-2 animated fadeIn delay1000">
+            <img src="./imgs/end/light2.png" alt="" class="img-7 animated fadeIn delay600">
+         </div>
+         <img src="./imgs/end/circle6.png" alt="" class="img-6 animate scaleB">
+         <img src="./imgs/end/circle5.png" alt="" class="img-3 animate scaleA">
+      </div>
+      <img src="./imgs/end/circle4.png" alt="" class="img-circle4-1 animate blink">
+      <img src="./imgs/end/circle4.png" alt="" class="img-circle4-2 animate blink">
+      <img src="./imgs/end/circle1.png" alt="" class="img-circle1-1 animate rotateB">
+      <img src="./imgs/end/circle2.png" alt="" class="img-circle2-1 animate scaleA">
+      <img src="./imgs/end/circle3.png" alt="" class="img-circle3-1 animate scaleB">
+      <img src="./imgs/end/text.png" alt="" class="img-text animated zoomIn delay1400">
+   </section>
+   <!-- 公共JS -->
+   <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+   <script src="js/swiper.min.js"></script>
+   <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+   <script src="js/miwow.min.js"></script>
+</body>
+<script>
+   // -----------------loading
+   perFun()
+
+   function perFun() {
+      var imgs = document.getElementsByTagName("img");
+      var len = 0;
+      var percent = $("#percent")
+      var imgLength = imgs.length - 1
+      for (var i = 0; i < imgs.length; i++) {
+         if (imgs[i].complete) {
+            len++;
+            percent.html(Math.round(len * 100 / imgs.length) + "%")
+            // 跳转到首页
+            if (len == imgLength) {
+               $(".page-loading").fadeOut(0)
+               $(".page-page1").fadeIn(500)
+            }
+         } else {
+            imgs[i].onload = function () {
+               len++;
+               percent.html(Math.round(len * 100 / imgs.length) + "%")
+               // 跳转到首页
+               if (len == imgLength) {
+                  $(".page-loading").fadeOut(0)
+                  $(".page-page1").fadeIn(500)
+                  // -----------------page-page1
+                  setTimeout(function () {
+                     $(".page-page1").fadeOut(0)
+                     $(".page-page2").fadeIn(500)
+                  }, 3500);
+               }
+            }
+         }
+      }
+   }
+   // 触屏滑动
+   // var order = ['page-index'];
+   // var current = 0;
+   // var touchstartY, touchendY;
+   // $("body").on("touchstart", function (e) {
+   //    touchstartY = e.originalEvent.targetTouches[0].pageY;
+   // })
+   // $("body").on("touchend", function (e) {
+   //    touchendY = e.originalEvent.changedTouches[0].pageY;
+   //    if (touchstartY - touchendY >= 50) {
+   //       if (current == 3) {
+   //          return;
+   //       }
+   //       $("." + order[current]).fadeOut(0);
+   //       current++;
+   //       current = (current + 4) % 4;
+   //       $('.page-page3').fadeIn(500);
+   //    }
+   //    if (touchstartY - touchendY <= -50) {
+   //       if (current == 0) {
+   //          return;
+   //       }
+   //       $("." + order[current]).fadeOut(0);
+   //       current--;
+   //       current = (current + 4) % 4;
+   //       $('.page-page3').fadeIn(500);
+   //    }
+   // })
+   //   ----------page-page2
+   $(".js-go-page-index").click(function () {
+      $(".page-page2").fadeOut(0)
+      $(".page-index").fadeIn(500)
+   })
+   // ---------------page-index 
+   $(".js-go-page-page3").click(function () {
+      $(".page-index").fadeOut(0)
+      $(".page-page3").fadeIn(500)
+   })
+   // ----------------page-page3
+   $(".js-go-page-long1").click(function () {
+      $(".page-page3").fadeOut(0)
+      $(".page-long1").fadeIn(500)
+      new Miwow('.miwow-box1').init();
+   })
+   $(".js-go-page-long2").click(function () {
+      $(".page-page3").fadeOut(0)
+      $(".page-long2").fadeIn(500)
+      new Miwow('.miwow-box2').init();
+   })
+   $(".js-go-page-long3").click(function () {
+      $(".page-page3").fadeOut(0)
+      $(".page-long3").fadeIn(500)
+      new Miwow('.miwow-box3').init();
+   })
+   $(".js-go-page-long4").click(function () {
+      $(".page-page3").fadeOut(0)
+      $(".page-long4").fadeIn(500)
+      new Miwow('.miwow-box4').init();
+   })
+   $(".js-go-page-long5").click(function () {
+      $(".page-page3").fadeOut(0)
+      $(".page-long5").fadeIn(500)
+      new Miwow('.miwow-box5').init();
+      var swiper = new Swiper('.swiper1-container', {
+         slidesPerView: 'auto',
+         spaceBetween: 15,
+         centeredSlides: true,
+         loop: true,
+         autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+         },
+         navigation: {
+            nextEl: '.swiper1-right',
+            prevEl: '.swiper1-left',
+         },
+      });
+      var swiper = new Swiper('.swiper2-container', {
+         slidesPerView: 'auto',
+         spaceBetween: 15,
+         centeredSlides: true,
+         loop: true,
+         autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+         },
+         navigation: {
+            nextEl: '.swiper2-right',
+            prevEl: '.swiper2-left',
+         },
+      });
+   })
+   $(".js-go-page-long6").click(function () {
+      $(".page-page3").fadeOut(0)
+      $(".page-long6").fadeIn(500)
+      new Miwow('.miwow-box6').init();
+   })
+   // 长图返回
+   $(".back").click(function () {
+      $(this).parent().parent().fadeOut(0)
+      $(".page-page3").fadeIn(500)
+   })
+</script>
+
+</html>

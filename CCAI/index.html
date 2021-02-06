@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>CCAI</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- 独立样式 -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <script>
+        // 自适应REM
+        window.onload = function () {
+            getRem(540, 100)
+        };
+        window.onresize = function () {
+            getRem(540, 100)
+        };
+        getRem(540, 100);
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <img class="music animated rotatemusic infinite" src="./imgs/music.png">
+    <audio id="bgm" preload="auto" src="https://kx2019.oss-cn-beijing.aliyuncs.com/ccai/bgmusic.mp3"></audio>
+    <!-- 加载页 -->
+    <section class="page-loading">
+        <img src="./imgs/loading-bg.jpg" alt="" class="bg">
+        <div class="double-box">
+            <div class="double-bounce1 double-bounce1"></div>
+            <div class="double-bounce2 double-bounce2"></div>
+        </div>
+        <div id="percent" class="number"></div>
+    </section>
+    <section class="page-1 js-page-1" style="display: none">
+        <img src="./imgs/page-1-bg2.jpg" alt="" class="bg">
+        <img src="./imgs/page-1-bg1.jpg" alt="" class="bg opacityBg">
+        <img src="./imgs/page-1-img1.png" alt="" class="img-1 animated fadeIn du1000">
+        <div class="text-box">
+            <div class="relative">
+                <img src="./imgs/page-1-text1.png" alt="" class="text-1 animated movePage1text1 du1000">
+                <img src="./imgs/page-1-text2.png" alt="" class="text-2 animated movePage1text1 du1000 ">
+            </div>
+        </div>
+        <div class="button-box js-go-page-2 animated fadeInUp du1000">
+            <div class="relative">
+                <img src="./imgs/page-1-img3.png" alt="" class="button1">
+                <img src="./imgs/page-1-img2.png" alt="" class="button2 opacityButton">
+            </div>
+        </div>
+    </section>
+    <section class="page-2 js-page-2" style="display: none">
+        <img src="./imgs/loading-bg.jpg" alt="" class="bg">
+        <img src="./imgs/back.png" alt="" class="back js-back-page-1">
+        <img src="./imgs/page-1-img1.png" alt="" class="img-1">
+        <div class="text-box">
+            <img src="./imgs/page-2-img1.png" alt="" class="text-bg">
+            <img src="./imgs/page-2-img7.png" alt="" class="text-bg opacityLine3">
+            <div class="textHidden">
+                <img src="./imgs/page-2-img2.png" alt="" class="text">
+            </div>
+            <img src="./imgs/page-2-img5.png" alt="" class="img-gang1 gangMove1">
+            <img src="./imgs/page-2-img5.png" alt="" class="img-gang2 gangMove2">
+        </div>
+        <div class="button-box js-go-page-3">
+            <div class="relative">
+                <img src="./imgs/page-2-img3.png" alt="" class="button1">
+                <img src="./imgs/page-2-img4.png" alt="" class="button2 opacityButton">
+            </div>
+        </div>
+    </section>
+    <section class="page-3 js-page-3" style="display: none">
+        <img src="./imgs/page-3-bg.jpg" alt="" class="bg">
+        <img src="./imgs/back.png" alt="" class="back js-back-page-2">
+        <div class="circle-box">
+            <img src="./imgs/page-3-img1.png" alt="" class="img-1 rotateCircle1">
+            <img src="./imgs/page-3-img2.png" alt="" class="img-2 rotateCircle2">
+            <img src="./imgs/page-3-img9.png" alt="" class="title">
+            <img src="./imgs/page-3-img14.png" alt="" class="cover">
+            <!-- 日程安排 -->
+            <div class="text-box-1 text-box moveBox1 js-go-page-5">
+                <div class="relative">
+                    <img src="./imgs/page-3-text-box.png" alt="" class="text-bg opacityLine1">
+                    <div class="text"><img src="./imgs/page-3-img4.png" alt=""><span>启程安排</span></div>
+                    <img src="./imgs/page-3-img3.png" alt="" class="line ">
+                </div>
+            </div>
+            <!-- 大会嘉宾 -->
+            <div class="text-box-2 text-box moveBox2 js-go-page-4">
+                <div class="relative">
+                    <img src="./imgs/page-3-text-box.png" alt="" class="text-bg opacityLine2">
+                    <div class="text">大会嘉宾</div>
+                    <img src="./imgs/page-3-img5.png" alt="" class="line">
+                </div>
+            </div>
+            <!-- 报名参加 -->
+            <div class="text-box-3 text-box moveBox3 js-go-other">
+                <div class="relative">
+                    <img src="./imgs/page-3-text-box.png" alt="" class="text-bg opacityLine1">
+                    <div class="text">报名参加</div>
+                    <img src="./imgs/page-3-img6.png" alt="" class="line">
+                </div>
+            </div>
+            <!-- 查看地图 -->
+            <div class="text-box-4 text-box moveBox2 js-go-map">
+                <div class="relative">
+                    <img src="./imgs/page-3-text-box2.png" alt="" class="text-bg opacityLine2">
+                    <div class="text">查看地图</div>
+                    <img src="./imgs/page-3-img7.png" alt="" class="line">
+                    <img src="./imgs/page-3-img8.png" alt="" class="map">
+                </div>
+            </div>
+            <div class="text-box-5 text-box">
+                <div class="relative">
+                    <img src="./imgs/page-3-img10.png" alt="" class="line">
+                    <img src="./imgs/page-3-img11.png" alt="" class="icon-line opacityLine2">
+                </div>
+            </div>
+            <div class="text-box-6 text-box">
+                <div class="relative">
+                    <img src="./imgs/page-3-img12.png" alt="" class="line">
+                    <img src="./imgs/page-3-img13.png" alt="" class="icon-line opacityLine1">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-4 js-page-4" style="display: none">
+        <img src="./imgs/page-4-bg.jpg" alt="" class="bg">
+        <img src="./imgs/back.png" alt="" class="back js-back-page-3-4">
+        <img src="./imgs/page-1-img1.png" alt="" class="img-1 animated fadeIn du1000">
+        <div class=" text-box">
+            <img src="./imgs/page-4-text1.png" alt="" class="title1 animated zoomIn du1000">
+            <div class="img-box">
+                <img src="./imgs/page-4-img1.png" alt="" class="img img-2 wow zoomIn" data-wow-duration="0.5s">
+                <img src="./imgs/page-4-img2.png" alt="" class="img img-3 wow zoomIn" data-wow-duration="0.5s"
+                    data-wow-delay="1s">
+                <img src="./imgs/page-4-img3.png" alt="" class="img img-4 wow zoomIn" data-wow-duration="0.5s"
+                    data-wow-delay="1.5s">
+                <img src="./imgs/page-4-img4.png" alt="" class="img img-5 wow zoomIn" data-wow-duration="0.5s"
+                    data-wow-delay="2s">
+                <img src="./imgs/page-4-img5.png" alt="" class="img img-6 wow zoomIn" data-wow-duration="0.5s"
+                    data-wow-delay="2.5s">
+                <img src="./imgs/page-4-img6.png" alt="" class="img img-7 wow zoomIn" data-wow-duration="0.5s"
+                    data-wow-delay="3s">
+                <img src="./imgs/page-4-img7.png" alt="" class="img img-8 wow zoomIn" data-wow-duration="0.5s"
+                    data-wow-delay="3.5s">
+            </div>
+        </div>
+    </section>
+    <section class="page-5 js-page-5" style="display: none">
+        <img src="./imgs/page-5-bg.jpg" alt="" class="bg">
+        <img src="./imgs/back.png" alt="" class="back js-back-page-3-5">
+        <img src="./imgs/page-1-img1.png" alt="" class="img-1 animated fadeIn du1000">
+        <div class="text-box">
+            <img src="./imgs/page-2-img1.png" alt="" class="text-bg">
+            <img src="./imgs/page-2-img7.png" alt="" class="text-bg opacityLine3">
+            <div class="textHidden">
+                <img src="./imgs/page-5-img5.png" alt="" class="text js-data-text-1">
+                <img src="./imgs/page-5-img6.png" alt="" class="text js-data-text-2" style="display: none">
+            </div>
+            <div class="data-box">
+                <div class="data js-data-1">
+                    <div class="relative">
+                        <img src="./imgs/page-5-img3.png" alt="">
+                        <img src="./imgs/page-5-img4.png" alt="" style="display: none" class="js-data-active1">
+                        <span>9/21</span>
+                    </div>
+                </div>
+                <div class="data js-data-2">
+                    <div class="relative">
+                        <img src="./imgs/page-5-img3.png" alt="">
+                        <img src="./imgs/page-5-img4.png" alt="" class="js-data-active2">
+                        <span>9/22</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="demo"></div>
+    <!-- 公共JS -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://api.map.baidu.com/api?v=2.0&ak=GcgEefPYzdTn2FU52fbzXtmBKUL5xbol"></script>
+    <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+    <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

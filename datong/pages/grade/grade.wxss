@@ -1,0 +1,37 @@
+/* pages/grade/grade.wxss */
+.grade-box{
+   position:absolute;
+  z-index:5;
+  left:0;
+  width:600rpx;
+  right:0;
+  margin:auto;
+  top:255rpx;
+}
+.grage-img{
+  position:absolute;
+top:745rpx;
+left:0;
+right:0;
+margin:auto;
+width:390rpx;
+z-index:5;
+}
+.grade-text{
+  position:absolute;
+top:570rpx;
+left:0;
+right:0;
+margin:auto;
+font-size:70rpx;
+color:#fff;
+font-weight:bold;
+z-index:6;
+line-height:120rpx;
+text-align:center;
+text-shadow:0.11em 0.11em 0.13em #333
+}
+.grade-text view{
+  display: inline-block;
+  color: #f19601;
+}

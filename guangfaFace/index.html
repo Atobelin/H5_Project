@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>广发银行</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<script src="js/rem.js"></script>
+		<!-- loading -->
+		<section class="loading page fullpage">
+			<img src="img/loading/icon.png" alt="" class="icon">
+			<img src="img/loading/icon-line.png" alt="" class="icon-line loadingMove">
+			<span class="number" id="target">100%</span>
+			<div class="loadingcanvas">
+				<canvas id="loadingCanvas"></canvas>
+			</div>			
+		</section>
+		
+		<!-- page1 -->
+		<section class="page1 page fullpage" style="display: none" >
+			<img class="logo animated fadeIn delay2000" src="img/page1/logo.png" >
+			<img class="dot dot1 animated bounceInUp" src="img/page1/dot.png" >
+			<img class="dot dot2 animated bounceInDown" src="img/page1/dot.png" >
+			<img class="line animated taller delay500" src="img/page1/line.png" >
+			<img class="face animated zoomIn delay1500" src="img/page1/face.png" >
+			<div class="circles animated zoomIn delay2000">
+				<img class="circle1 animated move1 infinite" src="img/page1/circle1.png" >
+				<img class="circle2 animated move3 infinite" src="img/page1/circle2.png" >
+				<img class="circle3 animated move2 infinite" src="img/page1/circle3.png" >
+				<img class="circle4 animated move1 infinite" src="img/page1/circle4.png" >
+				<img class="circle5 animated flash infinite du3000" src="img/page1/circle5.png" >
+				<img class="circle6 animated move2 infinite" src="img/page1/circle6.png" >
+				<img class="circle7 animated move3 infinite" src="img/page1/circle4.png" >
+				<div class="inputtext animated move4 infinite"></div>
+			</div>
+			<img class="leftface animated vanishIn delay2000" src="img/page1/leftface.png" >
+			<img class="rightface animated vanishIn delay2000" src="img/page1/rightface.png" >
+			<div class="bigtitle animated fatter delay1000">
+				<img class="title" src="img/page1/title.png">
+				<img class="titlelight animated flash infinite" src="img/page1/titlelight.png">
+			</div>
+			<img class="inputbg animated fatter delay2500" src="img/page1/inputbg.png" >
+			<img class="input animated fadeIn delay3000" src="img/page1/input.png" >
+			<img class="pleaseinput animated fadeIn delay3000" src="img/page1/pleaseinput.png">
+			<input id="nameinput" class="nameinput animated fadeIn delay3000" >
+
+			<img class="btn animated bounceIn delay3000" src="img/page1/btn.png" >
+			<input id="cameraInput" class="cameraInput" type="file"  accept="image/gif,image/jpeg,image/jpg,image/png" >
+			<div class="js-inputPhone"></div>
+			<!-- 弹出提示 -->
+			<!-- 请输入您的姓名 -->
+			<div class="tan-box js-tan-box js-tan-name" style="display: none;">
+				<img src="img/page1/t-box-1.png" alt="" class="t-name-img animated bounceInUp">
+			</div>
+			<!-- 换照片 -->
+			<div class="tan-box js-tan-box js-tan-phone" style="display: none;">
+				<img src="img/page1/t-box-3.png" alt="" class="t-name-img">
+			</div>	
+			<!-- 拼命加载 -->
+			<div class="tan-box js-tan " style="display: none;">
+				<img src="img/page1/t-box-2.png" alt="" class="t-tan-img animated scaleMove infinite">
+				<img src="img/page1/t-box.png" alt="" class="t-tam-line animated scaleMove infinite">
+			</div>					
+		</section>
+		
+		<!-- page2 -->
+		<section class="page2 page fullpage" style="display: none" >
+			<img class="logo animated fadeIn delay2000" src="img/page1/logo.png" >
+			<div class="line-dot">
+				<img src="img/page2/bg-line.png" alt="" class="bg-line  animated Opacity infinite">
+				<img src="img/page2/dot-1.png" alt="" class="dot-1  animated move5 infinite">
+				<img src="img/page2/dot-2.png" alt="" class="dot-2  animated move6 infinite">
+				<img src="img/page2/dot-3.png" alt="" class="dot-3 animated move7 infinite">
+				<img src="img/page2/dot-4.png" alt="" class="dot-4 animated Opacity infinite">	
+				<img src="img/page2/line-2.png" alt="" class="line-2 animated Opacity_line infinite">		
+				<img src="img/page2/line-4.png" alt="" class="line-4 animated Opacity_line infinite">	
+				<img src="img/page2/line-5.png" alt="" class="line-5 animated Opacity infinite">				
+			</div>
+			<!-- 脸部 -->
+			<div class="face animated bounceInDown">
+				<img src="img/page2/face-box.png" alt="" class="face-box">	
+				<div class="person-box">
+					<div class="relative">
+						<img src="" alt="" class="person-img" id="pic">
+						<img src="img/page2/person-bg.png" alt="" class="person-bg">
+						<img src="img/page2/saomiao-line.png" alt="" class="saomiao-line animated saomiaoMove infinite">
+					</div>
+				</div>
+				<div class="text-img-1 animated move8 infinite"></div>
+				<div class="text-img-2 animated move9 infinite"></div>			
+			</div>
+
+			<!-- 线条 -->
+			<img src="img/page2/line-1.png" alt="" class="line-1 animated move10 infinite">
+			<img src="img/page2/line-3.png" alt="" class="line-1-left animated Opacity_line infinite">
+			<img src="img/page2/line-3.png" alt="" class="line-1-right animated Opacity_line infinite">
+
+			<!-- 文字滚动 -->
+			<img src="img/page2/line-6.png" alt="" class="text-g-line-1">
+			<img src="img/page2/line-7.png" alt="" class="text-g-line-2">
+			<div class="text-g-box animated zoomIn delay1000" id="marquee6">
+				<ul>
+					<li>ahsjduienbchdj，hisjwko,acnhdha#hi,hsjduienbchdj，hisjwkoa#vcnhdh,woojy#ij@alsodkdmcnhgxxxxhcdkcgqlwieyewkmxnc--%--yweoshakiwuqkdnb-----------#</li>
+					<li>ahsjduienbchdj，hisjwko,acnhdha#hi,hsjduienbchdj，hisjwkoa#vcnhdh,woojy#ij@alsodkdmcnhgxxxxhcdkcgqlwieyewkmxnc--%--yweoshakiwuqkdnb-----------#</li>
+				</ul>
+			</div>
+
+			<!-- 结果 -->
+			<div class="animated taller delay1500">
+				<img src="img/page2/text-box.png" alt="" class="result-box js-result-box animated infinite Opacity_quick">
+				<div class="result-text js-result-text">
+					<div>
+						<p>固定固定固定固定</p>
+						<p>固定固定固定固定</p>
+						<p>随机1随机1随机1随机1</p>
+						<p>随机2随机2随机2随机2</p>
+					</div>
+					<div>
+						<p>固定固定固定固定</p>
+						<p>固定固定固定固定</p>
+						<p>随机1随机1随机1随机1</p>
+						<p>随机2随机2随机2随机2</p>
+					</div>					
+				</div>			
+			</div>
+		</section>
+
+		<!-- page3 -->
+		<section class="page3 page fullpage" style="display: none">
+			<div>
+				<img src="img/page3/bg.png" alt="" class="bg" id="bg">
+				<!-- 头像 -->
+				<div class="person-box">
+					<img src="" alt="" id="pic_result">
+				</div>
+				<!-- 姓名 -->
+				<div class="name" id="result_name"></div>
+				<!-- 结果 -->
+				<div class="face-result js-face-result"></div>
+				<!-- 二维码 -->
+				<img src="img/page3/code.png" alt="" class="code">
+				<!-- 按钮 -->
+				<img src="img/page3/button.png" alt="" class="btn" >				
+			</div>
+		</section>
+		<!-- js -->
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+		<script src="js/marquee.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
+ 

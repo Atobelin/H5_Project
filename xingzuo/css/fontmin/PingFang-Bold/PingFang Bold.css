@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "PingFang Bold";
+    src: url("PingFang Bold.eot"); /* IE9 */
+    src: url("PingFang Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("PingFang Bold.woff") format("woff"), /* chrome、firefox */
+    url("PingFang Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("PingFang Bold.svg#PingFang Bold") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>惠普</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>  
+
+<body>
+	<div class="star section">
+		<!-- logo -->
+		<img src="imgs/logo.png" alt="" class="logo">
+		<!-- star内容 -->
+		<div class="box">
+			<img src="imgs/star-text.png" alt="" class="text">
+			<div class="js-question-list">
+				<!-- <p>您了解到本活动的途径是：</p>
+				<div class="check-box">
+					<div class="check-list">明星海报</div>
+					<div class="check-list">吾皇粉丝</div>
+					<div class="check-list">店员宣传</div>
+					<div class="check-list">路过看到</div>
+					<div class="check-list js-other">其他<input type="text"></div>
+				</div>	 -->			
+			</div>		
+		</div>
+	</div>
+	<!-- 公共JS -->
+	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+		var Ohref=window.location.href;
+		var arrhref=Ohref.split("?phone=");
+		var phone = arrhref[1]    	
+    	$.ajax({
+	        type: 'POST',
+	        url: 'http://hpapi.hongyu.ren/site/questions',
+	        data: {},
+	        dataType: 'json',
+	        success: function(data){
+	            if (data.status == 100) {
+	                var list = data.data.list
+  					// console.log(list)
+  					var html = ''
+				  	for(var i=0;i<list.length;i++){
+				   		var id = list[i].id
+				   		var idx = list[i].idx
+				  	 	var title = list[i].title
+				   		var answers = list[i].answers
+				   		// console.log(answers);
+				   		html += '<div class="question-list" id="'+i+'">'
+						html += '<p data-id="'+id+'">'+idx+'、'+title+'</p>';
+				   		html += '<div class="check-box">';				   		
+				   		for(var k=0;k<answers.length;k++){
+				   			var laber = answers[k].label
+				   			var content = answers[k].content
+				   			// console.log(content);
+				   			var tag = answers[k].tag
+				   			// console.log(tag);
+							if (tag == 1) {
+								html += '<div class="check-list"><span class="zm">'+laber+'</span>&nbsp&nbsp;<span class="nr">'+content+'</span><input type="text"/></div>';
+							}else{
+								html += '<div class="check-list"><span class="zm">'+laber+'</span>&nbsp&nbsp;<span class="nr">'+content+'</span></div>';
+							}
+				   		}
+				   		html += '<input class="js-result" type="hidden"/>'
+						html += '</div>';
+						html += '<a href="javascript:;" class="button js-next">下一步</a>';
+						html += '</div>';				   						  			   		
+				  	}
+				  	$(".js-question-list").append(html)	
+					// 单选
+					var zm
+					var nr
+					var qt
+					var tm
+					// 兑换码
+					var code
+			    	$(".check-list").click(function() {
+			    		$(this).siblings().removeClass('active')
+			    		$(this).addClass('active')
+			    	});	
+			    	var j = 0	
+			    	$("#"+j).show()			  	
+			    	// 下一步
+			    	var other_text
+			    	var allanswers=[]
+			    	$(".js-next").click(function(){
+			    		if ($(this).parent().find('.check-list').hasClass('active')) {
+							// 获取题目编号id
+			    			tm = $(this).parent().find('p').attr("data-id")
+			    			// console.log(tm);
+			    			// 获取答案
+			    			zm = $(this).parent().find('.check-list.active .zm').text()	
+			    			// console.log(zm);
+			    			nr = $(this).parent().find('.check-list.active .nr').text()	
+			    			// console.log(nr);
+			    			if (nr == '其他') {
+			    				qt = $(this).parent().find('.check-list.active input').val()	
+			    				console.log(qt);
+			    				$(this).parent().find('.js-result').val(qt)    				
+			    			}else{
+			    				$(this).parent().find('.js-result').val(zm)			    				
+			    			}
+			    			allanswers.push({
+			    				id: tm,
+			    				answer: $(this).parent().find('.js-result').val()
+			    			})
+			    			console.log(allanswers);
+			    			j++
+			    			if (j<8) {
+			    				var number = j-1
+			    				$("#"+number).hide()
+			    				$("#"+j).show()
+			    			}else{
+								$.ajax({
+					                type: 'POST',
+					                url: 'http://hpapi.hongyu.ren/site/answer',
+					                data: {
+					                	phone : phone,
+					                	answer : JSON.stringify(allanswers)
+					                },
+					                dataType: 'json',
+					                success: function(data){
+					                    if (data.status == 100) {
+					                    	// 号码
+					                       code = data.data.code
+					                       console.log(code);
+					                       window.location.href = "way.html?code="+code;
+					                    }else{
+					                    	layer.msg(data.data.err_msg);
+					                    }
+					                },
+					                error: function(xhr, type){
+					                    // layer.msg('请求超时!');
+					                    console.log('请求超时');
+					                }
+					            })			    				
+			    			}
+
+			    		}else{
+			    			layer.msg('请选择！')
+			    			return
+			    		}
+			    	})
+	            }else{
+	                // layer.msg(data.msg);
+	            }
+	        },
+	        error: function(xhr, type){
+	            // layer.msg('请求超时!');
+	        }
+	    });
+		    
+    </script>
+</body>
+
+</html>

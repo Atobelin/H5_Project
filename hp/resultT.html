@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>惠普</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>  
+
+<body>
+	<div class="resultT section">
+		<!-- logo -->
+		<img src="imgs/logo.png" alt="" class="logo">
+		<!-- resultT内容 -->
+		<div class="box">
+			<div class="img-box">
+                <a href="">
+                    <img src="imgs/resultT-1.png" alt="">
+                    <p class="name name-left">PPT</p>
+                    <p class="content">超大文件 运行速度</p>
+                </a>
+                <a href="">
+                    <img src="imgs/resultT-2.png" alt="">
+                    <p class="name name-right">Excel</p>
+                    <p class="content">数据功能 运行速度</p>
+                </a>                         
+            </div>
+            <img src="imgs/resultT-text.png" alt="" class="text">
+		</div>
+       <a href="javascript:;" class="button js-button">下一步</a>
+	</div>
+	<!-- 公共JS -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        var Ohref=window.location.href;
+        var arrhref=Ohref.split("?code=");
+        var code = arrhref[1] 
+        $(".js-button").click(function() {
+            location.href="end.html?code="+code;
+        });     
+    </script>
+</body>
+
+</html>

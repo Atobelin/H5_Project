@@ -1,0 +1,628 @@
+@charset "UTF-8";
+
+html{overflow-y: auto;overflow-x: hidden}
+body{overflow-x:hidden;width: 100%;font-family: "Helvetica neue", Helvetica, "lantinghei sc", 'Microsoft Yahei', '微软雅黑', sans-serif !important;;font-size: 16px;-ms-overflow-style: scrollbar;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-weight:normal;}
+input,button,select,textarea{outline:none}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+li{list-style:none}
+caption,th{text-align:left}
+th{vertical-align:baseline}
+*{outline:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;}
+a{text-decoration:none;color: #575757;font-size: 16px;}
+a:hover{text-decoration:none;}
+.tr3{-webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {position: relative; min-height: 1px; padding-right: 0; padding-left: 0; }
+.btn-group-vertical>.btn-group::after, .btn-group-vertical>.btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {display: none}
+.relative{position: relative}
+html,body{overflow: hidden; width: 100%; height: 100%; }
+.full{width: 32rem; height: 10.8rem; overflow: hidden; background: url(../img/bg.png); background-size: cover; background-repeat: no-repeat; background-position: center; position: relative;}
+
+/*-----------------------------------------------------------------------------*/
+img{
+	pointer-events: none
+}
+/*-------------------------------------------------------*/
+/*动画*/
+/*背景动画*/
+@keyframes bgMove
+{
+	0%{opacity: 0;transform: scale(1);}
+	50%{opacity: 1;transform: scale(1.1);}
+	100%{opacity: 0;transform: scale(1.2);}	
+}
+@-moz-keyframes bgMove/* Firefox */
+{
+	0%{opacity: 0;transform: scale(1);}
+	50%{opacity: 1;transform: scale(1.1);}
+	100%{opacity: 0;transform: scale(1.2);}
+}
+@-webkit-keyframes bgMove/* Safari 和 Chrome */
+{
+	0%{opacity: 0;transform: scale(1);}
+	50%{opacity: 1;transform: scale(1.1);}
+	100%{opacity: 0;transform: scale(1.2);}
+}
+/*顺时针旋转*/
+@keyframes rotate
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(360deg);}	
+}
+@-moz-keyframes rotate/* Firefox */
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate/* Safari 和 Chrome */
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(360deg);}
+}
+/*反向旋转*/
+@keyframes rotateBack
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(-360deg);}	
+}
+@-moz-keyframes rotateBack/* Firefox */
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(-360deg);}
+}
+@-webkit-keyframes rotateBack/* Safari 和 Chrome */
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(-360deg);}
+}
+/*箭头动*/
+@keyframes jt
+{
+	0%{opacity: 0;transform: scaleX(1);}
+	50%{opacity: 1;transform: scaleX(1.05);}
+	100%{opacity: 0;transform: scaleX(1.1);}	
+}
+@-moz-keyframes jt/* Firefox */
+{
+	0%{opacity: 0;transform: scaleX(1);}
+	50%{opacity: 1;transform: scaleX(1.05);}
+	100%{opacity: 0;transform: scaleX(1.1);}
+}
+@-webkit-keyframes jt/* Safari 和 Chrome */
+{
+	0%{opacity: 0;transform: scaleX(1);}
+	50%{opacity: 1;transform: scaleX(1.05);}
+	100%{opacity: 0;transform: scaleX(1.1);}
+}
+/*----------------------------------------------------------*/
+.bg-move{
+	width: 30.43rem;
+	height: 10.8rem;
+	position: absolute;
+	left: 0.9rem;  		
+	animation: bgMove 3s linear infinite;
+    -moz-animation: bgMove 3s linear infinite;
+    -webkit-animation: bgMove 3s linear infinite;	
+}
+.text-common{
+	width: 8.6rem;
+	height: 0.24rem;
+	font-family: SimHei;
+	font-size: 0.2rem;
+	color: #aaebff;
+	line-height: 0.24rem;
+	overflow:hidden;
+	text-align: center;
+}
+/*大标题*/
+.title-all{
+	position: absolute;
+	top: 0.36rem;
+	left: 14.91rem;
+	width: 2.15rem;
+	height: 0.64rem;
+}
+/*综合指数*/
+.c-1{
+	position: absolute;
+	width: 3.63rem;
+	height: 3.63rem;
+	top: 1.53rem;
+	left: 14.21rem;	
+}
+.c-2{
+	position: absolute;
+	width: 4.14rem;
+	height: 4.14rem;
+	top: 1.266rem;
+	left: 13.95rem;
+}
+.c-3{
+	position: absolute;
+	width: 4.32rem;
+	height: 4.32rem;
+	top: 1.18rem;
+	left: 13.86rem;
+	animation: rotate 15s linear infinite;
+    -moz-animation: rotate 15s linear infinite;
+    -webkit-animation: rotate 15s linear infinite;
+}
+.c-4{
+	position: absolute;
+	height: 4.74rem;
+	width: 4.74rem;
+	top: 0.97rem;
+	left: 13.65rem;
+	animation: rotate 15s linear infinite;
+    -moz-animation: rotate 15s linear infinite;
+    -webkit-animation: rotate 15s linear infinite;
+}
+.c-5{
+	position: absolute;
+	width: 2.19rem;
+	height: auto;
+	top: 2.311rem;
+    left: 14.935rem;
+	-webkit-transform-origin: 49.8% 49.9%;
+	transform-origin: 49.8% 49.9%;
+	animation: rotateBack 15s linear infinite;
+    -moz-animation: rotateBack 15s linear infinite;
+    -webkit-animation: rotateBack 15s linear infinite;
+}
+.c-6{
+	position: absolute;
+	width: 2.09rem;
+	height: auto;
+	top: 2.336rem;
+  left: 15.01rem;
+	-webkit-transform-origin: 49.3% 50%;
+	transform-origin: 49.3% 50%;
+	animation: rotate 15s linear infinite;
+    -moz-animation: rotate 15s linear infinite;
+    -webkit-animation: rotate 15s linear infinite;
+}
+.c-7{
+	position: absolute;
+	width: 1.76rem;
+	height: auto;
+	top: 2.46rem;
+	left: 15.15rem;
+animation: rotateBack 15s linear infinite;
+    -moz-animation: rotateBack 15s linear infinite;
+    -webkit-animation: rotateBack 15s linear infinite;	
+}
+.c-text-1{
+	    font-family: SimHei;
+    font-size: 0.49rem;
+    color: #d9c62d;
+    position: absolute;
+    top: 2.82rem;
+    left: 15.42rem;
+}
+.c-text-2{
+	    font-family: SimHei;
+    font-size: 0.18rem;
+    color: #e1e1e1;
+    position: absolute;
+    top: 3.46rem;
+    left: 15.39rem;
+}
+.c-text-3{
+	font-family: SimHei;
+	font-size: 0.16rem;
+	color: #e1e1e1;
+	position: absolute;
+	top: 3.72rem;
+	left: 15.51rem;
+}
+.c-text-4{
+	width: 0.16rem;
+	height: 0.17rem;
+}
+.c-text-5{
+	font-family: SimHei;
+	font-size: 0.18rem;
+	color: #d9c62d;
+}
+/*市场流动性指数*/
+.box-ld{
+	width: 10.15rem;
+	height: 4.47rem;
+	position: absolute;
+	top: 1.1rem;
+	left: 0.4rem;
+}
+.boxa-ld{
+	width: 10.53rem;
+	height: 4.85rem;
+	position: absolute;
+	top: 0.93rem;
+  left: 0.2rem;
+	animation: flash 3s infinite linear;
+	-webkit-animation: flash 3s infinite linear;
+}
+.box-title-ld{
+	width: 4.02rem;
+    position: absolute;
+    top: 1.28rem;
+    left: 3.7rem;
+    height: 0.67rem;
+	animation: jt 2.5s linear infinite;
+    -moz-animation: jt 2.5s linear infinite;
+    -webkit-animation: jt 2.5s linear infinite;    
+}
+.title-ld{
+	width: 2.44rem;
+	height: 0.36rem;
+	position: absolute;
+	top: 1.22rem;
+	left: 4.2rem;
+}
+.text-ld{
+	top: 4.83rem;
+	left: 1.44rem;
+	position: absolute;
+}
+/*市场活跃度指数*/
+.box-hy{
+	width: 10.15rem;
+	height: 4.47rem;
+	position: absolute;
+	top: 5.97rem;
+	left: 0.4rem;
+}
+.boxa-hy{
+	width: 10.53rem;
+	height: 4.85rem;
+	position: absolute;
+	top: 5.78rem;
+  left: 0.2rem;
+	animation: flash 3s infinite linear;
+	-webkit-animation: flash 3s infinite linear;
+}
+.box-title-hy{
+	    width: 4.02rem;
+    position: absolute;
+    top: 5.97rem;
+    left: 3.7rem;
+    height: 0.67rem;
+	animation: jt 2.5s linear infinite;
+    -moz-animation: jt 2.5s linear infinite;
+    -webkit-animation: jt 2.5s linear infinite;    
+}
+.title-hy{
+	width: 2.44rem;
+	height: 0.36rem;
+	position: absolute;
+	top: 6.09rem;
+	left: 4.2rem;
+}
+.text-hy{
+	position: absolute;
+	top: 9.69rem;
+	left: 1.44rem;
+}
+/*市场竞争指数*/
+.box-jingz{
+	width: 10.15rem;
+	height: 4.47rem;
+	position: absolute;
+	top: 5.97rem;
+	left: 10.93rem;
+}
+.boxa-jingz{
+	width: 10.53rem;
+	height: 4.85rem;
+	position: absolute;
+	top: 5.78rem;
+  left: 10.74rem;
+	animation: flash 3s infinite linear;
+	-webkit-animation: flash 3s infinite linear;
+}
+.box-title-jingz{
+	    width: 4.02rem;
+    position: absolute;
+    top: 5.97rem;
+    left: 14.05rem;
+    height: 0.67rem;
+	animation: jt 2.5s linear infinite;
+    -moz-animation: jt 2.5s linear infinite;
+    -webkit-animation: jt 2.5s linear infinite;    
+}
+.title-jingz{
+	width: 2.1rem;
+    height: 0.36rem;
+    position: absolute;
+    top: 6.09rem;
+    left: 14.95rem;
+}
+.text-jingz{
+	position: absolute;
+	top: 9.69rem;
+	left: 11.71rem;
+}
+/*市场集中指数*/
+.box-jz{
+	width: 10.15rem;
+	height: 4.47rem;
+	position: absolute;
+	top: 1.1rem;
+	right: 0.4rem;
+}
+.boxa-jz{
+	width: 10.53rem;
+	height: 4.85rem;
+	position: absolute;
+	top: 0.93rem;
+	right: 0.2rem;
+	animation: flash 3s infinite linear;
+	-webkit-animation: flash 3s infinite linear;
+}
+.box-title-jz{
+	    width: 4.02rem;
+    position: absolute;
+    top: 1.28rem;
+    right: 3.7rem;
+    height: 0.67rem;
+	animation: jt 2.5s linear infinite;
+    -moz-animation: jt 2.5s linear infinite;
+    -webkit-animation: jt 2.5s linear infinite;    
+}
+.title-jz{
+	width: 2.44rem;
+	height: 0.36rem;
+	position: absolute;
+	top: 1.22rem;
+	right: 4.2rem;
+}
+.text-jz{
+	position: absolute;
+	top: 4.83rem;
+	right: 1.38rem;
+}
+/*市场开放指数*/
+.box-kf{
+	width: 10.15rem;
+	height: 4.47rem;
+	position: absolute;
+	top: 5.97rem;
+	right: 0.4rem;
+}
+.boxa-kf{
+	width: 10.53rem;
+	height: 4.85rem;
+	position: absolute;
+	top: 5.78rem;
+	right: 0.2rem;
+	animation: flash 3s infinite linear;
+	-webkit-animation: flash 3s infinite linear;
+}
+.box-title-kf{
+	    width: 4.02rem;
+    position: absolute;
+    top: 5.97rem;
+    right: 3.7rem;
+    height: 0.67rem;
+	animation: jt 2.5s linear infinite;
+    -moz-animation: jt 2.5s linear infinite;
+    -webkit-animation: jt 2.5s linear infinite;    
+}
+.title-kf{
+	width: 2.44rem;
+	height: 0.36rem;
+	position: absolute;
+	top: 6.09rem;
+	right: 4.2rem;
+}
+.text-kf{
+	position: absolute;
+	right: 1.38rem;
+	top: 9.69rem;
+}
+
+.text-all{
+	position: absolute;
+	width: 7.95rem;
+	height: 2.46rem;
+}
+.text-all-1{
+	top: 2.20rem;
+	left: 1.7rem;
+}
+.text-all-2{
+	    top: 7rem;
+    left: 1.7rem;
+}
+.text-all-3{
+	top: 7rem;
+	left: 12.15rem;
+}
+.text-all-4{
+	top: 2.20rem;
+	right: 1.6rem;
+}
+.text-all-5{
+	top: 7rem;
+	right: 1.6rem;
+}
+
+.canvasbody{
+	    width: 4.5rem;
+    height: 4.5rem;
+    position: absolute;
+    top: 1.14rem;
+    left: 13.78rem;
+    transform: rotate(1deg);
+}
+#canvas{
+	width: 100%;
+	height: 100%;
+}
+.delay1500{
+	animation-delay: 1.5s;
+	-webkit-animation-delay: 1.5s;
+}
+@keyframes flash{
+	from,to{opacity: 0;}
+	50%{opacity: 1;}
+}
+@-webkit-keyframes flash{
+	from,to{opacity: 0;}
+	50%{opacity: 1;}
+}
+@keyframes iconMoveYi
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(11rem,0); -ms-transform: translate(11rem,0); -webkit-transform: translate(11rem,0); -o-transform: translate(11rem,0); -moz-transform: translate(11rem,0);opacity: 1}	
+	100%{opacity:0;transform: translate(22rem,0);-ms-transform: translate(22rem,0); -webkit-transform: translate(22rem,0); -o-transform: translate(22rem,0); -moz-transform: translate(22rem,0);}	
+}
+@-moz-keyframes iconMoveYi/* Firefox */
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(11rem,0); -ms-transform: translate(11rem,0); -webkit-transform: translate(11rem,0); -o-transform: translate(11rem,0); -moz-transform: translate(11rem,0);opacity: 1}	
+	100%{opacity:0;transform: translate(22rem,0);-ms-transform: translate(22rem,0); -webkit-transform: translate(22rem,0); -o-transform: translate(22rem,0); -moz-transform: translate(22rem,0);}
+}
+@-webkit-keyframes iconMoveYi/* Safari 和 Chrome */
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(11rem,0); -ms-transform: translate(11rem,0); -webkit-transform: translate(11rem,0); -o-transform: translate(11rem,0); -moz-transform: translate(11rem,0);opacity: 1}	
+	100%{opacity:0;transform: translate(22rem,0);-ms-transform: translate(22rem,0); -webkit-transform: translate(22rem,0); -o-transform: translate(22rem,0); -moz-transform: translate(22rem,0);}
+}
+
+@keyframes iconMoveEr
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(0,2rem); -ms-transform: translate(0,2rem); -webkit-transform: translate(0,2rem); -o-transform: translate(0,2rem); -moz-transform: translate(0,2rem);opacity: 1}	
+	100%{opacity:0;transform: translate(0,4rem);-ms-transform: translate(0,4rem); -webkit-transform: translate(0,4rem); -o-transform: translate(0,4rem); -moz-transform: translate(0,4rem);}	
+}
+@-moz-keyframes iconMoveEr/* Firefox */
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(0,2rem); -ms-transform: translate(0,2rem); -webkit-transform: translate(0,2rem); -o-transform: translate(0,2rem); -moz-transform: translate(0,2rem);opacity: 1}	
+	100%{opacity:0;transform: translate(0,4rem);-ms-transform: translate(0,4rem); -webkit-transform: translate(0,4rem); -o-transform: translate(0,4rem); -moz-transform: translate(0,4rem);}
+}
+@-webkit-keyframes iconMoveEr/* Safari 和 Chrome */
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(0,2rem); -ms-transform: translate(0,2rem); -webkit-transform: translate(0,2rem); -o-transform: translate(0,2rem); -moz-transform: translate(0,2rem);opacity: 1}	
+	100%{opacity:0;transform: translate(0,4rem);-ms-transform: translate(0,4rem); -webkit-transform: translate(0,4rem); -o-transform: translate(0,4rem); -moz-transform: translate(0,4rem);}
+}
+
+@keyframes iconMoveSan
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(-11rem,0); -ms-transform: translate(-11rem,0); -webkit-transform: translate(-11rem,0); -o-transform: translate(-11rem,0); -moz-transform: translate(-11rem,0);opacity: 1}	
+	100%{opacity:0;transform: translate(-22rem,0);-ms-transform: translate(-22rem,0); -webkit-transform: translate(-22rem,0); -o-transform: translate(-22rem,0); -moz-transform: translate(-22rem,0);}	
+}
+@-moz-keyframes iconMoveSan/* Firefox */
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(-11rem,0); -ms-transform: translate(-11rem,0); -webkit-transform: translate(-11rem,0); -o-transform: translate(-11rem,0); -moz-transform: translate(-11rem,0);opacity: 1}	
+	100%{opacity:0;transform: translate(-22rem,0);-ms-transform: translate(-22rem,0); -webkit-transform: translate(-22rem,0); -o-transform: translate(-22rem,0); -moz-transform: translate(-22rem,0);}
+}
+@-webkit-keyframes iconMoveSan/* Safari 和 Chrome */
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(-11rem,0); -ms-transform: translate(-11rem,0); -webkit-transform: translate(-11rem,0); -o-transform: translate(-11rem,0); -moz-transform: translate(-11rem,0);opacity: 1}	
+	100%{opacity:0;transform: translate(-22rem,0);-ms-transform: translate(-22rem,0); -webkit-transform: translate(-22rem,0); -o-transform: translate(-22rem,0); -moz-transform: translate(-22rem,0);}
+}
+
+@keyframes iconMoveSi
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(0,-2rem); -ms-transform: translate(0,-2rem); -webkit-transform: translate(0,-2rem); -o-transform: translate(0,-2rem); -moz-transform: translate(0,-2rem);opacity: 1}	
+	100%{opacity:0;transform: translate(0,-4rem);-ms-transform: translate(0,-4rem); -webkit-transform: translate(0,-4rem); -o-transform: translate(0,-4rem); -moz-transform: translate(0,-4rem);}	
+}
+@-moz-keyframes iconMoveSi/* Firefox */
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(0,-2rem); -ms-transform: translate(0,-2rem); -webkit-transform: translate(0,-2rem); -o-transform: translate(0,-2rem); -moz-transform: translate(0,-2rem);opacity: 1}	
+	100%{opacity:0;transform: translate(0,-4rem);-ms-transform: translate(0,-4rem); -webkit-transform: translate(0,-4rem); -o-transform: translate(0,-4rem); -moz-transform: translate(0,-4rem);}
+}
+@-webkit-keyframes iconMoveSi/* Safari 和 Chrome */
+{
+	0%{transform: translate(0 ,0); -ms-transform: translate(0,0); -webkit-transform: translate(0,0); -o-transform: translate(0,0); -moz-transform: translate(0,0);opacity: 0}
+	50%{transform: translate(0,-2rem); -ms-transform: translate(0,-2rem); -webkit-transform: translate(0,-2rem); -o-transform: translate(0,-2rem); -moz-transform: translate(0,-2rem);opacity: 1}	
+	100%{opacity:0;transform: translate(0,-4rem);-ms-transform: translate(0,-4rem); -webkit-transform: translate(0,-4rem); -o-transform: translate(0,-4rem); -moz-transform: translate(0,-4rem);}
+}
+.ld-icon-1{
+	width: 3.2rem;
+    top: 5.5rem;
+    position: absolute;
+    left: 0.2rem;
+    z-index: 4;
+	animation: iconMoveYi 10s linear infinite;
+    -moz-animation: iconMoveYi 10s linear infinite;
+    -webkit-animation: iconMoveYi 10s linear infinite;      
+}
+.ld-icon-2{
+	    width: 0.2rem;
+    top: 6.5rem;
+    position: absolute;
+    left: 10.44rem;
+    z-index: 4;
+animation: iconMoveEr 4s linear infinite;
+    -moz-animation: iconMoveEr 4s linear infinite;
+    -webkit-animation: iconMoveEr 4s linear infinite;     
+}
+.ld-icon-2-2{
+	width: 3.2rem;
+    position: absolute;
+    top: 10.33rem;
+    left: 2rem;
+    z-index: 4;
+animation: iconMoveYi 7s linear infinite;
+    -moz-animation: iconMoveYi 7s linear infinite;
+    -webkit-animation: iconMoveYi 7s linear infinite;    
+}
+.ld-icon-3{
+	    width: 3.2rem;
+    top: 10.33rem;
+    position: absolute;
+    left: 16.2rem;
+    z-index: 4;
+	animation: iconMoveSan 5s linear infinite;
+    -moz-animation: iconMoveSan 5s linear infinite;
+    -webkit-animation: iconMoveSan 5s linear infinite;      
+}
+.ld-icon-4{
+	       width: 0.2rem;
+    top: 1.5rem;
+    position: absolute;
+    left: 21.335rem;
+    z-index: 4;
+animation: iconMoveEr 5s linear infinite;
+    -moz-animation: iconMoveEr 5s linear infinite;
+    -webkit-animation: iconMoveEr 5s linear infinite;     
+}
+.ld-icon-4-1{
+	  width: 0.3rem;
+    top: 2.5rem;
+    position: absolute;
+    left: 31.46rem;
+    z-index: 4;
+animation: iconMoveSi 8s linear infinite;
+    -moz-animation: iconMoveSi 8s linear infinite;
+    -webkit-animation: iconMoveSi 8s linear infinite;     
+}
+.ld-icon-5{
+	    width: 3.2rem;
+    top: 10.33rem;
+    position: absolute;
+    left: 21.2rem;
+    z-index: 4;
+	animation: iconMoveYi 8s linear infinite;
+    -moz-animation: iconMoveYi 8s linear infinite;
+    -webkit-animation: iconMoveYi 8s linear infinite;      
+}
+
+
+
+
+
+
+
+
+
+

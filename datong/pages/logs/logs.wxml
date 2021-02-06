@@ -1,0 +1,223 @@
+<!--logs.wxml-->
+<view class="log content">
+  <image src='../../imgs/bg.png'  class='bg-img'></image>
+  <image src='../../imgs/title.png' class='all-title' mode="widthFix"></image>
+  <image src='../../imgs/logo.png'  mode="widthFix" class='logo'></image>
+  <image src='../../imgs/log-text.png'  mode="widthFix" class='log-text'></image>
+  <view class='log-box'>
+    <view class='log-box-list'>
+      <image src='../../imgs/log-bg.png' mode="widthFix" class='log-bg'></image>
+      <view class='list-title'>Group A</view>
+      <view class='check-box'>
+        <view class='check-list'>
+          <image data-num="0" src='../../imgs/a-1.png' class="country animated {{num[0]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[0]}}' mode='widthFix'></image>
+          <view class='check-text'>俄罗斯</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="1" src='../../imgs/a-2.png' class="country animated {{num[1]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[1]}}' mode='widthFix'></image>
+          <view class='check-text'>乌拉圭</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="2" src='../../imgs/a-3.png' class="country animated {{num[2]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[2]}}' mode='widthFix'></image>
+          <view class='check-text'>沙特阿拉伯</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="3" src='../../imgs/a-4.png' class="country animated {{num[3]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[3]}}' mode='widthFix'></image>
+          <view class='check-text'>埃及</view>
+        </view>
+      </view>
+    </view>
+    <view class='log-box-list'>
+      <image src='../../imgs/log-bg.png' mode="widthFix" class='log-bg'></image>
+      <view class='list-title'>Group B</view>
+      <view class='check-box'>
+        <view class='check-list'>
+          <image data-num="4" src='../../imgs/b-1.png' class="country animated {{num[4]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[4]}}' mode='widthFix'></image>
+          <view class='check-text'>西班牙</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="5" src='../../imgs/b-2.png' class="country animated {{num[5]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[5]}}' mode='widthFix'></image>
+          <view class='check-text'>葡萄牙</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="6" src='../../imgs/b-3.png' class="country animated {{num[6]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[6]}}' mode='widthFix'></image>
+          <view class='check-text'>伊朗</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="7" src='../../imgs/b-4.png' class="country animated {{num[7]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[7]}}' mode='widthFix'></image>
+          <view class='check-text'>摩洛哥</view>
+        </view>
+      </view>
+    </view>
+    <view class='log-box-list'>
+      <image src='../../imgs/log-bg.png' mode="widthFix"  class='log-bg'></image>
+      <view class='list-title'>Group C</view>
+      <view class='check-box'>
+        <view class='check-list'>
+          <image data-num="8" src='../../imgs/c-1.png' class="country animated {{num[8]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[8]}}' mode='widthFix'></image>
+          <view class='check-text'>法国</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="9" src='../../imgs/c-2.png' class="country animated {{num[9]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[9]}}' mode='widthFix'></image>
+          <view class='check-text'>丹麦</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="10" src='../../imgs/c-3.png' class="country animated {{num[10]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[10]}}' mode='widthFix'></image>
+          <view class='check-text'>秘鲁</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="11" src='../../imgs/c-4.png' class="country animated {{num[11]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[11]}}' mode='widthFix'></image>
+          <view class='check-text'>澳大利亚</view>
+        </view>
+      </view>
+    </view>
+    <view class='log-box-list'>
+      <image src='../../imgs/log-bg.png' mode="widthFix" class='log-bg'></image>
+      <view class='list-title'>Group D</view>
+      <view class='check-box'>
+        <view class='check-list'>
+          <image data-num="12" src='../../imgs/d-1.png' class="country animated {{num[12]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[12]}}' mode='widthFix'></image>
+          <view class='check-text'>克罗地亚</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="13" src='../../imgs/d-2.png' class="country animated {{num[13]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[13]}}' mode='widthFix'></image>
+          <view class='check-text'>阿根廷</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="14" src='../../imgs/d-3.png' class="country animated {{num[14]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[14]}}' mode='widthFix'></image>
+          <view class='check-text'>尼日利亚</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="15" src='../../imgs/d-4.png' class="country animated {{num[15]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[15]}}' mode='widthFix'></image>
+          <view class='check-text'>冰岛</view>
+        </view>
+      </view>
+    </view>
+    <view class='log-box-list'>
+      <image src='../../imgs/log-bg.png' mode="widthFix" class='log-bg'></image>
+      <view class='list-title'>Group E</view>
+      <view class='check-box'>
+        <view class='check-list'>
+          <image data-num="16" src='../../imgs/e-1.png' class="country animated {{num[16]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[16]}}' mode='widthFix'></image>
+          <view class='check-text'>巴西</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="17" src='../../imgs/e-2.png' class="country animated {{num[17]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[17]}}' mode='widthFix'></image>
+          <view class='check-text'>瑞士</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="18" src='../../imgs/e-3.png' class="country animated {{num[18]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[18]}}' mode='widthFix'></image>
+          <view class='check-text'>塞尔维亚</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="19" src='../../imgs/e-4.png' class="country animated {{num[19]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[19]}}' mode='widthFix'></image>
+          <view class='check-text'>哥斯达黎加</view>
+        </view>
+      </view>
+    </view>
+    <view class='log-box-list'>
+      <image src='../../imgs/log-bg.png' mode="widthFix"  class='log-bg'></image>
+      <view class='list-title'>Group F</view>
+      <view class='check-box'>
+        <view class='check-list'>
+          <image data-num="20" src='../../imgs/f-1.png' class="country animated {{num[20]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[20]}}' mode='widthFix'></image>
+          <view class='check-text'>瑞士</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="21" src='../../imgs/f-2.png' class="country animated {{num[21]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[21]}}' mode='widthFix'></image>
+          <view class='check-text'>墨西哥</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="22" src='../../imgs/f-3.png' class="country animated {{num[22]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[22]}}' mode='widthFix'></image>
+          <view class='check-text'>韩国</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="23" src='../../imgs/f-4.png' class="country animated {{num[23]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[23]}}' mode='widthFix'></image>
+          <view class='check-text'>德国</view>
+        </view>
+      </view>
+    </view>
+    <view class='log-box-list-last'>
+      <view class='log-box-list'>
+        <image src='../../imgs/log-bg.png' mode="widthFix"  class='log-bg'></image>
+        <view class='list-title'>Group G</view>
+        <view class='check-box'>
+        <view class='check-list'>
+          <image data-num="24" src='../../imgs/g-1.png' class="country animated {{num[24]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[24]}}' mode='widthFix'></image>
+          <view class='check-text'>英格兰</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="25" src='../../imgs/g-2.png' class="country animated {{num[25]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[25]}}' mode='widthFix'></image>
+          <view class='check-text'>比利时</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="26" src='../../imgs/g-3.png' class="country animated {{num[26]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[26]}}' mode='widthFix'></image>
+          <view class='check-text'>突尼斯</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="27" src='../../imgs/g-4.png' class="country animated {{num[27]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[27]}}' mode='widthFix'></image>
+          <view class='check-text'>巴拿马</view>
+        </view>
+      </view>
+      </view>
+      <view class='log-box-list'>
+        <image src='../../imgs/log-bg.png'  mode="widthFix"  class='log-bg'></image>
+        <view class='list-title'>Group H</view>
+        <view class='check-box'>
+        <view class='check-list'>
+          <image data-num="28" src='../../imgs/h-1.png' class="country animated {{num[28]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[28]}}' mode='widthFix'></image>
+          <view class='check-text'>日本</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="29" src='../../imgs/h-2.png' class="country animated {{num[29]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[29]}}' mode='widthFix'></image>
+          <view class='check-text'>塞内加尔</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="30" src='../../imgs/h-3.png' class="country animated {{num[30]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/true.png' class='lian animated flipIn delay300 ' wx:if='{{show[30]}}' mode='widthFix'></image>
+          <view class='check-text'>哥伦比亚</view>
+        </view>
+        <view class='check-list'>
+          <image data-num="31" src='../../imgs/h-4.png' class="country animated {{num[31]}}" mode="widthFix" bindtap="click1"></image>
+          <image src='../../imgs/erro.png' class='lian animated flipIn delay300 ' wx:if='{{show[31]}}' mode='widthFix'></image>
+          <view class='check-text'>波兰</view>
+        </view>
+      </view>
+      </view>
+    </view>
+    <view class='text'>
+      <view class='times'><view>剩余选择次数</view></view>
+      <view class='number'>{{times}}/12</view>
+    </view>
+  </view>
+</view>

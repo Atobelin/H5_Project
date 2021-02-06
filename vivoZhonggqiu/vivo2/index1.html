@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   <meta http-equiv="X-UA-Compatible" content="UTF-8">
+   <title>中秋万店礼遇</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <!-- 公共样式 -->
+   <link rel="stylesheet" href="css/animate.css">
+   <!-- 独立样式 -->
+   <link rel="stylesheet" type="text/css" href="css/index1.css">
+</head>
+
+<body>
+   <script>
+      // 自适应REM
+      window.onload = function () {
+         getRem(1080, 100)
+      };
+      window.onresize = function () {
+         getRem(1080, 100)
+      };
+      getRem(1080, 100);
+
+      function getRem(pwidth, prem) {
+         var html = document.getElementsByTagName("html")[0];
+         var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+         html.style.fontSize = oWidth / pwidth * prem + "px";
+      }
+   </script>
+   <div id="allmap" style="opacity: 0"></div>
+   <section class="page-1 js-page-1" style="display: none">
+      <img src="imgs/page-1/1.jpg" alt="" class="bg" style="height: 100%;">
+      <img src="imgs/page-1/4.png" alt="" class="img-1">
+      <img src="imgs/page-1/5.png" alt="" class="img-2">
+      <img src="imgs/page-1/6.png" alt="" class="img-3 moonOpacity">
+      <img src="imgs/page-1/7.png" alt="" class="img-4">
+      <img src="imgs/page-1/7-1.png" alt="" class="img-5 animated fadeInRight du1000 delay500">
+      <img src="imgs/page-1/7-2.png" alt="" class="img-6 animated fadeInLeft du1000">
+      <img src="imgs/page-1/7-3.png" alt="" class="img-7 animated fadeInLeft du1000">
+      <img src="imgs/page-1/8-1.png" alt="" class="img-8 animated fadeInRight du1000 delay500">
+      <img src="imgs/page-1/8-2.png" alt="" class="img-9 animated fadeInLeft du1000">
+      <img src="imgs/page-1/8-3.png" alt="" class="img-10">
+      <img src="imgs/page-1/8-4.png" alt="" class="img-11">
+      <img src="imgs/page-1/8-5.png" alt="" class="img-12">
+      <img src="imgs/page-1/12.png" alt="" class="img-13 animated zoomIn du500 delay1000">
+      <img src="imgs/page-1/13.png" alt="" class="img-14">
+      <img src="imgs/page-1/14.png" alt="" class="img-15">
+      <img src="imgs/page-1/21.png" alt="" class="img-16">
+      <img src="imgs/page-1/25.png" alt="" class="img-17 pButtonMove js-go-page-3">
+      <img src="imgs/page-1/26.png" alt="" class="img-18">
+      <img src="imgs/page-1/234.png" alt="" class="img-19">
+      <img src="imgs/page-1/title/1.png" alt="" class="text-1">
+      <img src="imgs/page-1/title/2.png" alt="" class="text-2">
+      <img src="imgs/page-1/title/4.png" alt="" class="text-4">
+      <img src="imgs/page-1/title/5.png" alt="" class="text-5">
+      <img src="imgs/page-1/title/6.png" alt="" class="text-6">
+      <img src="imgs/page-1/title/7.png" alt="" class="text-7">
+      <div class="page-1-box">
+         <div class="relative">
+            <img src="imgs/page-1/29.png" alt="" class="img-29">
+            <img src="imgs/page-1/28.png" alt="" class="img-28">
+            <img src="imgs/page-1/27-1.png" alt="" class="img-27 img-27-1 moonOpacity1">
+            <img src="imgs/page-1/27-2.png" alt="" class="img-27 img-27-2 moonOpacity2">
+            <img src="imgs/page-1/27-3.png" alt="" class="img-27 img-27-3 moonOpacity3">
+            <img src="imgs/page-1/27-4.png" alt="" class="img-27 img-27-4 moonOpacity4">
+            <div class="img-30">
+               中秋期间，vivo体验店在全国<span>374</span>个城市为您准备了<span>上万份礼遇</span>，点击查看领取最近门店的中秋礼遇
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="page-2 js-page-2" style="display: none">
+      <img src="imgs/page-2/1.jpg" alt="" class="bg">
+      <img src="imgs/page-2/2.png" alt="" class="img-1">
+      <img src="imgs/page-2/3.png" alt="" class="img-2">
+      <img src="imgs/page-2/4.png" alt="" class="img-3">
+      <img src="imgs/page-2/5.png" alt="" class="img-4">
+      <img src="imgs/page-2/6.png" alt="" class="img-5">
+      <img src="imgs/page-2/7.png" alt="" class="img-6">
+      <img src="imgs/page-2/8.png" alt="" class="img-7">
+      <img src="imgs/page-2/17.png" alt="" class="img-17">
+      <div class="fj-box">
+         <div class="list">
+            <img src="imgs/page-2/14.png" alt="" class="img">
+            <div class="title js-nerestStorName"></div>
+            <div class="place js-nerestStorPlace"></div>
+            <img src="imgs/page-2/15.png" alt="" class="button js-nerestStor-button">
+         </div>
+      </div>
+      <div class="img-8-box">
+         <img src="imgs/page-2/9.1.png" alt="" class="img-8">
+         <div class="relative" style="color:#ff9200;">
+            <div class="place-box sheng">
+               <div class="relative">
+                  <select class="select js-sheng-select">
+                     <option value="" style="font-family: SourceHanSansCN-Regular;
+                     font-size: 0.5rem;
+                     color: #ff9200;">省</option>
+                  </select>
+                  <img src="imgs/page-2/10.png" alt="" class="img-9 js-img-9">
+               </div>
+            </div>
+            <div class="place-box shi">
+               <div class="relative">
+                  <select class="select js-shi-select">
+                     <option value="" style="font-family: SourceHanSansCN-Regular;
+                     font-size: 0.5rem;
+                     color: #ff9200;">市</option>
+                  </select>
+                  <img src="imgs/page-2/10.png" alt="" class="img-9 js-img-9">
+               </div>
+            </div>
+            <div class="place-box qu">
+               <div class="relative">
+                  <select class="select js-qu-select">
+                     <option value="" style="font-family: SourceHanSansCN-Regular;
+                     font-size: 0.5rem;
+                     color: #ff9200;">区</option>
+                  </select>
+                  <img src="imgs/page-2/10.png" alt="" class="img-9 js-img-9">
+               </div>
+            </div>
+         </div>
+      </div>
+      <img src="imgs/page-2/11.png" alt="" class="img-10">
+      <img src="imgs/page-2/12.png" alt="" class="img-11">
+      <div class="page-2-box">
+         <img src="imgs/page-2/13.png" alt="" class="img-12">
+         <img src="imgs/page-2/18.png" alt="" class="img-18">
+         <div class="relative js-storList"></div>
+      </div>
+      <img src="imgs/page-2/19.png" alt="" class="img-19">
+      <img src="imgs/page-2/back.png" alt="" class="back js-back-page-3">
+   </section>
+   <section class="page-2 page-3 js-page-3" style="overflow: scroll;">
+      <img src="imgs/page-2/back.png" alt="" class="back js-back-page-1">
+      <img src="imgs/page-3/bg.jpg" alt="" class="bg" style="position: fixed;top:0;">
+      <img src="imgs/page-3/1.png" alt="" class="img-13">
+      <img src="imgs/page-3/2.png" alt="" class="img-14">
+      <!-- <img src="imgs/page-3/10.png" alt="" class="img-17"> -->
+      <img src="imgs/page-3/16.png" alt="" class="img-18">
+      <img src="imgs/page-3/17.png" alt="" class="img-19">
+      <img src="imgs/page-3/18.png" alt="" class="img-20">
+      <div class="page-3-box">
+         <div class="relative">
+            <div class="list">
+               <img src="imgs/page-3/3.png" alt="" class="img">
+               <input type="text" placeholder="请填写姓名" id="personName">
+            </div>
+            <div class="list">
+               <img src="imgs/page-3/4.png" alt="" class="img">
+               <!-- <input type="text" placeholder="请填写性别" id="personSex"> -->
+               <span class="tip js-tip">请选择性别</span>
+               <select name="" id="personSex">
+                  <option value="1">男</option>
+                  <option value="2">女</option>
+               </select>
+            </div>
+            <div class="list">
+               <img src="imgs/page-3/5.png" alt="" class="img">
+               <input type="number" placeholder="请填写联系方式" style="padding-right: 2.5rem;" id="personTel">
+               <img src="imgs/page-3/19.png" alt="" class="code-button js-send-code">
+               <span class="js-time"
+                  style="position: absolute;right: 1rem;top: 0.66rem;display: none;font-size: 0.38rem">60S</span>
+            </div>
+            <div class="list">
+               <img src="imgs/page-3/6.png" alt="" class="img">
+               <input type="number" placeholder="请输入验证码" id="personCode">
+            </div>
+         </div>
+      </div>
+      <div class="text-1">离您最近门店：<span class="js-nerestStorName"></span></div>
+      <div class="go-box">
+         <img src="imgs/page-3/23.png" alt="" class="img-22 js-go-page-5">
+         <img src="imgs/page-3/22.png" alt="" class="img-21 js-go-page-2">
+      </div>
+      <img src="imgs/page-3/21.png" alt="" class="img-23">
+      <img src="imgs/page-3/24.png" alt="" class="img-24">
+      <img src="imgs/page-3/25.png" alt="" class="img-25">
+      <img src="imgs/page-3/26.png" alt="" class="img-26">
+      <div class="img-27-box js-if-show-gift" style="display: none">
+         <div class="relative">
+            <img src="imgs/page-3/30.png" alt="" class="img-27">
+            <div class="img-28-box">
+               <div class="text-1"><span class="js-nerestStorName"></span>门店礼遇</div>
+               <div class="text-2">（离你最近）</div>
+               <img src="imgs/page-3/31.png" alt="" class="img-28">
+            </div>
+            <div class="text-box">
+               <img src="imgs/page-3/29.png" alt="" class="img-29">
+               <div class="js-giftBox-bottom"></div>
+               <div class="text" style="margin-top: 0.1rem">门店电话：<span class="js-nerestStorTel-bottom"></span></div>
+               <div class="text">门店地址：<span class="js-nerestStorPlace-bottom"></span></div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="page-5 js-page-5" style="overflow: scroll;display: none">
+      <!-- 放图片 -->
+      <div style="width: 100%;position:relative">
+         <img src="imgs/page-5/bg.jpg" alt="" class="bg js-card-url">
+         <img src="imgs/page-5/back.png" alt="" class="back js-go-back-page-3">
+         <img src="imgs/page-5/text-1.png" alt="" class="text-1">
+         <img src="imgs/page-5/map-button.png" alt="" class="map-button">
+      </div>
+   </section>
+   <!-- 公共JS -->
+   <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+   <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+   <script src="https://webapi.amap.com/maps?v=1.4.15&key=ab2b451a35b0fd8ba2567a62e8990fd1"></script>
+   <script src="js/index.js"></script>
+</body>
+
+</html>

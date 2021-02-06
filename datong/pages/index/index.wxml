@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="index content">
+  <image src='../../imgs/bg.png' class='bg-img'></image>
+  <image src='../../imgs/title.png' class='all-title' mode="widthFix"></image>
+  <image src='../../imgs/logo.png'  mode="widthFix" class='logo'></image>
+  <image src='../../imgs/index-bg.png' class='index-box' mode="widthFix"></image>
+  <navigator url='../logs/logs' class='go-box rotate'><image src='../../imgs/go.png' class='go' mode='widthFix'></image></navigator>
+</view>

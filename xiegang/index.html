@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   <meta http-equiv="X-UA-Compatible" content="UTF-8">
+   <title>测出你体内隐藏的斜杠人格</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <!-- 公共样式 -->
+   <link rel="stylesheet" href="css/animate.css">
+   <!-- 独立样式 -->
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+   <script>
+      var _hmt = _hmt || [];
+      (function () {
+         var hm = document.createElement("script");
+         hm.src = "https://hm.baidu.com/hm.js?7d274cc779e35e45545da9dba1666ba1";
+         var s = document.getElementsByTagName("script")[0];
+         s.parentNode.insertBefore(hm, s);
+      })();
+   </script>
+
+   <script>
+      // 自适应REM
+      window.onload = function () {
+         getRem(750, 100)
+      };
+      window.onresize = function () {
+         getRem(750, 100)
+      };
+      getRem(750, 100);
+
+      function getRem(pwidth, prem) {
+         var html = document.getElementsByTagName("html")[0];
+         var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+         html.style.fontSize = oWidth / pwidth * prem + "px";
+      }
+   </script>
+   <img src="imgs/logo.png" alt="" class="logo">
+   <img src="imgs/music.png" alt="" class="music js-music" onclick="onMusicClick()">
+   <audio id="bgm" preload="auto" loop
+      src="https://songjiang-web.oss-cn-beijing.aliyuncs.com/active/music/xiegang.mp3"></audio>
+   <!-- 加载页 -->
+   <section class="page-loading">
+      <img src="imgs/loading/bg.jpg" alt="" class="bg">
+      <img src="imgs/loading/img-1.png" alt="" class="img-1">
+      <img src="imgs/loading/img-2.png" alt="" class="img-2">
+      <div style="position: absolute;width: 120px;height: 120px;left: 0;right: 0; margin: auto;bottom: 6.1rem;">
+         <img src="imgs/loading/img-4.png" alt="" class="img-4 ">
+         <canvas id="loadingCanvas" width="120" height="120"
+            style=" position: absolute;top: 0;left: 0;right: 0;margin: auto;"></canvas>
+         <div class="number" id="percent">0%</div>
+      </div>
+   </section>
+   <section class="page-1 js-page-1" style="display: none;">
+      <img src="imgs/page-1/bg.jpg" alt="" class="bg wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0">
+      <div class="img-1-box wow bounceIn" data-wow-delay="1.4s" data-wow-duration="0.8s">
+         <img src="imgs/page-1/img-1.png" alt="" class="img-1">
+      </div>
+      <div class="input-name wow bounceIn" data-wow-delay="1.6s" data-wow-duration="0.8s">
+         <div class="relative">
+            <img src="imgs/page-1/img-2.png" alt="" class="img-2">
+            <input type="text" class="js-name" maxlength="10">
+         </div>
+      </div>
+      <img src="imgs/page-1/img-3.png" alt="" class="img-3 wow bounceIn js-go-page-2" data-wow-duration="0.8s"
+         data-wow-delay="1.8s">
+      <img src="imgs/page-1/img-4.png" alt="" class="img-4 wow bounceInRight" data-wow-duration="0.8s"
+         data-wow-delay="1s">
+      <img src="imgs/page-1/img-5.png" alt="" class="img-5 wow bounceInLeft" data-wow-duration="0.8s"
+         data-wow-delay="1s">
+      <div class="img-6-box wow bounceIn" data-wow-delay="0.6s" data-wow-duration="0.8s">
+         <img src="imgs/page-1/img-6.png" alt="" class="img-6 animate rotateC">
+      </div>
+      <div class="img-7-box wow bounceIn" data-wow-delay="0.5s" data-wow-duration="0.8s">
+         <img src="imgs/page-1/img-7.png" alt="" class="img-7 animate rotateA">
+      </div>
+      <img src="imgs/page-1/img-8.png" alt="" class="img-8 animated bounceIn" data-wow-duration="0.8s"
+         data-wow-delay="0.3s">
+      <div class="img-9-box  wow bounceIn" data-wow-delay="0.7s" data-wow-duration="0.8s">
+         <img src="imgs/page-1/img-9.png" alt="" class="img-9 animate rotateB">
+      </div>
+      <img src="imgs/page-1/img-10.png" alt="" class="img-10">
+      <img src="imgs/page-1/img-11.png" alt="" class="img-11">
+   </section>
+   <section class="page-2 js-page-2" style="display: none;">
+      <img src="imgs/page-2/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-2/img-5.png" alt="" class="dianLine">
+      <div class="question-cover-box">
+         <div class="question-img-box">
+            <img src="imgs/page-2/img-1.png" alt="" class="question-bg">
+            <img src="imgs/page-2/img-3.png" alt="" class="img-3">
+            <div class="img-4-box wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+               <img src="imgs/page-2/img-4.png" alt="" class="img-4 animate rotateD">
+            </div>
+            <div class="img-6-box wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+               <img src="imgs/page-2/img-6.png" alt="" class="img-6 animate rotateC">
+            </div>
+            <img src="imgs/page-2/questionTitle.png?v=1.0" alt="" class="question-title wow bounceInDown"
+               data-wow-duration="0.8s" data-wow-delay="0">
+            <!-- 答题文本 -->
+            <div class="question-text-box">
+               <div class="title wow bounceIn" data-wow-duration="1s" data-wow-delay="0.8s">Q1：下面话剧的四个角色你最想演哪个？
+               </div>
+               <div class="answer-box">
+                  <div class="list js-choose-answer1 wow bounceInRight" data-id="A" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/a.png" alt="">
+                     </div>
+                     <div class="list-right">可盐可甜的女主</div>
+                  </div>
+                  <div class="list js-choose-answer1 wow bounceInRight" data-id="B" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/b.png" alt="">
+                     </div>
+                     <div class="list-right">佛系浪子</div>
+                  </div>
+                  <div class="list js-choose-answer1 wow bounceInRight" data-id="C" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/c.png" alt="">
+                     </div>
+                     <div class="list-right">三头六臂的职场人</div>
+                  </div>
+                  <div class="list js-choose-answer1 wow bounceInRight" data-id="D" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/d.png" alt="">
+                     </div>
+                     <div class="list-right">野生美食家</div>
+                  </div>
+               </div>
+               <img src="imgs/next.png" alt=""
+                  style="width: 2.13rem;height: 0.87rem;margin: auto;display: block;margin-top: 0.4rem;"
+                  class="js-go-page-3 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.2s">
+            </div>
+         </div>
+      </div>
+      <img src=" imgs/house.png" alt="" class="house">
+   </section>
+   <section class="page-3 js-page-3" style="display: none;">
+      <img src="imgs/page-3/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-3/img-4.gif" alt="" class="dianLine">
+      <div class="question-cover-box">
+         <div class="question-img-box">
+            <img src="imgs/page-3/img-1.png" alt="" class="question-bg">
+            <img src="imgs/page-3/img-2.png" alt="" class="img-3 animate opacityA">
+            <img src="imgs/page-3/questionTitle.png?v=1.0" alt="" class="question-title wow bounceInDown"
+               data-wow-duration="0.8s" data-wow-delay="0">
+            <!-- 答题文本 -->
+            <div class="question-text-box">
+               <div class="title wow bounceIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                  Q2:到酒店后，进酒店房间第一件事通常会是？
+               </div>
+               <div class="answer-box">
+                  <div class="list js-choose-answer2 wow bounceInRight" data-id="A" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/a.png" alt="">
+                     </div>
+                     <div class="list-right">先洗个澡</div>
+                  </div>
+                  <div class="list js-choose-answer2 wow bounceInRight" data-id="B" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/b.png" alt="">
+                     </div>
+                     <div class="list-right">行李甩掉衣服甩掉统统甩掉</div>
+                  </div>
+                  <div class="list js-choose-answer2 wow bounceInRight" data-id="C" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/c.png" alt="">
+                     </div>
+                     <div class="list-right">当然是插房卡啊不然还想干嘛</div>
+                  </div>
+                  <div class="list js-choose-answer2 wow bounceInRight" data-id="D" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/d.png" alt="">
+                     </div>
+                     <div class="list-right">试试床垫弹性</div>
+                  </div>
+               </div>
+               <div class="button-box" style="margin-top: 0.4rem;display:flex;justify-content: space-around;">
+                  <img src="imgs/pre.png" alt="" style="width: 2.13rem;height: 0.87rem;"
+                     class="js-back-page-2 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.2s">
+                  <img src="imgs/next.png" alt="" style="width: 2.13rem;height: 0.87rem;"
+                     class="js-go-page-4 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.5s">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="img-6-box wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+         <img src="imgs/page-3/img-3.png" alt="" class="img-6 animate rotateD">
+      </div>
+      <img src=" imgs/house.png" alt="" class="house">
+   </section>
+   <section class="page-4 js-page-4" style="display: none;">
+      <img src="imgs/page-4/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-4/img-2.gif" alt="" class="dianLine">
+      <div class="question-cover-box">
+         <div class="question-img-box">
+            <img src="imgs/page-4/img-1.png" alt="" class="question-bg">
+            <img src="imgs/page-4/img-3.png" alt="" class="img-3 animate opacityA">
+            <img src="imgs/page-4/questionTitle.png?v=1.0" alt="" class="question-title wow bounceInDown"
+               data-wow-duration="0.8s" data-wow-delay="0">
+            <div class="img-4-box wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+               <img src="imgs/page-4/img-4.png" alt="" class="img-4 animate rotateD">
+            </div>
+            <div class="img-5-box wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+               <img src="imgs/page-4/img-5.png" alt="" class="img-5 animate rotateD">
+            </div>
+            <!-- 答题文本 -->
+            <div class="question-text-box">
+               <div class="title wow bounceIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                  Q3:辛苦了一个月的项目被否了101次，这时你会？
+               </div>
+               <div class="answer-box">
+                  <div class="list js-choose-answer3 wow bounceInRight" data-id="A" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/a.png" alt="">
+                     </div>
+                     <div class="list-right">辞职，去西伯利亚喝西北风</div>
+                  </div>
+                  <div class="list js-choose-answer3 wow bounceInRight" data-id="B" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/b.png" alt="">
+                     </div>
+                     <div class="list-right">请假，游山玩水拍小视频</div>
+                  </div>
+                  <div class="list js-choose-answer3 wow bounceInRight" data-id="C" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/c.png" alt="">
+                     </div>
+                     <div class="list-right">认命，拾起掉落的头发继续改</div>
+                  </div>
+                  <div class="list js-choose-answer3 wow bounceInRight" data-id="D" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/d.png" alt="">
+                     </div>
+                     <div class="list-right">炒老板鱿鱼，回家帮老爸收租</div>
+                  </div>
+               </div>
+               <div class="button-box" style="margin-top: 0.4rem;display:flex;justify-content: space-around;">
+                  <img src="imgs/pre.png" alt="" style="width: 2.13rem;height: 0.87rem;"
+                     class="js-back-page-3 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.2s">
+                  <img src="imgs/next.png" alt="" style="width: 2.13rem;height: 0.87rem;"
+                     class="js-go-page-5 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.5s">
+               </div>
+            </div>
+         </div>
+         <img src=" imgs/house.png" alt="" class="house">
+      </div>
+   </section>
+   <section class="page-7 js-page-7" style="display: none;">
+      <img src="imgs/page-7/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-7/img-2.png" alt="" class="dianLine">
+      <div class="question-cover-box">
+         <div class="question-img-box">
+            <img src="imgs/page-7/img-1.png" alt="" class="question-bg">
+            <img src="imgs/page-7/img-3.png" alt="" class="img-3 animate opacityA">
+            <img src="imgs/page-7/questionTitle.png?v=1.0" alt="" class="question-title wow bounceInDown"
+               data-wow-duration="0.8s" data-wow-delay="0">
+            <div class="img-4-box wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+               <img src="imgs/page-7/img-4.png" alt="" class="img-4 animate scaleB">
+            </div>
+            <!-- 答题文本 -->
+            <div class="question-text-box">
+               <div class="title wow bounceIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                  Q4：下班路上看到有人抱着吉他在天桥上唱歌，你觉得他可能是？
+               </div>
+               <div class="answer-box">
+                  <div class="list js-choose-answer6 wow bounceInRight" data-id="A" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/a.png" alt="">
+                     </div>
+                     <div class="list-right">靠街边卖艺维生</div>
+                  </div>
+                  <div class="list js-choose-answer6 wow bounceInRight" data-id="B" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/b.png" alt="">
+                     </div>
+                     <div class="list-right">又是哪个网红在直播吧</div>
+                  </div>
+                  <div class="list js-choose-answer6 wow bounceInRight" data-id="C" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/c.png" alt="">
+                     </div>
+                     <div class="list-right">刚刚征服了天桥底打算继续征服天桥之上的新张学友</div>
+                  </div>
+                  <div class="list js-choose-answer6 wow bounceInRight" data-id="D" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/d.png" alt="">
+                     </div>
+                     <div class="list-right">在寻梦之旅上勇敢实践的胖虎同学</div>
+                  </div>
+               </div>
+               <div class="button-box" style="margin-top: 0.4rem;display:flex;justify-content: space-around;">
+                  <img src="imgs/pre.png" alt="" style="width: 2.13rem;height: 0.87rem;"
+                     class="js-back-page-6 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.2s">
+                  <img src="imgs/next.png" alt="" style="width: 2.13rem;height: 0.87rem;"
+                     class="js-go-page-8 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.5s">
+               </div>
+            </div>
+         </div>
+         <div class="img-5-box wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+            <img src="imgs/page-7/img-5.png" alt="" class="img-5 animate scaleA">
+         </div>
+         <img src=" imgs/house.png" alt="" class="house">
+      </div>
+   </section>
+   <section class="page-8 js-page-8" style="display: none;">
+      <img src="imgs/page-8/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-8/img-3.png" alt="" class="dianLine">
+      <div class="question-cover-box">
+         <div class="question-img-box">
+            <img src="imgs/page-8/img-1.png" alt="" class="question-bg">
+            <img src="imgs/page-8/img-2.png" alt="" class="img-3 animate opacityA">
+            <img src="imgs/page-8/questionTitle.png?v=1.0" alt="" class="question-title wow bounceInDown"
+               data-wow-duration="0.8s" data-wow-delay="0">
+            <!-- 答题文本 -->
+            <div class="question-text-box">
+               <div class="title wow bounceIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                  Q5：如果你是一无所有的钢琴老师，突然想学画画，你会？
+               </div>
+               <div class="answer-box">
+                  <div class="list js-choose-answer7 wow bounceInRight" data-id="A" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/a.png" alt="">
+                     </div>
+                     <div class="list-right">到处演奏挣钱买颜料</div>
+                  </div>
+                  <div class="list js-choose-answer7 wow bounceInRight" data-id="B" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/b.png" alt="">
+                     </div>
+                     <div class="list-right">靠弹琴的魅力泡个美术老师指导</div>
+                  </div>
+                  <div class="list js-choose-answer7 wow bounceInRight" data-id="C" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/c.png" alt="">
+                     </div>
+                     <div class="list-right">收一个会画画的学生</div>
+                  </div>
+                  <div class="list js-choose-answer7 wow bounceInRight" data-id="D" data-wow-duration="2s"
+                     data-wow-delay="0.9s">
+                     <div class="list-left">
+                        <img src="imgs/d.png" alt="">
+                     </div>
+                     <div class="list-right">死了这条心</div>
+                  </div>
+               </div>
+               <div class="button-box" style="margin-top: 0.4rem;display:flex;justify-content: space-around;">
+                  <img src="imgs/pre.png" alt="" style="width: 2.13rem;height: 0.87rem;"
+                     class="js-back-page-7 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.2s">
+                  <img src="imgs/result.png" alt="" style="width: 2.13rem;height: 0.87rem;"
+                     class="js-go-page-9 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="2.5s">
+               </div>
+            </div>
+         </div>
+         <img src=" imgs/house.png" alt="" class="house">
+      </div>
+   </section>
+   <section class="page-9 js-page-9" style="display: none;">
+      <img src="imgs/page-9/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-9/img-1.png" alt="" class="img-1">
+      <div class="img-box">
+         <img src="imgs/page-9/img-4.png" alt="" class="img-4 animate rotatemusic">
+         <img src="imgs/page-9/img-2.png" alt="" class="img-2">
+      </div>
+      <img src="imgs/page-9/img-3.png" alt="" class="img-3">
+   </section>
+   <!-- 结果 -->
+   <section class="page-10  js-page-10" style="display: none;z-index: 100;">
+      <img src="imgs/page-10/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-10/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-10/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0">
+         <img src="imgs/page-10/img-3.png" alt="" class="result-common-5 animate rotatemusic">
+         <img src="imgs/page-10/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-10/img-5.png" alt="" class="img-1 wow bounceIn" data-wow-duration="0.8s"
+            data-wow-delay="0.3s">
+         <img src="imgs/page-10/img-4.png" alt="" class="result-common-6 wow zoomIn" data-wow-duration="0.8s"
+            data-wow-delay="0">
+         <img src="imgs/page-10/img-9.png" alt="" class="result-common-7 wow bounceInLeft" data-wow-duration="0.8s"
+            data-wow-delay="1s">
+         <img src="imgs/page-10/img-11.png" alt="" class="img-5 wow zoomIn" data-wow-duration="0.8s" data-wow-delay="0">
+         <img src="imgs/page-10/img-6.png" alt="" class="img-2  wow bounceIn" data-wow-duration="0.8s"
+            data-wow-delay="0.5s">
+         <img src="imgs/page-10/img-7.png" alt="" class="img-3  wow bounceIn" data-wow-duration="0.8s"
+            data-wow-delay="0.7s">
+         <img src="imgs/page-10/img-8.png" alt="" class="img-4 wow bounceInRight" data-wow-duration="0.8s"
+            data-wow-delay="1.8s">
+      </div>
+      <div class="result-common-11 wow bounceInLeft" data-wow-duration="0.8s" data-wow-delay="1.2s">
+         <div class="img-box ">
+            <img src="imgs/page-10/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10 wow bounceInRight" data-wow-duration="0.8s" data-wow-delay="1.5s">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-10/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-common-9 animated scaleC">
+         <img src="imgs/share.png" alt="" class="wow bounceInLeft js-share-10" data-wow-duration="0.8s"
+            data-wow-delay="2s">
+         <img src="imgs/other.png" alt="" class="wow bounceInRight js-other" data-wow-duration="0.8s"
+            data-wow-delay="2.2s">
+      </div>
+   </section>
+   <section class="page-11 js-page-11" style="display: none;z-index: 100;">
+      <img src="imgs/page-11/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-11/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-11/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0">
+         <img src="imgs/page-11/img-3.png" alt="" class="result-common-5 animate rotatemusic">
+         <img src="imgs/page-11/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-11/img-4.png" alt="" class="result-common-6 wow zoomIn" data-wow-duration="0.8s"
+            data-wow-delay="0">
+         <img src="imgs/page-11/img-9.png" alt="" class="result-common-7 wow bounceInLeft" data-wow-duration="0.8s"
+            data-wow-delay="0.3s">
+         <img src="imgs/page-11/img-11.png" alt="" class="img-5 wow zoomIn" data-wow-duration="0.8s" data-wow-delay="0">
+         <img src="imgs/page-11/img-8.png" alt="" class="img-4 wow bounceInRight" data-wow-duration="0.8s"
+            data-wow-delay="0.6s">
+
+      </div>
+      <div class="result-common-11 wow bounceInLeft" data-wow-duration="0.8s" data-wow-delay="0.9s">
+         <div class="img-box ">
+            <img src="imgs/page-11/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10 wow bounceInRight" data-wow-duration="0.8s" data-wow-delay="1.2s">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-11/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-common-9 animated scaleC">
+         <img src="imgs/share.png" alt="" class="wow bounceInLeft js-share-11" data-wow-duration="0.8s"
+            data-wow-delay="1.5s">
+         <img src="imgs/other.png" alt="" class="wow bounceInRight js-other" data-wow-duration="0.8s"
+            data-wow-delay="1.8s">
+      </div>
+   </section>
+   <section class="page-12 js-page-12" style="display: none;z-index: 100;">
+      <img src="imgs/page-12/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-12/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-12/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0">
+         <img src="imgs/page-12/img-3.png" alt="" class="result-common-5 animate rotatemusic">
+         <img src="imgs/page-12/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-12/img-5.png" alt="" class="img-1 wow bounceIn" data-wow-duration="0.8s"
+            data-wow-delay="0.3s">
+         <img src="imgs/page-12/img-4.png" alt="" class="result-common-6 wow zoomIn" data-wow-duration="0.8s"
+            data-wow-delay="0">
+         <img src="imgs/page-12/img-9.png" alt="" class="result-common-7 wow bounceInLeft" data-wow-duration="0.8s"
+            data-wow-delay="1s" style=" width: 1.54rem;">
+         <img src="imgs/page-12/img-8.png" alt="" class="img-4 wow bounceInRight" data-wow-duration="0.8s"
+            data-wow-delay="1.8s">
+      </div>
+      <div class="result-common-11 wow bounceInLeft" data-wow-duration="0.8s" data-wow-delay="1.2s">
+         <div class="img-box ">
+            <img src="imgs/page-12/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10 wow bounceInRight" data-wow-duration="0.8s" data-wow-delay="1.5s">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-12/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-common-9 animated scaleC">
+         <img src="imgs/share.png" alt="" class="wow bounceInLeft js-share-12" data-wow-duration="0.8s"
+            data-wow-delay="2s">
+         <img src="imgs/other.png" alt="" class="wow bounceInRight js-other" data-wow-duration="0.8s"
+            data-wow-delay="2.2s">
+      </div>
+   </section>
+   <section class="page-13 js-page-13" style="display: none;z-index: 100;">
+      <img src="imgs/page-13/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-13/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-13/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0">
+         <img src="imgs/page-13/img-3.png" alt="" class="result-common-5 animate rotatemusic">
+         <img src="imgs/page-13/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-13/img-5.png" alt="" class="img-1 wow bounceIn" data-wow-duration="0.8s"
+            data-wow-delay="0.3s">
+         <img src="imgs/page-13/img-4.png" alt="" class="result-common-6 wow zoomIn" data-wow-duration="0.8s"
+            data-wow-delay="0" style=" top: 1rem;">
+         <img src="imgs/page-13/img-9.png" alt="" class="result-common-7 wow bounceInLeft" data-wow-duration="0.8s"
+            data-wow-delay="1s">
+         <img src="imgs/page-13/img-8.png" alt="" class="img-4 wow bounceInRight" data-wow-duration="0.8s"
+            data-wow-delay="1.8s">
+      </div>
+      <div class="result-common-11 wow bounceInLeft" data-wow-duration="0.8s" data-wow-delay="1.2s">
+         <div class="img-box ">
+            <img src="imgs/page-13/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10 wow bounceInRight" data-wow-duration="0.8s" data-wow-delay="1.5s">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-13/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-common-9 animated scaleC">
+         <img src="imgs/share.png" alt="" class="wow bounceInLeft js-share-13" data-wow-duration="0.8s"
+            data-wow-delay="2s">
+         <img src="imgs/other.png" alt="" class="wow bounceInRight js-other" data-wow-duration="0.8s"
+            data-wow-delay="2.2s">
+      </div>
+   </section>
+   <section class="page-14 js-page-14" style="display: none;z-index: 100;">
+      <img src="imgs/page-14/bg.jpg" alt="" class="bg">
+      <img src="imgs/page-14/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-14/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3 wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0">
+         <img src="imgs/page-14/img-3.png" alt="" class="result-common-5 animate rotatemusic">
+         <img src="imgs/page-14/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-14/img-4.png" alt="" class="result-common-6 wow zoomIn" data-wow-duration="0.8s"
+            data-wow-delay="0" style=" top: 0.8rem;">
+         <img src="imgs/page-14/img-5.png" alt="" class="img-1 wow bounceIn" data-wow-duration="0.8s"
+            data-wow-delay="0.3s">
+         <img src="imgs/page-14/img-9.png" alt="" class="result-common-7 wow bounceInLeft" data-wow-duration="0.8s"
+            data-wow-delay="1s" style=" width: 1.5rem;">
+         <img src="imgs/page-14/img-8.png" alt="" class="img-4 wow bounceInRight" data-wow-duration="0.8s"
+            data-wow-delay="1.8s">
+      </div>
+      <div class="result-common-11 wow bounceInLeft" data-wow-duration="0.8s" data-wow-delay="1.2s">
+         <div class="img-box ">
+            <img src="imgs/page-14/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10 wow bounceInRight" data-wow-duration="0.8s" data-wow-delay="1.5s">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-14/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-common-9 animated scaleC">
+         <img src="imgs/share.png" alt="" class="wow bounceInLeft js-share-14" data-wow-duration="0.8s"
+            data-wow-delay="2s">
+         <img src="imgs/other.png" alt="" class="wow bounceInRight js-other" data-wow-duration="0.8s"
+            data-wow-delay="2.2s">
+      </div>
+   </section>
+   <!-- 合成图 -->
+   <section class="page-10 page-img-10" style="opacity: 0;display: none;position: fixed;left: 0;top: 0;">
+      <img src="imgs/page-10/bg.jpg" alt="" class="bg">
+      <img src="imgs/logo.png" alt="" class="logo">
+      <img src="imgs/page-10/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-10/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3">
+         <img src="imgs/page-10/img-3.png" alt="" class="result-common-5">
+         <img src="imgs/page-10/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-10/img-5.png" alt="" class="img-1">
+         <img src="imgs/page-10/img-4.png" alt="" class="result-common-6">
+         <img src="imgs/page-10/img-9.png" alt="" class="result-common-7">
+         <img src="imgs/page-10/img-11.png" alt="" class="img-5">
+         <img src="imgs/page-10/img-6.png" alt="" class="img-2">
+         <img src="imgs/page-10/img-7.png" alt="" class="img-3">
+         <img src="imgs/page-10/img-8.png" alt="" class="img-4">
+      </div>
+      <div class="result-common-11">
+         <div class="img-box ">
+            <img src="imgs/page-10/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-10/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-img-box">
+         <img src="imgs/code2.png" alt="" class="code-img">
+         <div class="text">
+            <p><span>扫 描 测 试</span></p>
+            <p><span>看 看 你 是 哪 位 斜 杠 大 神 ?</span></p>
+         </div>
+      </div>
+   </section>
+   <section class="page-11 page-img-11" style="opacity: 0;display: none;position: fixed;left: 0;top: 0;">
+      <img src="imgs/page-11/bg.jpg" alt="" class="bg">
+      <img src="imgs/logo.png" alt="" class="logo">
+      <img src="imgs/page-11/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-11/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3">
+         <img src="imgs/page-11/img-3.png" alt="" class="result-common-5">
+         <img src="imgs/page-11/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-11/img-4.png" alt="" class="result-common-6">
+         <img src="imgs/page-11/img-9.png" alt="" class="result-common-7">
+         <img src="imgs/page-11/img-11.png" alt="" class="img-5">
+         <img src="imgs/page-11/img-8.png" alt="" class="img-4">
+
+      </div>
+      <div class="result-common-11">
+         <div class="img-box ">
+            <img src="imgs/page-11/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-11/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-img-box">
+         <img src="imgs/code2.png" alt="" class="code-img">
+         <div class="text">
+            <p><span>扫 描 测 试</span></p>
+            <p><span>看 看 你 是 哪 位 斜 杠 大 神 ?</span></p>
+         </div>
+      </div>
+   </section>
+   <section class="page-12 page-img-12" style="opacity: 0;display: none;position: fixed;left: 0;top: 0;">
+      <img src="imgs/page-12/bg.jpg" alt="" class="bg">
+      <img src="imgs/logo.png" alt="" class="logo">
+      <img src="imgs/page-12/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-12/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3">
+         <img src="imgs/page-12/img-3.png" alt="" class="result-common-5">
+         <img src="imgs/page-12/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-12/img-5.png" alt="" class="img-1">
+         <img src="imgs/page-12/img-4.png" alt="" class="result-common-6">
+         <img src="imgs/page-12/img-9.png" alt="" class="result-common-7" style=" width: 1.54rem;">
+         <img src="imgs/page-12/img-8.png" alt="" class="img-4">
+      </div>
+      <div class="result-common-11">
+         <div class="img-box ">
+            <img src="imgs/page-12/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-12/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-img-box">
+         <img src="imgs/code2.png" alt="" class="code-img">
+         <div class="text">
+            <p><span>扫 描 测 试</span></p>
+            <p><span>看 看 你 是 哪 位 斜 杠 大 神 ?</span></p>
+         </div>
+      </div>
+   </section>
+   <section class="page-13 page-img-13" style="opacity: 0;display: none;position: fixed;left: 0;top: 0;">
+      <img src="imgs/page-13/bg.jpg" alt="" class="bg">
+      <img src="imgs/logo.png" alt="" class="logo">
+      <img src="imgs/page-13/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-13/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3">
+         <img src="imgs/page-13/img-3.png" alt="" class="result-common-5">
+         <img src="imgs/page-13/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-13/img-5.png" alt="" class="img-1">
+         <img src="imgs/page-13/img-4.png" alt="" class="result-common-6" style=" top: 1rem;">
+         <img src="imgs/page-13/img-9.png" alt="" class="result-common-7">
+         <img src="imgs/page-13/img-8.png" alt="" class="img-4">
+      </div>
+      <div class="result-common-11">
+         <div class="img-box ">
+            <img src="imgs/page-13/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-13/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-img-box">
+         <img src="imgs/code2.png" alt="" class="code-img">
+         <div class="text">
+            <p><span>扫 描 测 试</span></p>
+            <p><span>看 看 你 是 哪 位 斜 杠 大 神 ?</span></p>
+         </div>
+      </div>
+   </section>
+   <section class="page-14 page-img-14" style="opacity: 0;display: none;position: fixed;left: 0;top: 0;">
+      <img src="imgs/page-14/bg.jpg" alt="" class="bg">
+      <img src="imgs/logo.png" alt="" class="logo">
+      <img src="imgs/page-14/img-1.png" alt="" class="result-common-1">
+      <img src="imgs/page-14/img-10.png" alt="" class="result-common-2">
+      <div class="result-common-3">
+         <img src="imgs/page-14/img-3.png" alt="" class="result-common-5">
+         <img src="imgs/page-14/img-2.png" alt="" class="result-common-4">
+         <img src="imgs/page-14/img-4.png" alt="" class="result-common-6" style=" top: 0.8rem;">
+         <img src="imgs/page-14/img-5.png" alt="" class="img-1">
+         <img src="imgs/page-14/img-9.png" alt="" class="result-common-7" style=" width: 1.5rem;">
+         <img src="imgs/page-14/img-8.png" alt="" class="img-4">
+      </div>
+      <div class="result-common-11">
+         <div class="img-box ">
+            <img src="imgs/page-14/img-14.png" alt="">
+            <div class="js-result-name box"></div>
+         </div>
+         <img src="" alt="" class="num js-gang-num">
+      </div>
+      <div class="result-common-10">
+         <img src="imgs/shuxing.png" alt="" class="shuxing-img">
+         <img src="imgs/page-14/img-15.png" alt="" class="line-img">
+      </div>
+      <div class="result-img-box">
+         <img src="imgs/code2.png" alt="" class="code-img">
+         <div class="text">
+            <p><span>扫 描 测 试</span></p>
+            <p><span>看 看 你 是 哪 位 斜 杠 大 神 ?</span></p>
+         </div>
+      </div>
+   </section>
+   <!-- 弹框 -->
+   <div class="tan-box js-tan-box">
+      <div class="box-flex">
+         <div class="box">
+            <div class="text js-tan-text"></div>
+            <div class="button js-close-tan-box">确定</div>
+         </div>
+      </div>
+   </div>
+   <!-- 长按保存 -->
+   <div class="long-box js-long-box">
+      <div class="color-box animated opacityD"></div>
+      <div class="box">
+         <img src="" alt="" class="js-button-long button-long">
+      </div>
+   </div>
+   <img src="" alt="" class="cover-img js-cover-img">
+   <!-- 分享朋友圈 -->
+   <img src="imgs/shareIcon.png" alt="" class="shareIcon js-share animated rotateE">
+   <div class="shar-box js-shar-box">
+      <img src="imgs/share/img-2.png" alt="" class="img-1">
+      <img src="imgs/share/img-3.png" alt="" class="img-2">
+      <img src="imgs/share/img-3.png" alt="" class="img-3">
+      <img src="imgs/share/img-4.png" alt="" class="img-4">
+      <img src="imgs/share/img-5.png" alt="" class="img-5">
+      <img src="imgs/share/img-6.png" alt="" class="img-6">
+   </div>
+   <!-- 解除斜杠力 -->
+   <div class="other-box js-other-box">
+      <img src="imgs/share/img-1.png" alt="">
+   </div>
+   <!-- 公共JS -->
+   <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+   <!-- <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script> -->
+   <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+   <script src="js/dom2canvas.min.js"></script>
+   <script src="https://img.songjiang.xyz/normal/xiegang/weixinShare/jweixin-1.0.0.js"></script>
+   <!-- <script src="https://img.songjiang.xyz/normal/xiegang/weixinShare/wechat.js"></script> -->
+   <script>
+      // -----------定义变量-----------
+      var name
+      var cookie
+      var question1
+      var question2
+      var question3
+      var question4
+      var question5
+      var question6
+      var question7
+      var randa
+      var randb
+      var peopleName
+      // alert('宽:' + document.body.clientWidth + '高:' + document.body.clientHeight)
+      // 音乐
+      var audio = document.getElementById('bgm');
+      var rotate = 0
+      var audioPaused = false
+      var musictimer = setInterval(function () {
+         rotate = rotate + 5
+         var music = document.querySelector(".music")
+         music.style.transform = 'rotate(' + rotate + 'deg)'
+      }, 20)
+
+      function onMusicClick() {
+         if (audioPaused) {
+            musictimer = setInterval(function () {
+               rotate = rotate + 5
+               var music = document.querySelector(".music")
+               music.style.transform = 'rotate(' + rotate + 'deg)'
+               audio.play()
+               audioPaused = false
+            }, 20)
+         } else {
+            audioPaused = true
+            clearInterval(musictimer)
+            musictimer = null
+            audio.pause()
+         }
+      }
+
+      function audioAutoPlay() {
+         audio.play();
+         document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+         }, false);
+         audio.onended = function () {
+            audio.currentTime = 0
+            audio.play();
+         }
+      }
+      // 禁止input顶上去
+      $("input").on("blur", function () {
+         window.scroll(0, 0);
+      })
+      // 关闭弹框
+      $(".js-close-tan-box").click(function () {
+         $(".js-tan-box").fadeOut(0)
+      })
+      // wow动画
+      var wow = new WOW({
+         boxClass: 'wow',
+         animateClass: 'animated',
+         offset: 0,
+         mobile: true,
+         live: true
+      });
+      wow.init();
+      for (var i = 0; i < $(".wow").length; i++) {
+         var node = $(".wow")[i];
+         node.style.animationFillMode = 'both';
+         var animation = document.defaultView.getComputedStyle(node).animation;
+         node.style.webkitAnimation = animation;
+      }
+      // loading
+      var img = document.createElement('img')
+      img.src = 'imgs/loading/img-3.png'
+      img.onload = function () {
+         var loadNum = 45
+         var loadingtimer = setInterval(function () {
+            loadingCanvas(img, loadNum)
+            console.log(loadNum)
+            $("#percent").html(loadNum + "%")
+            if (loadNum >= 100) {
+               $(".page-loading").fadeOut(0)
+               $(".js-page-1").fadeIn(300)
+               clearInterval(loadingtimer)
+               loadingtimer = null
+               return
+            }
+            loadNum++
+         }, 30)
+      }
+
+      function loadingCanvas(img, loadNum) {
+         var canvas = document.getElementById('loadingCanvas')
+         var ctx = canvas.getContext('2d')
+         ctx.save()
+         ctx.beginPath()
+         ctx.moveTo(60, 60)
+         ctx.arc(60, 60, 60, -Math.PI / 2, (loadNum * 2 * Math.PI / 100) - Math.PI / 2)
+         ctx.closePath()
+         ctx.clip()
+         ctx.drawImage(img, 0, 0, 120, 120)
+         ctx.restore()
+      }
+      // perFun()
+      audioAutoPlay()
+      // loading
+      function perFun() {
+         var imgs = document.getElementsByTagName("img");
+         var len = 0;
+         var percent = document.getElementById("percent");
+         var imgLength = imgs.length - 1
+         for (var i = 0; i < imgs.length; i++) {
+            if (imgs[i].complete) {
+               len++;
+               $("#percent").html(Math.round(len * 50 / imgs.length) + "%")
+               loadingCanvas(img, len * 50 / imgs.length)
+               //跳转到首页
+               if (len == imgLength) {
+                  var timer = setInterval(function () {
+                     len++
+                     $("#percent").html(Math.round(len * 50 / imgs.length) + '%')
+                     loadingCanvas(img, len * 50 / imgs.length)
+                     if (len >= imgs.length * 2) {
+                        len = imgs.length * 2
+                        $("#percent").html(Math.round(len * 50 / imgs.length) + '%')
+                        loadingCanvas(img, len * 50 / imgs.length)
+                        $(".page-loading").fadeOut(0)
+                        $(".js-page-1").fadeIn(300)
+                        clearInterval(timer)
+                        timer = null
+                     }
+                  }, 3)
+               }
+            } else {
+               imgs[i].onload = function () {
+                  len++;
+                  $("#percent").html(Math.round(len * 50 / imgs.length) + "%")
+                  loadingCanvas(img, len * 50 / imgs.length)
+                  // 跳转到首页 
+                  if (len == imgLength) {
+                     var timer = setInterval(function () {
+                        len++
+                        $("#percent").html(Math.round(len * 50 / imgs.length) + '%')
+                        loadingCanvas(img, len * 50 / imgs.length)
+                        if (len >= imgs.length * 2) {
+                           len = imgs.length * 2
+                           $("#percent").html(Math.round(len * 50 / imgs.length) + '%')
+                           loadingCanvas(img, len * 50 / imgs.length)
+                           $(".page-loading").fadeOut(0)
+                           $(".js-page-1").fadeIn(300)
+                           clearInterval(timer)
+                           timer = null
+                        }
+                     }, 3)
+                  }
+               }
+            }
+         }
+      }
+      // 名字限制
+      function StrLen(sString) {
+         var j = 0;
+         var s = sString;
+         if (s == "") return j;
+         for (var i = 0; i < s.length; i++) {
+            if (s.substr(i, 1).charCodeAt(0) > 255) j = j + 2;
+            else j++
+         }
+         return j;
+      }
+      // 更改文字行高
+      function updateLineHeight() {
+         var lists = $(".list-right");
+         for (var i = 0; i < lists.length; i++) {
+            var textLength = $(lists[i]).text().length
+            if (textLength > 14) {
+               $(lists[i]).css("lineHeight", "0.45rem")
+            }
+         }
+      }
+      updateLineHeight();
+
+      // page-1
+      $(".js-go-page-2").click(function () {
+         if (StrLen($(".js-name").val()) > 12) {
+            $(".tan-box").fadeIn(300)
+            $(".js-tan-text").html('姓名不能超过6个汉字或者10个英文！')
+         } else if (StrLen($(".js-name").val()) < 1) {
+            $(".tan-box").fadeIn(300)
+            $(".js-tan-text").html('姓名不能为空！')
+         } else {
+            name = $(".js-name").val()
+            // console.log(name)
+            $(".js-page-1").fadeOut(0)
+            $(".js-page-2").fadeIn(300)
+         }
+      })
+      // page-2
+      // 选择答案
+      $(".js-choose-answer1").click(function () {
+         $(this).siblings('.js-choose-answer1').removeClass('active');
+         $(this).addClass('active')
+         question1 = $(this).attr("data-id")
+         // console.log(question1)
+      })
+      // 点击下一题
+      $(".js-go-page-3").click(function () {
+         if (question1) {
+            $(".js-page-2").fadeOut(0)
+            $(".js-page-3").fadeIn(300)
+         }
+      })
+      // page-3
+      // 选择答案
+      $(".js-choose-answer2").click(function () {
+         $(this).siblings('.js-choose-answer2').removeClass('active');
+         $(this).addClass('active')
+         question2 = $(this).attr("data-id")
+         // console.log(question1)
+      })
+      // 点击下一题
+      $(".js-go-page-4").click(function () {
+         if (question2) {
+            $(".js-page-3").fadeOut(0)
+            $(".js-page-4").fadeIn(300)
+         }
+      })
+      $(".js-back-page-2").click(function () {
+         $(".js-page-3").fadeOut(0)
+         $(".js-page-2").fadeIn(300)
+      })
+      // page-4
+      // 选择答案
+      $(".js-choose-answer3").click(function () {
+         $(this).siblings('.js-choose-answer3').removeClass('active');
+         $(this).addClass('active')
+         question3 = $(this).attr("data-id")
+         // console.log(question1)
+      })
+      // 点击下一题
+      $(".js-go-page-5").click(function () {
+         if (question3) {
+            $(".js-page-4").fadeOut(0)
+            $(".js-page-7").fadeIn(300)
+         }
+      })
+      $(".js-back-page-3").click(function () {
+         $(".js-page-4").fadeOut(0)
+         $(".js-page-3").fadeIn(300)
+      })
+      // page-5
+      // 选择答案
+      $(".js-choose-answer4").click(function () {
+         $(this).siblings('.js-choose-answer4').removeClass('active');
+         $(this).addClass('active')
+         question4 = $(this).attr("data-id")
+         // console.log(question1)
+      })
+      // 点击下一题
+      $(".js-go-page-6").click(function () {
+         if (question4) {
+            $(".js-page-5").fadeOut(0)
+            $(".js-page-6").fadeIn(300)
+         }
+      })
+      $(".js-back-page-4").click(function () {
+         $(".js-page-5").fadeOut(0)
+         $(".js-page-4").fadeIn(300)
+      })
+      // page-6
+      // 选择答案
+      $(".js-choose-answer5").click(function () {
+         $(this).siblings('.js-choose-answer5').removeClass('active');
+         $(this).addClass('active')
+         question5 = $(this).attr("data-id")
+         // console.log(question1)
+      })
+      // 点击下一题
+      $(".js-go-page-7").click(function () {
+         if (question5) {
+            $(".js-page-6").fadeOut(0)
+            $(".js-page-7").fadeIn(300)
+         }
+      })
+      $(".js-back-page-5").click(function () {
+         $(".js-page-6").fadeOut(0)
+         $(".js-page-5").fadeIn(300)
+      })
+      // page-7
+      // 选择答案
+      $(".js-choose-answer6").click(function () {
+         $(this).siblings('.js-choose-answer6').removeClass('active');
+         $(this).addClass('active')
+         question6 = $(this).attr("data-id")
+         // console.log(question1)
+      })
+      // 点击下一题
+      $(".js-go-page-8").click(function () {
+         if (question6) {
+            $(".js-page-7").fadeOut(0)
+            $(".js-page-8").fadeIn(300)
+         }
+      })
+      $(".js-back-page-6").click(function () {
+         $(".js-page-7").fadeOut(0)
+         $(".js-page-4").fadeIn(300)
+      })
+      // page-8
+      // 选择答案
+      $(".js-choose-answer7").click(function () {
+         $(this).siblings('.js-choose-answer7').removeClass('active');
+         $(this).addClass('active')
+         question7 = $(this).attr("data-id")
+         // console.log(question1)
+      })
+      // 点击下一题
+      $(".js-go-page-9").click(function () {
+         if (question7) {
+            $(".js-music").fadeOut(0)
+            $(".js-page-8").fadeOut(0)
+            $(".js-page-9").fadeIn(300)
+            setTimeout(function () {
+               $(".js-page-9").fadeOut(0)
+               // $(".js-page-10").fadeIn(300)
+               randA()
+               randB()
+               $(".js-result-name").html('<span class="name">' + name + '</span>')
+               var clazz = '.page-img-' + randa;
+               $(clazz).show();
+               $(".js-page-" + randa).fadeIn(300);
+               setTimeout(function () {
+                  dom2canvas(clazz).then(function (canvas) {
+                     $(".js-cover-img").attr('src', canvas.toDataURL());
+                  });
+               }, 400);
+            }, 3000);
+         }
+      })
+      $(".js-cover-img").click(function () {
+         $(".js-page-" + randa).fadeIn(300);
+         $(".page-img-" + randa).css('opacity', '0')
+         $(".js-share").fadeOut(0)
+         $('.js-long-box').fadeOut(0)
+         $(".js-cover-img").fadeOut(0)
+      })
+      $(".js-back-page-7").click(function () {
+         $(".js-page-8").fadeOut(0)
+         $(".js-page-7").fadeIn(300)
+      })
+      // 结果页
+      $(".js-share-10").click(function () {
+         $(".js-page-10").fadeOut(0)
+         $(".page-img-10").css('opacity', '1')
+         $(".js-share").fadeIn(0)
+         $('.js-long-box').fadeIn(0)
+         $(".js-cover-img").fadeIn(0)
+         $(".js-button-long").attr('src', 'imgs/button-10.png')
+      })
+      $(".js-share-11").click(function () {
+         $(".js-page-11").fadeOut(0)
+         $(".page-img-11").css('opacity', '1')
+         $(".js-share").fadeIn(0)
+         $('.js-long-box').fadeIn(0)
+         $(".js-cover-img").fadeIn(0)
+         $(".js-button-long").attr('src', 'imgs/button-11.png')
+      })
+      $(".js-share-12").click(function () {
+         $(".js-page-12").fadeOut(0)
+         $(".page-img-12").css('opacity', '1')
+         $(".js-share").fadeIn(0)
+         $('.js-long-box').fadeIn(0)
+         $(".js-cover-img").fadeIn(0)
+         $(".js-button-long").attr('src', 'imgs/button-12.png')
+      })
+      $(".js-share-13").click(function () {
+         $(".js-page-13").fadeOut(0)
+         $(".page-img-13").css('opacity', '1')
+         $(".js-share").fadeIn(0)
+         $('.js-long-box').fadeIn(0)
+         $(".js-cover-img").fadeIn(0)
+         $(".js-button-long").attr('src', 'imgs/button-13.png')
+      })
+      $(".js-share-14").click(function () {
+         $(".js-page-14").fadeOut(0)
+         $(".page-img-14").css('opacity', '1')
+         $(".js-share").fadeIn(0)
+         $('.js-long-box').fadeIn(0)
+         $(".js-cover-img").fadeIn(0)
+         $(".js-button-long").attr('src', 'imgs/button-14.png')
+      })
+      $(".js-share").click(function () {
+         $(".js-shar-box").fadeIn(300)
+      })
+      $(".js-shar-box").click(function () {
+         $(this).fadeOut(0)
+      })
+      $(".js-other").click(function () {
+         $(".js-other-box").fadeIn(300)
+      })
+      $(".js-other-box").click(function () {
+         $(this).fadeOut(0)
+      })
+      // 生成随机数10-14展示结果页
+      function randA() {
+         //x上限，y下限
+         // var x = 14;
+         var x = 14;
+         var y = 10;
+         randa = parseInt(Math.random() * (x - y + 1) + y);
+         if (randa === 10) {
+            peopleName = 'menglu'
+         } else if (randa === 11) {
+            peopleName = 'heben'
+         } else if (randa === 12) {
+            peopleName = 'dafenqi'
+         } else if (randa === 13) {
+            peopleName = 'sudongpo'
+         } else if (randa === 14) {
+            peopleName = 'qianlong'
+         }
+         console.log(peopleName)
+         wexinShare(peopleName, name)
+      }
+      // 生成随机数1-5 展示杠杆力
+      function randB() {
+         //x上限，y下限
+         var x = 5;
+         var y = 1;
+         randb = parseInt(Math.random() * (x - y + 1) + y);
+         console.log(randb)
+         $(".js-gang-num").attr('src', 'imgs/page-' + randa + '/num-' + randb + '.png')
+      }
+      // 分享
+      function wexinShare(check, name) {
+         if (check === 'dafenqi') {
+            title = name + '体内隐藏着军事发明狂人「达芬奇」人格！测测你体内隐藏着哪位斜杠名人';
+         } else if (check === 'heben') {
+            title = name + '体内隐藏着气质公主「奥黛丽·赫本」人格！测测你体内隐藏着哪位斜杠名人';
+         } else if (check === 'menglu') {
+            title = name + '体内隐藏着性感女神「玛丽莲·梦露」人格！测测你体内隐藏着哪位斜杠名人';
+         } else if (check === 'sudongpo') {
+            title = name + '体内隐藏着美食作家「苏东坡」人格！测测你体内隐藏着哪位斜杠名人';
+         } else if (check === 'qianlong') {
+            title = name + '体内隐藏着弹幕宗师「乾隆」人格！测测你体内隐藏着哪位斜杠名人';
+         }
+
+         imgUrl = 'https://img.songjiang.xyz/normal/xiegang/weixinShare/' + check + '.png'
+
+         clickWXShare()
+      }
+
+      function clickWXShare() {
+
+         console.log(title, imgUrl)
+         $.ajax({
+            type: 'post',
+            url: "https://vivo.songjiang.xyz/wechat/jssdk/share",
+            data: {
+               "url": myurl
+            },
+            dataType: "json",
+            success: function (data) {
+               wx.config({
+                  debug: false,
+                  appId: data.data.appId,
+                  timestamp: data.data.timestamp,
+                  nonceStr: data.data.nonceStr,
+                  signature: data.data.signature,
+                  jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage']
+               })
+               initShar();
+            },
+            error: function (data) {
+               console.log("加载系统变量失败，请重新登录", "登录错误");
+            }
+         });
+      }
+
+
+      function initShar() {
+         wx.onMenuShareTimeline({
+            title: title,
+            desc: desc,
+            link: myurl,
+            imgUrl: imgUrl,
+            success: function () {
+               shar2();
+            }
+         });
+         wx.onMenuShareAppMessage({
+            title: title,
+            desc: desc,
+            link: myurl,
+            imgUrl: imgUrl,
+            success: function () {
+               shar2();
+            }
+         });
+      }
+
+      function shar2() {
+         $.ajax({
+            url: 'https://vivo.songjiang.xyz/customer/customer/get_slash_num?type=share',
+            type: 'get',
+            timeout: 0,
+            data: {},
+            success: function (res) {
+               console.log(res)
+            },
+            error: function (data) {
+               console.log(data);
+            }
+         })
+      }
+
+      var title = '测测你体内隐藏着哪位斜杠名人';
+      var imgUrl = 'https://img.songjiang.xyz/normal/xiegang/weixinShare/dafenqi.png'
+      var desc = '点击探寻真实的自己';
+      var myurl = location.href;
+
+      clickWXShare()
+
+
+      wx.ready(initShar);
+   </script>
+</body>
+
+</html>

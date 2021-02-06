@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>性格香水测试</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- 独立样式 -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <script>
+        // 自适应REM
+        window.onload = function () {
+            getRem(640, 100)
+        };
+        window.onresize = function () {
+            getRem(640, 100)
+        };
+        getRem(640, 100);
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <!-- 加载页 -->
+    <!-- <section class="page-loading"></section> -->
+    <!-- page-1 -->
+    <section class="page-1">
+        <img src="imgs/P1/P1-1.png" alt="" class="bg">
+    </section>
+    <!-- 公共JS -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

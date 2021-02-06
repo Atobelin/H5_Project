@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="UTF-8">
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- 公共样式 -->
+	<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<!-- 独立样式 -->
+</head>
+
+<body>
+	<script>
+		// 自适应REM
+		window.onload = function () {
+			/*640代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+			  为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+			getRem(640, 100)
+		};
+		window.onresize = function () {
+			getRem(640, 100)
+		};
+		getRem(640, 100);
+
+		function getRem(pwidth, prem) {
+			var html = document.getElementsByTagName("html")[0];
+			var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+			html.style.fontSize = oWidth / pwidth * prem + "px";
+		}
+	</script>
+	<!-- loading -->
+	<section class="js-loading loading">
+		<img src="img/loading/bg.jpg" alt="" class="bg">
+		<img src="img/loading/loading.png" alt="" class="c-1 rotate_1">
+		<img src="img/loading/xu-line.png" alt="" class="c-2 rotate_2">
+		<img src="img/loading/text.png" alt="" class="text">
+	</section>
+	<!-- 首页 -->
+	<section class="js-index index" style="display: none;">
+		<img src="img/01-index/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/01-index/text-1.png" alt="" class="text-1 animated zoomIn du2000">
+		<img src="img/01-index/text-2.png" alt="" class="text-2 animated zoomIn delay-15s du2000">
+		<img src="img/01-index/text-3.png" alt="" class="text-3 animated zoomIn delay-2s du3000">
+		<img src="img/01-index/text-4.png" alt="" class="text-4 animated zoomIn delay-25s du2000">
+		<img src="img/01-index/text-5.png" alt="" class="text-5 animated zoomIn delay-3s du2000">
+		<img src="img/01-index/star.png" alt="" class="star star_1">
+	</section>
+	<!-- 输入手机 -->
+	<section class="js-phone phone" style="display: none;">
+		<img src="img/02-phone/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/ball.png" alt="" class="ball">
+		<img src="img/02-phone/text-1.png" alt="" class="text-1">
+		<img src="img/02-phone/text-2.png" alt="" class="text-2">
+		<input id="telphone" type="text" class="input" placeholder="手机号">
+		<img src="img/02-phone/button.png" alt="" class="button js-qiandao">
+		<img src="img/02-phone/c-1.png" alt="" class="c-1 circle_1">
+		<img src="img/02-phone/c-2.png" alt="" class="c-2 circle_2">
+		<img src="img/02-phone/c-3.png" alt="" class="c-3 circle_3">
+		<img src="img/02-phone/s-1.png" alt="" class="s-1 star_2">
+		<img src="img/02-phone/s-2.png" alt="" class="s-2 star_5">
+		<img src="img/02-phone/s-3.png" alt="" class="s-3 star_4">
+		<img src="img/02-phone/s-4.png" alt="" class="s-4 star_3">
+	</section>
+	<!-- 签到 -->
+	<section class="js-success phone success" style="display: none;">
+		<img src="img/02-phone/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/ball.png" alt="" class="ball">
+		<img src="img/02-phone/c-1.png" alt="" class="c-1 circle_1">
+		<img src="img/02-phone/c-2.png" alt="" class="c-2 circle_2">
+		<img src="img/02-phone/c-3.png" alt="" class="c-3 circle_3">
+		<img src="img/02-phone/s-1.png" alt="" class="s-1 star_2">
+		<img src="img/02-phone/s-2.png" alt="" class="s-2 star_5">
+		<img src="img/02-phone/s-3.png" alt="" class="s-3 star_4">
+		<img src="img/02-phone/s-4.png" alt="" class="s-4 star_3">
+		<img src="img/03-qiandao/text-2.png" alt="" class="text-1">
+		<div class="textnew">
+		</div>
+		<img src="img/03-qiandao/button.png" alt="" class="button js-huoqu">
+	</section>
+	<section class="js-fairly phone  fairly" style="display: none;">
+		<img src="img/02-phone/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/ball.png" alt="" class="ball">
+		<img src="img/02-phone/c-1.png" alt="" class="c-1 circle_1">
+		<img src="img/02-phone/c-2.png" alt="" class="c-2 circle_2">
+		<img src="img/02-phone/c-3.png" alt="" class="c-3 circle_3">
+		<img src="img/02-phone/s-1.png" alt="" class="s-1 star_2">
+		<img src="img/02-phone/s-2.png" alt="" class="s-2 star_5">
+		<img src="img/02-phone/s-3.png" alt="" class="s-3 star_4">
+		<img src="img/02-phone/s-4.png" alt="" class="s-4 star_3">
+		<a class="shenhedianhua" href="tel:13601076323">
+			<img src="img/03-qiandao/text-1.png" alt="" class="text-1">
+		</a>
+
+	</section>
+	<!-- 会议提示 -->
+	<section class="js-hyts hyts" style="display: none;">
+		<img src="img/04-hyts/bg.png" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/ball.png" alt="" class="ball">
+		<img src="img/04-hyts/bg-3.png" alt="" class="bg-3">
+		<img src="img/04-hyts/person-gif.gif" alt="" class="person">
+		<!-- 圆圈 -->
+		<img src="img/04-hyts/s-3.png" alt="" class="s-1-img">
+		<img src="img/04-hyts/s-2.png" alt="" class="s-2-img">
+		<img src="img/04-hyts/s-5.png" alt="" class="s-3-img">
+		<img src="img/04-hyts/s-1.png" alt="" class="s-4-img">
+		<img src="img/04-hyts/s-4.png" alt="" class="s-5-img">
+		<div class="a_c-6-img all-a-box">
+			<span>
+				<img src="img/04-hyts/c-hsse.png" alt="" class="c-6-img">
+				<a class="js-go-hsse"></a>
+			</span>
+		</div>
+		<div class="a_c-7-img all-a-box">
+			<span>
+				<img src="img/04-hyts/c-zl.png" alt="" class="c-7-img">
+				<a class="js-go-zl"></a>
+			</span>
+		</div>
+		<div class="a_c-8-img all-a-box">
+			<span>
+				<img src="img/04-hyts/c-ly.png" alt="" class="c-8-img">
+				<a class="js-go-ly"></a>
+			</span>
+		</div>
+		<div class="a_c-9-img all-a-box">
+			<span>
+				<img src="img/04-hyts/c-hy.png" alt="" class="c-9-img">
+				<a class="js-go-yc"></a>
+			</span>
+		</div>
+		<div class="a_c-10-img all-a-box">
+			<span>
+				<img src="img/04-hyts/c-tsh.png" alt="" class="c-10-img">
+				<a class="js-go-tsh"></a>
+			</span>
+		</div>
+		<!-- 转动圆圈 -->
+		<div class="r-rotate_5">
+			<img src="img/04-hyts/5.png" alt="" class="r-5-img">
+		</div>
+		<div class="r-rotate_4">
+			<img src="img/04-hyts/4.png" alt="" class="r-4-img">
+		</div>
+		<div class="r-rotate_3">
+			<img src="img/04-hyts/3.png" alt="" class="r-3-img">
+		</div>
+		<div class="r-rotate_2">
+			<img src="img/04-hyts/2.png" alt="" class="r-2-img">
+		</div>
+		<div class="r-rotate_1">
+			<img src="img/04-hyts/1.png" alt="" class="r-1-img">
+		</div>
+		<div class="r-rotate_0">
+			<img src="img/04-hyts/0.png" alt="" class="r-0-img">
+		</div>
+		<img src="img/04-hyts/bg-2.png" alt="" class="bg-2">
+		<!-- 人 -->
+		<img src="img/04-hyts/person.png" alt="" class="person-img">
+	</section>
+	<!-- 会议议程 -->
+	<section class="js-yc yc" style="display: none;">
+		<img src="img/05-yc/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/ball.png" alt="" class="ball">
+		<img src="img/back.png" alt="" class="back js-back">
+		<img src="img/05-yc/line.png" alt="" class="line">
+		<div class="line-box ">
+			<!-- <img src="img/05-yc/text.png" alt="" class="text"> -->
+			<div class="swiper-container yc-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/05-yc/shuxian.png" alt="" class="shuxian">
+						<img src="img/05-yc/dian.png" alt="" class="dian ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+						<img src="img/05-yc/dian.png" alt="" class="dian ani" style="top: 2.67rem;" swiper-animate-effect="bounceIn" swiper-animate-duration="1s"
+						    swiper-animate-delay="1s">
+						<img src="img/05-yc/dian.png" alt="" class="dian ani" style="top: 3.49rem;" swiper-animate-effect="bounceIn" swiper-animate-duration="1s"
+						    swiper-animate-delay="1.5s">
+						<img src="img/05-yc/dian.png" alt="" class="dian ani" style="top: 4.72rem;" swiper-animate-effect="bounceIn" swiper-animate-duration="1s"
+						    swiper-animate-delay="2s">
+						<img src="img/05-yc/dian.png" alt="" class="dian ani" style="top: 5.26rem;" swiper-animate-effect="bounceIn" swiper-animate-duration="1s"
+						    swiper-animate-delay="2.5s">
+						<p class="yc-title ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.5s">会议议程</p>
+						<p class="yc-time  ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.7s">9月10日 上午</p>
+						<p class="yc-people tlt_swiper tlt_swiper1" data-in-effect="fadeIn">主持人：共享服务公司副总经理 邱颖</p>
+						<p class="yc-place tlt_swiper tlt_swiper2" data-in-effect="fadeIn">会议室：五楼正天厅</p>
+						<div class="yc-text">
+							<span class="left  tlt_swiper tlt_swiper3" data-in-effect="fadeInRight">9:00</span>
+							<div class="right">
+								<p class=" tlt_swiper tlt_swiper4" data-in-effect="fadeInRight">会议致辞</p>
+								<p class=" tlt_swiper tlt_swiper5" data-in-effect="fadeInRight">--共享服务公司经理、党委书记
+									<span> 刘利君</span>
+								</p>
+							</div>
+						</div>
+						<div class="yc-text">
+							<span class="left tlt_swiper tlt_swiper6" data-in-effect="fadeInRight">9:15</span>
+							<div class="right">
+								<p class="tlt_swiper tlt_swiper7" data-in-effect="fadeInRight">中国石化共享服务建设总体情况介绍</p>
+								<p class="tlt_swiper tlt_swiper8" data-in-effect="fadeInRight">--共享服务公司经理
+									<span> 马永林</span>
+								</p>
+							</div>
+						</div>
+						<div class="yc-text">
+							<span class="left tlt_swiper tlt_swiper9" data-in-effect="fadeInRight">10:00</span>
+							<div class="right">
+								<p class="tlt_swiper tlt_swiper10" data-in-effect="fadeInRight">客户服务平台演示</p>
+								<p class="tlt_swiper tlt_swiper11" data-in-effect="fadeInRight">--共享服务公司南京分公司副经理
+									<span> 易思安</span>
+								</p>
+							</div>
+						</div>
+						<div class="yc-text">
+							<span class="left tlt_swiper tlt_swiper12" data-in-effect="fadeInRight">10:15</span>
+							<div class="right">
+								<p class="tlt_swiper tlt_swiper13" data-in-effect="fadeInRight">会间休息</p>
+							</div>
+						</div>
+						<div class="yc-text">
+							<span class="left tlt_swiper tlt_swiper12" data-in-effect="fadeInRight">10:30</span>
+							<div class="right">
+								<p class="tlt_swiper tlt_swiper13" data-in-effect="fadeInRight">典型企业访谈(胜利油田、西北油田、镇海炼化、上海石化、济南分公司)</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/05-yc/shuxian.png" alt="" class="shuxian" style="top: 0.2rem;height: 2rem;">
+						<img src="img/05-yc/shuxian.png" alt="" class="shuxian" style="top: 3.8rem;height: 3rem;">
+						<img src="img/05-yc/dian.png" alt="" class="dian ani" style="top: 0.05rem;" swiper-animate-effect="bounceIn" swiper-animate-duration="1s"
+						    swiper-animate-delay="0.5s">
+						<img src="img/05-yc/dian.png" alt="" class="dian ani" style="top: 3.68rem;" swiper-animate-effect="bounceIn" swiper-animate-duration="1s"
+						    swiper-animate-delay="1s">
+						<div class="yc-text">
+							<span class="left tlt_swiper tlt_swiper1" data-in-effect="fadeInRight">10:30</span>
+							<div class="right">
+								<p class="tlt_swiper tlt_swiper2" data-in-effect="fadeInRight">主题分享</p>
+								<p class="tlt_swiper tlt_swiper3" data-in-effect="fadeInRight">&nbsp;1.共享创新发展助力客户业务转型</p>
+								<p class="tlt_swiper tlt_swiper4" data-in-effect="fadeInRight">&nbsp;&nbsp;IBM全球企业咨询服务部大中华区财务管理咨询团队负责人、共享咨询方案负责人&nbsp;辛本梅</p>
+								<p class="tlt_swiper tlt_swiper5" data-in-effect="fadeInRight">&nbsp;2.《新科技、新服务、新价值》</p>
+								<p class="tlt_swiper tlt_swiper6" data-in-effect="fadeInRight">&nbsp;&nbsp;用友网络科技股份有限公司副总裁 郎松涛  </p>
+							</div>
+						</div>
+						<p class="yc-time ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.7s">9月10日 下午</p>
+						<div class="yc-text">
+							<span class="left tlt_swiper tlt_swiper7" data-in-effect="fadeInRight">14:00</span>
+							<div class="right">
+								<p class="tlt_swiper tlt_swiper8" data-in-effect="fadeInRight">研讨交流</p>
+								<p class="tlt_swiper tlt_swiper9" data-in-effect="fadeInRight">财务共享研讨交流</p>
+								<p class="tlt_swiper tlt_swiper10 yellow" data-in-effect="fadeInRight">二层红宫廷、四层上元厅、四层昇州厅</p>
+								<p class="tlt_swiper tlt_swiper11" data-in-effect="fadeInRight">HR共享研讨交流</p>
+								<p class="tlt_swiper tlt_swiper12 yellow" data-in-effect="fadeInRight">二层大成厅</p>
+								<p class="tlt_swiper tlt_swiper13" data-in-effect="fadeInRight">IT共享研讨交流</p>
+								<p class="tlt_swiper tlt_swiper14 yellow" data-in-effect="fadeInRight">二层健康厅</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/05-yc/shuxian.png" alt="" class="shuxian" style="top: 1.1rem;height: 0.5rem;">
+						<img src="img/05-yc/dian.png" alt="" class="dian ani" style="top: 0.92rem;" swiper-animate-effect="bounceIn" swiper-animate-duration="1s"
+						    swiper-animate-delay="0.5s">
+						<p class="yc-time ani" swiper-animate-effect="fadeIn" swiper-animate-duration="2s" swiper-animate-delay="0.7s" style="padding-bottom: 0.43rem;">9月11日 上午</p>
+						<div class="yc-text">
+							<span class="left tlt_swiper tlt_swiper1" data-in-effect="fadeInRight">9:00</span>
+							<div class="right">
+								<p class="tlt_swiper tlt_swiper2" data-in-effect="fadeInRight">共享服务公司南京分公司现场交流</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<img src="img/05-yc/s-1.png" alt="" class="s-1 star_2">
+		<img src="img/05-yc/s-2.png" alt="" class="s-2 star_5">
+		<img src="img/05-yc/q-1.png" alt="" class="q-1 circle_1">
+		<img src="img/05-yc/q-2.png" alt="" class="q-2 circle_3">
+		<img src="img/05-yc/q-3.png" alt="" class="q-3 circle_4">
+		<img src="img/05-yc/q-4.png" alt="" class="q-4 circle_2">
+		<img src="img/05-yc/q-5.png" alt="" class="q-5 circle_4">
+		<img src="img/05-yc/q-6.png" alt="" class="q-6 circle_2">
+	</section>
+	<!-- HSSE -->
+	<section class="js-hsse hsse" style="display: none;">
+		<img src="img/06-zl/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/ball.png" alt="" class="ball">
+		<img src="img/back.png" alt="" class="back js-back">
+		<img src="img/05-yc/line.png" alt="" class="line">
+		<div class="line-box">
+			<h3 class="yellow">HSSE 须 知</h3>
+			<p>为了确保您在会议期间的健康、安全与环保，请您注意以下有关事项：</p>
+			<p class="yellow">一、住宿</p>
+			<p>1.入住宾馆后，请及时了解宾馆及会场的安全须知，熟悉安全疏散示意图。</p>
+			<p>2.请不要携带易燃、易爆、化学物品进入酒店。</p>
+			<p>3.正确使用房间电器等设施，不要在床上吸烟。</p>
+			<p>4. 离开房间时，请锁好房门，妥善保管好重要文件和贵重物品。退房时将房卡交回宾馆总台。</p>
+			<p>5.如遇火灾时不要搭乘电梯；穿过有浓烟的走廊、通道时，用浸湿的衣服披裹身体，捂住口鼻低身顺墙逃生；大火封门无法逃出时，用被褥堵住门缝，泼水降温，关闭空调系统，及时拨打火警119，耐心等待救援人员。</p>
+			<p class="yellow">二、出行</p>
+			<p>1.请熟悉所搭乘交通工具发生意外时的紧急逃生办法。</p>
+			<p>2.外出时携带宾馆房卡及宾馆名片，以防迷路时使用。</p>
+			<p>3.注意有关安全提示，经过危险地段（如陡峭、狭窄、潮湿打滑的道路等）不要拥挤。</p>
+			<p class="yellow">三、应急通讯电话： 区号：025（南京）</p>
+			<p>求助电话：火警119　匪警110　交通122　急救120</p>
+			<p>附近医院：江苏省中西医结合医院（红山路十字街100号；电话：025-85638721）</p>
+		</div>
+	</section>
+	<!-- 会议资料 -->
+	<section class="js-zl zl" style="display: none;">
+		<img src="img/06-zl/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/ball.png" alt="" class="ball">
+		<img src="img/back.png" alt="" class="back js-back">
+		<img src="img/06-zl/s-1.png" alt="" class="s-1 star_2">
+		<img src="img/06-zl/s-2.png" alt="" class="s-2 star_5">
+		<img src="img/06-zl/s-3.png" alt="" class="s-3 star_4">
+		<img src="img/06-zl/s-4.png" alt="" class="s-4 star_3">
+		<img src="img/06-zl/q-1.png" alt="" class="q-1 circle_2">
+		<img src="img/06-zl/q-2.png" alt="" class="q-2 circle_1">
+		<img src="img/06-zl/q-3.png" alt="" class="q-3 circle_3">
+		<div class="swiper-box">
+			<div class="swiper-container zl-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box ziliao">
+							<h3>会议代表名册</h3>
+							<p class="yellow">一、总部部门</p>
+							<p>
+								<span>贾海晶</span> 集团财务部会计处副处长</p>
+							<p>
+								<span>李登强</span> 集团企业改革管理部改革处副处长</p>
+							<p>
+								<span>祝君光</span> 集团人事部劳动薪酬管理处副处长</p>
+							<p>
+								<span>张玉乾</span> 集团人事部办公室主办</p>
+							<p>
+								<span>初旭明</span> 集团资本运营部财务会计处副处长</p>
+							<p>
+								<span>张&emsp;云</span> 集团资本运营部(资产公司)办公室主管</p>
+							<p>
+								<span>奚&emsp;震</span> 集团宣传工作部宣传文化处主管</p>
+							<p>
+								<span>朱灵梅</span> 股份财务部会计处副处长</p>
+							<p>
+								<span>蒋&emsp;楠</span> 集团信息化管理部应用管理处副处长</p>
+							<p>
+								<span>孟庆峰</span> 集团信息化管理部安全技术管理处高级主管</p>
+							<p>
+								<span>徐启锋</span> 油田勘探开发事业部财务处副处长</p>
+							<p>
+								<span>张功名</span> 炼油事业部财务处专家</p>
+							<p>
+								<span>张宁海</span> 化工事业部财务处处长</p>
+							<p>
+								<span>韩&emsp;翔</span> 油品销售事业部财务处副处长</p>
+							<p>
+								<span>刘智源</span> 油品销售事业部财务处主办</p>
+							<p class="yellow">二、集团企业及专业公司</p>
+							<p>（一）油田企业</p>
+							<p>
+								<span>张志友</span> 胜利油田分公司财务资产处副处长</p>
+							<p>
+								<span>姜&emsp;涛</span> 胜利油田分公司财务资产处成本科副科长</p>
+							<p>
+								<span>段鸿杰</span> 胜利油田分公司信息化管理中心副处长</p>
+							<p>
+								<span>隋国栋</span> 胜利油田分公司信息化管理中心副科长</p>
+							<p>
+								<span>杨万山</span> 胜利油田分公司人力资源处副处长</p>
+							<p>
+								<span>姚永泽</span> 胜利油田分公司人力资源处劳动组织计划科科长</p>
+							<p>
+								<span>辛大勇</span> 胜利石油管理局财务资产部会计管理科科长</p>
+							<p>
+								<span>张&emsp;祥</span> 胜利石油管理局财务资产部会计管理科科员</p>
+							<p>
+								<span>刘建军</span> 中原油田分公司财务资产处处长</p>
+							<p>
+								<span>高&emsp;燕</span> 中原油田分公司财务资产处科长</p>
+							<p>
+								<span>章&emsp;胜</span> 中原油田分公司人力资源处副处长</p>
+							<p>
+								<span>陈&emsp;洁</span> 中原油田分公司人力资源处副科长</p>
+							<p>
+								<span>龙&emsp;飞</span> 中原油田分公司信息化管理中心副主任</p>
+							<p>
+								<span>赵志伟</span> 中原油田分公司信息化管理中心业务主管</p>
+							<p>
+								<span>朱建华</span> 中原石油勘探局计划财务处副科长</p>
+							<p>
+								<span>魏建新</span> 河南油田分公司人事处副处长</p>
+							<p>
+								<span>丁富野</span> 河南油田分公司人事处薪酬激励科副科长</p>
+							<p>
+								<span>赵严勋</span> 河南油田分公司财务资产处会计资产科科长</p>
+							<p>
+								<span>吕少群</span> 河南石油勘探局计划财务处会计管理科副科长</p>
+							<p>
+								<span>尹祥继</span> 江汉油田分公司财务资产处处长</p>
+							<p>
+								<span>肖&emsp;霞</span> 江汉油田分公司计划财务处业务主管</p>
+							<p>
+								<span>常&emsp;友</span> 江汉油田分公司人力资源处业务主管</p>
+							<p>
+								<span>孙&emsp;薇</span> 江汉油田分公司人力资源处主办</p>
+							<p>
+								<span>张庆祥</span> 江苏油田分公司财务计划处副处长</p>
+							<p>
+								<span>曾&emsp;瑾</span> 江苏油田分公司财务计划处主管</p>
+							<p>
+								<span>黄开铭</span> 江苏油田分公司人力资源部副部长</p>
+							<p>
+								<span>祖德勇</span> 江苏油田分公司人力资源部薪酬管理科副科长</p>
+							<p>
+								<span>张桂新</span> 江苏油田分公司信息化管理中心网络与信息安全科副科长</p>
+							<p>
+								<span>严奉刚</span> 西北石油局财务资产处专家</p>
+							<p>
+								<span>杨新莉</span> 西北石油局人力资源处高级主管</p>
+							<p>
+								<span>周丽君</span> 西北石油局人力资源处主管</p>
+							<p>
+								<span>张卫东</span> 西北石油局信息化管理处副处长</p>
+							<p>
+								<span>杨&emsp;飞</span> 西北石油局信息化管理处主管</p>
+							<p>
+								<span>杨达高</span> 西南油气分公司财务资产处副处长</p>
+							<p>
+								<span>李智海</span> 西南油气分公司财务资产处副科长</p>
+							<p>
+								<span>周&emsp;伟</span> 西南油气分公司信息中心主任</p>
+							<p>
+								<span>杨文骞</span> 华北油气分公司财务资产处主管</p>
+							<p>
+								<span>高&emsp;峰</span> 华北油气分公司人力资源处高级主管</p>
+							<p>
+								<span>简玉磊</span> 华东石油局计划财务处资金科副科长</p>
+							<p>
+								<span>梁辛怡</span> 华东石油局人力资源处干部管理科主管</p>
+							<p>
+								<span>徐长志</span> 华东石油局人力资源处薪酬管理科主管</p>
+							<p>
+								<span>徐桂芳</span> 华东油气分公司财务资产处处长</p>
+							<p>（二）炼化企业</p>
+							<p>
+								<span>孙冬梅</span> 燕山分公司、燕山石化公司会计中心处长</p>
+							<p>
+								<span>马&emsp;瑶</span> 燕山分公司、燕山石化公司会计中心报表信息科科长</p>
+							<p>
+								<span>王&emsp;晶</span> 燕山分公司、燕山石化公司管理信息部处长</p>
+							<p>
+								<span>张&emsp;倩</span> 燕山分公司、燕山石化公司管理信息部主管</p>
+							<p>
+								<span>刘志鹏</span> 齐鲁分公司信息中心副处长</p>
+							<p>
+								<span>阚晓明</span> 齐鲁分公司财务处主办</p>
+							<p>
+								<span>陈&emsp;洋</span> 齐鲁分公司财务处主办</p>
+							<p>
+								<span>阎翠红</span> 齐鲁分公司财务处主办</p>
+							<p>
+								<span>宋丰贞</span> 齐鲁分公司人事处副处长</p>
+							<p>
+								<span>岳彦桥</span> 齐鲁分公司人力共享项目部科长</p>
+							<p>
+								<span>张友余</span> 金陵分公司信息化与计量中心总工程师</p>
+							<p>
+								<span>徐建荣</span> 金陵分公司财务处副处长</p>
+							<p>
+								<span>王忠明</span> 金陵分公司财务处成本科科长</p>
+							<p>
+								<span>黄桂平</span> 金陵分公司人力资源处科长</p>
+							<p>
+								<span>庄&emsp;明</span> 金陵分公司金陵分公司科员</p>
+							<p>
+								<span>生兆媛</span> 金陵分公司信息化与计量中心工程师</p>
+							<p>
+								<span>吴国飞</span> 茂名石化公司财务部副部长</p>
+							<p>
+								<span>杨俏仪</span> 茂名石化公司财务部总账岗</p>
+							<p>
+								<span>梁奕颖</span> 茂名石化公司财务部费用管理岗</p>
+							<p>
+								<span>伍晓刚</span> 茂名石化公司信息中心高级工程师</p>
+							<p>
+								<span>万宏翥</span> 扬子石化公司财务资产处处长</p>
+							<p>
+								<span>黄&emsp;平</span> 扬子石化公司财务资产处科长</p>
+							<p>
+								<span>于广祥</span> 扬子石化公司人力资源处科长</p>
+							<p>
+								<span>张载斌</span> 扬子石化公司人力资源处科长</p>
+							<p>
+								<span>方宗顺</span> 扬子石化公司技术处信息科科长</p>
+							<p>
+								<span>杨雅婷</span> 上海石化公司财务处副处长</p>
+							<p>
+								<span>顾晨舟</span> 上海石化公司财务处会计科副科长</p>
+							<p>
+								<span>金&emsp;峰</span> 上海石化公司人力资源处副处长</p>
+							<p>
+								<span>徐思远</span> 上海石化公司人力资源处薪酬福利科科长助理</p>
+							<p>
+								<span>顾红英</span> 仪征化纤公司财务资产处科长</p>
+							<p>
+								<span>李凤泉</span> 仪征化纤公司财务资产处主办</p>
+							<p>
+								<span>夏秀禄</span> 仪征化纤公司财务资产处主办</p>
+							<p>
+								<span>左立峰</span> 仪征化纤公司人力资源处副处长</p>
+							<p>
+								<span>马国斌</span> 仪征化纤公司人力资源处薪酬科科长</p>
+							<p>
+								<span>陶昌明</span> 仪征化纤公司信息管理处科长</p>
+							<p>
+								<span>赵君永</span> 南化公司财务计划处副处长</p>
+							<p>
+								<span>包仁江</span> 南化公司财务计划处科长</p>
+							<p>
+								<span>许&emsp;清</span> 南化公司人力资源处副处长</p>
+							<p>
+								<span>吴银清</span> 南化公司人力资源处副科长</p>
+							<p>
+								<span>冯&emsp;军</span> 南化公司信息化与计量中心副处长</p>
+							<p>
+								<span>赵丽丹</span> 镇海炼化分公司财务处处长</p>
+							<p>
+								<span>唐海滢</span> 镇海炼化分公司财务处副主任会计师</p>
+							<p>
+								<span>冯&emsp;云</span> 镇海炼化分公司财务处综合成本核算员</p>
+							<p>
+								<span>周&emsp;蔚</span> 镇海炼化分公司东海蓝帆副总经理</p>
+							<p>
+								<span>黄海彬</span> 广州分公司信息中心主任</p>
+							<p>
+								<span>李志清</span> 广州分公司财务部副主任</p>
+							<p>
+								<span>田维忠</span> 安庆分公司财务部副部长</p>
+							<p>
+								<span>许&emsp;旸</span> 安庆分公司财务部科长</p>
+							<p>
+								<span>张志侠</span> 安庆分公司人力资源处科科长</p>
+							<p>
+								<span>李&emsp;杰</span> 安庆分公司信息中心副主任</p>
+							<p>
+								<span>吴战强</span> 洛阳分公司会计科科长</p>
+							<p>
+								<span>常朋芳</span> 洛阳分公司财务科主管</p>
+							<p>
+								<span>任黄铭</span> 洛阳分公司薪酬科主管</p>
+							<p>
+								<span>杜丛林</span> 荆门分公司人力资源处主任师</p>
+							<p>
+								<span>陈&emsp;斌</span> 荆门分公司财务处科长</p>
+							<p>
+								<span>钟昆玉</span> 荆门分公司财务处主管</p>
+							<p>
+								<span>赵&emsp;雷</span> 济南分公司信息服务中心主任</p>
+							<p>
+								<span>苑钧宏</span> 济南分公司信息服务中心（ERP支持中心）主任</p>
+							<p>
+								<span>陈书聚</span> 济南分公司人力资源处高级主管</p>
+							<p>
+								<span>赵光春</span> 济南分公司财务资产处主任师</p>
+							<p>
+								<span>王冰洁</span> 济南分公司财务资产处科员 </p>
+							<p>
+								<span>吴后根</span> 青岛炼化公司财务资产处主任师</p>
+							<p>
+								<span>周长征</span> 青岛炼化公司行政事务中心主管</p>
+							<p>
+								<span>朱立华</span> 青岛炼化公司企业资源处主管</p>
+							<p>
+								<span>齐永军</span> 塔河炼化公司财务处会计科主管</p>
+							<p>
+								<span>蔡朝辉</span> 管道储运有限公司财务处副总会计师、财务处处长</p>
+							<p>
+								<span>李晓晨</span> 管道储运有限公司财务处会计科科长</p>
+							<p>
+								<span>王晓琳</span> 管道储运有限公司财务处会计科业务主管</p>
+							<p>
+								<span>何&emsp;兵</span> 管道储运有限公司人力资源处副处长</p>
+							<p>
+								<span>袁&emsp;燕</span> 管道储运有限公司人力资源处薪酬管理科高级主管</p>
+							<p>（三）油品销售企业</p>
+							<p>
+								<span>王&emsp;茜</span> 北京石油公司财务资产处处长助理</p>
+							<p>
+								<span>邵&emsp;悦</span> 北京石油公司财务资产处主管</p>
+							<p>
+								<span>张&emsp;伟</span> 北京石油公司信息处主管</p>
+							<p>
+								<span>田&emsp;伟</span> 上海石油公司财务资产处处长助理</p>
+							<p>
+								<span>殷&emsp;芟</span> 上海石油公司财务资产处高级主管</p>
+							<p>
+								<span>林&emsp;苒</span> 上海石油公司信息管理处处长助理</p>
+							<p>
+								<span>张家林</span> 江苏石油公司信息处处长</p>
+							<p>
+								<span>唐永杰</span> 江苏石油公司财务处主管</p>
+							<p>
+								<span>胡文悦</span> 江苏石油公司财务处主管</p>
+							<p>
+								<span>陈&emsp;云</span> 江苏石油公司人力资源处副处长</p>
+							<p>
+								<span>蒋&emsp;晖</span> 江苏石油公司人力资源处主管</p>
+							<p>
+								<span>徐&emsp;海</span> 浙江石油公司财务处处长</p>
+							<p>
+								<span>张向红</span> 浙江石油公司财务处科长</p>
+							<p>
+								<span>马&emsp;杰</span> 山东石油公司财务资产处副处长</p>
+							<p>
+								<span>杜受春</span> 山东石油公司财务资产处科长</p>
+							<p>
+								<span>张&emsp;旭</span> 山东石油公司人力资源处科长</p>
+							<p>
+								<span>张&emsp;牧</span> 山东石油公司信息管理处科长</p>
+							<p>
+								<span>应自强</span> 山东石油公司信息管理处主管</p>
+							<p>
+								<span>赵予燕</span> 河南石油公司财务资产处副处长</p>
+							<p>
+								<span>张德涛</span> 河南石油公司财务资产处科长</p>
+							<p>
+								<span>柴瑞丽</span> 广东石油公司财务资产处处长</p>
+							<p>
+								<span>何益超</span> 广东石油公司财务信息系统管理员</p>
+							<p>
+								<span>孙&emsp;楠</span> 新疆石油公司财务资产处副处长</p>
+							<p>
+								<span>李&emsp;洁</span> 新疆石油公司财务资产处业务员</p>
+							<p>
+								<span>王传刚</span> 催化剂公司财务部副主任</p>
+							<p>
+								<span>王占香</span> 催化剂公司财务部主办</p>
+							<p>
+								<span>龙&emsp;华</span> 催化剂公司ERP支持中心主管</p>
+							<p>（四）科研单位</p>
+							<p>
+								<span>杜爱军</span> 石油物探技术研究院计划财务部主任</p>
+							<p>
+								<span>林&emsp;静</span> 石油物探技术研究院计划财务部主管</p>
+							<p>
+								<span>吴坛珍</span> 石油物探技术研究院人力资源部主任</p>
+							<p>
+								<span>黄&emsp;骏</span> 石油物探技术研究院人力资源部主管</p>
+							<p>（五）专业公司</p>
+							<p>
+								<span>白宗和</span> 石油工程公司财务资产部副经理</p>
+							<p>
+								<span>刘黎龙</span> 石油工程公司财务资产部主管</p>
+							<p>
+								<span>刘博文</span> 石油工程公司人力资源部副经理</p>
+							<p>
+								<span>赵方红</span> 石油工程公司科技信息处副处长</p>
+							<p>
+								<span>苏&emsp;铁</span> 华东石油工程公司财务处副处长</p>
+							<p>
+								<span>高婧婷</span> 华东石油工程公司财务处主管</p>
+							<p>
+								<span>冯丹阳</span> 华东石油工程公司人力资源处主管</p>
+							<p>
+								<span>胡&emsp;宏</span> 炼化工程集团信息化管理部总经理</p>
+							<p>
+								<span>王力辉</span> 炼化工程集团财务部主管</p>
+							<p>
+								<span>姚小江</span> 南京工程公司财务部科长</p>
+							<p>
+								<span>刘忠成</span> 南京工程公司财务部副主任</p>
+							<p>
+								<span>后莲英</span> 南京工程公司人力资源部主任师</p>
+							<p>
+								<span>彭&emsp;磊</span> 长城能源化工公司资产部副处长</p>
+							<p>
+								<span>杨学成</span> 长城能源化工公司财务资产处会计管理科科长</p>
+							<p>
+								<span>刘双利</span> 化工销售公司财务处副处长</p>
+							<p>
+								<span>张&emsp;欧</span> 化工销售公司财务处主办</p>
+							<p>
+								<span>靳&emsp;行</span> 化工销售公司人力资源处主办</p>
+							<p>
+								<span>吕庆武</span> 天然气分公司财务部副处长</p>
+							<p>
+								<span>袭&emsp;明</span> 天然气分公司财务部主管</p>
+							<p>
+								<span>聂&emsp;封</span> 新疆煤制气管道有限公司财务资产部科长</p>
+							<p>
+								<span>王&emsp;赞</span> 新疆煤制气管道有限公司人力资源部主办</p>
+							<p>
+								<span>韩&emsp;琨</span> 国际事业公司财务处副处长</p>
+							<p>
+								<span>岳思滢</span> 国际事业公司人事处主办</p>
+							<p>
+								<span>田云苗</span> 国际事业公司电子商务处主办</p>
+							<p>
+								<span>高明辉</span> 石油机械公司财务计划处副处长</p>
+							<p>
+								<span>张&emsp;帆</span> 石油机械公司财务计划处主办</p>
+							<p>
+								<span>刘利君</span> 共享服务公司总经理</p>
+							<p>
+								<span>邱&emsp;颖</span> 共享服务公司副总经理</p>
+							<p>
+								<span>马永林</span> 共享服务公司副总经理</p>
+							<p>
+								<span>邰柬钧</span> 共享服务公司副总经济师</p>
+							<p>
+								<span>陈&emsp;宁</span> 共享服务公司服务管理部副经理</p>
+							<p>
+								<span>奚修磊</span> 共享服务公司业务管理部处长</p>
+							<p>
+								<span>张怡佩</span> 共享服务公司业务管理部高级主管</p>
+							<p>
+								<span>李堂亮</span> 共享服务公司HR业务管理部副处长</p>
+							<p>
+								<span>张&emsp;睿</span> 共享服务公司IT业务管理部副处长</p>
+							<p>
+								<span>侯增周</span> 共享东营分公司总经理</p>
+							<p>
+								<span>高长忠</span> 共享东营分公司副总经理</p>
+							<p>
+								<span>樊继刚</span> 共享东营分公司服务管理部经理</p>
+							<p>
+								<span>张&emsp;冰</span> 共享东营分公司财务业务服务部经理</p>
+							<p>
+								<span>宋彦胜</span> 共享东营分公司HR业务服务部经理</p>
+							<p>
+								<span>杨振勇</span> 共享东营分公司IT业务服务部经理</p>
+							<p>
+								<span>孟祥峰</span> 共享东营分公司淄博服务部经理</p>
+							<p>
+								<span>郭延山</span> 共享东营分公司濮阳服务部经理</p>
+							<p>
+								<span>张德平</span> 共享南京分公司总经理</p>
+							<p>
+								<span>易思安</span> 共享南京分公司副总经理</p>
+							<p>
+								<span>孙岱如</span> 共享南京分公司副总经理</p>
+							<p>
+								<span>李建平</span> 共享南京分公司党委副书记</p>
+							<p>
+								<span>费永祥</span> 共享南京分公司综合管理部副经理</p>
+							<p>
+								<span>石裕明</span> 共享南京分公司人力资源部副处长</p>
+							<p>
+								<span>熊大同</span> 共享南京分公司服务管理部经理</p>
+							<p>
+								<span>唐金龙</span> 共享南京分公司财务业务服务部经理</p>
+							<p>
+								<span>刘金彪</span> 共享南京分公司HR业务服务部经理</p>
+							<p>
+								<span>徐&emsp;鸣</span> 共享南京分公司IT业务服务部经理</p>
+							<p>
+								<span>张滨海</span> 共享南京分公司扬州服务部经理</p>
+							<p>
+								<span>郭&emsp;燕</span> 共享南京分公司扬州服务部副处长</p>
+							<p>
+								<span>杜安全</span> 共享南京分公司武汉服务部党委书记</p>
+							<p>
+								<span>郁&emsp;虎</span> 共享南京分公司武汉服务部经理</p>
+							<p>
+								<span>胡亚莉</span> 共享南京分公司武汉服务部副经理</p>
+							<p>
+								<span>姜应华</span> 石化盈科公司项目总监</p>
+							<p>
+								<span>刘剑峰</span> 石化盈科信公司项目总监</p>
+							<p>
+								<span>王宣跃</span> 石化盈科公司技术总监</p>
+							<p>
+								<span>王卉中</span> 石化盈科公司项目经理</p>
+							<p>
+								<span>杨&emsp;波</span> 石化盈科公司项目经理</p>
+							<p>
+								<span>张传华</span> 石化盈科公司高级顾问</p>
+							<p class="yellow">三、媒体单位</p>
+							<p>
+								<span>黄苏龙</span> 《石化财会》主编</p>
+							<p>
+								<span>王晶冉</span> 精准度品牌管理股份有限公司编辑</p>
+							<p class="yellow">四、外部单位</p>
+							<p>
+								<span>辛本梅</span> IBM公司全球企业咨询服务部大中华区财务管理咨询团队负责人、共享咨询方案负责人</p>
+							<p>
+								<span>郎松涛</span> 用友（集团）副总裁</p>
+							<p>
+								<span>陈志光</span> 用友（集团）</p>
+						</div>
+						<img src="img/06-zl/text-6.png" alt="" class="text-6">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box">
+							<h3 style="color: #f8b551;font-size: 0.28rem;text-align: center;">中国石化共享服务建设情况介绍<br>--聚焦客户价值 共创共享共赢</h3>
+							<div data-am-widget="gallery" data-am-gallery="{pureview:{target: 'a'}}">
+								<a href="img/06-zl/long-text1.jpg" class="text-3">
+									<img src="img/06-zl/long-text1.jpg">
+								</a>
+							</div>
+						</div>
+						<img src="img/06-zl/text-6.png" alt="" class="text-6">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box ziliao">
+							<h3>一、共享创新发展助力客户业务转型</h3>
+						
+							<p style="text-align: center;">辛本梅</p>
+							<p style="text-align: center;">IBM大中华区财务管理咨询团队/共享咨询方案负责人</p>
+							<div data-am-widget="gallery" data-am-gallery="{pureview:{target: 'a'}}">
+							
+								<a href="img/06-zl/ppt1.jpg" class="text-3">
+									<img src="img/06-zl/ppt1.jpg">
+								</a>
+							</div>
+							<h3>二、新科技 新服务 新价值</h3>
+						
+							<p style="text-align: center;">郎松涛</p>
+							<p style="text-align: center;">用友网络科技股份有限公司副总裁</p>
+							<div data-am-widget="gallery" data-am-gallery="{pureview:{target: 'a'}}">
+							
+								<a href="img/06-zl/ppt2.jpg" class="text-3">
+									<img src="img/06-zl/ppt2.jpg">
+								</a>
+							</div>
+						</div>
+						<img src="img/06-zl/text-6.png" alt="" class="text-6">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box">
+							<img src="img/06-zl/text-4.png" alt="" class="text-2">
+							<div data-am-widget="gallery" data-am-gallery="{pureview:{target: 'a'}}">
+								<a href="img/06-zl/long-text.jpg" class="text-3">
+									<img src="img/06-zl/long-text.jpg">
+								</a>
+							</div>
+						</div>
+						<img src="img/06-zl/text-6.png" alt="" class="text-6">
+					</div>
+				</div>
+				<!-- 如果需要导航按钮 -->
+				<div class="swiper-button-prev opacity_1"></div>
+				<div class="swiper-button-next opacity_2"></div>
+			</div>
+		</div>
+	</section>
+	<!-- 温馨提示 -->
+	<section class="js-tsh zl tsh" style="display: none">
+		<img src="img/06-zl/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/ball.png" alt="" class="ball">
+		<img src="img/back.png" alt="" class="back js-back">
+		<img src="img/06-zl/s-1.png" alt="" class="s-1 star_2">
+		<img src="img/06-zl/s-2.png" alt="" class="s-2 star_5">
+		<img src="img/06-zl/s-3.png" alt="" class="s-3 star_4">
+		<img src="img/06-zl/s-4.png" alt="" class="s-4 star_3">
+		<img src="img/06-zl/q-1.png" alt="" class="q-1 circle_2">
+		<img src="img/06-zl/q-2.png" alt="" class="q-2 circle_1">
+		<img src="img/06-zl/q-3.png" alt="" class="q-3 circle_3">
+		<div class="swiper-box">
+			<div class="swiper-container tsh-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box">
+							<p class="swiper-title">联系我们</p>
+							<div class="swiper-text">
+								<p>
+									<span class="first">会务：</span>
+									<span>沈星谷</span>
+									<a href="tel:15150510234">15150510234</a>
+								</p>
+								<p>
+									<span class="first">车辆：</span>
+									<span>赵&emsp;越</span>
+									<a href="tel:13952008827">13952008827</a>
+								</p>
+								<p>
+									<span class="first">食宿：</span>
+									<span>王维昭</span>
+									<a href="tel:13851928446">13851928446</a>
+								</p>
+								<p>
+									<span class="first">医疗：</span>
+									<span>郭&emsp;丽</span>
+									<a href="tel:15939393117">15939393117</a>
+								</p>
+								<p class="first" style="text-align: center;">WIFI信息</p>
+								<p>公共区域</p>
+								<p>
+									<span class="blue">手机：</span> aWiFi或i-Nαnjing-Free (无密码)</p>
+								<p>
+									<span class="blue">电脑：</span>ChinαNet (无密码)</p>
+								<p>
+									<span class="blue">房间：</span>搜索房间号对应wifi (无密码)</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box">
+							<p class="swiper-title">酒店信息</p>
+							<div class="swiper-text">
+								<p>南京辰茂新世纪大酒店</p>
+								<p style="display: flex;
+    justify-content: space-between;">
+									<span style="    display: inline-block;
+    white-space: nowrap;">地址：</span>
+									<span style="display: inline-block;    text-align: justify;">南京市龙蟠路133号(地铁1号线南京站4号口东行500米，近火车站南广场)。</span>
+								</p>
+								<p>电话：
+									<a href="tel:025-68894880" style="padding-left: 0">025-68894880</a>。</p>
+							</div>
+							<div id="map"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box">
+							<img src="img/07-tsh/text-3.png" alt="" class="text-3">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box">
+							<img src="img/07-tsh/text-4.png" alt="" class="text-4">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box">
+							<img src="img/07-tsh/text-5.png" alt="" class="text-5">
+						</div>
+					</div>
+					<div class="swiper-slide" data-am-widget="gallery" data-am-gallery="{pureview:{target: 'a'}}">
+						<img src="img/06-zl/line.png" alt="" class="line">
+						<div class="line-box">
+							<img src="img/07-tsh/text-8.png" alt="" class="text-7">
+							<a href="img/07-tsh/text7.jpg" class="text-8">
+								<img src="img/07-tsh/text7.jpg">
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- 如果需要导航按钮 -->
+				<div class="swiper-button-prev opacity_1"></div>
+				<div class="swiper-button-next opacity_2"></div>
+			</div>
+		</div>
+	</section>
+	<!-- 互动留言 -->
+	<section class="js-ly ly" style="display: none;">
+		<img src="img/08-ly/bg.jpg" alt="" class="bg">
+		<img src="img/logo.png" alt="" class="logo">
+		<img src="img/back.png" alt="" class="back js-back">
+		<p class="title-1">中国石化集团共享服务有限公司客户座谈会</p>
+		<p class="title-2">留下您的寄语 点亮您的城市</p>
+		<!-- 地图 -->
+		<div class="ly-box beijing">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box shanghai">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box dongying">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box zibo">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box qingdao">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box jinan">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box qianjiang">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box wuhan">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box jingmen">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box fuyang">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box nanyang">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box luoyang">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box zhengzhou">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box yangzhou">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box yizheng">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box nanjing">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box xuzhou">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box wulumuqi">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box chengdu">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box maoming">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box guangzhou">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box ningbo">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box hangzhou">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box anqing">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<div class="ly-box akesu">
+			<div class="relative">
+				<img src="img/08-ly/dian.png" alt="" class="dian anidian">
+				<div class="updatehtml"></div>
+			</div>
+		</div>
+		<!-- 留言框 -->
+		<div class="input-box">
+			<div class="relative">
+				<input id="liuyan" type="text" placeholder="输入您的留言">
+				<button id="fabuliuyan">发布留言</button>
+			</div>
+		</div>
+		<!-- 留言列表 -->
+		<ul class="ly-ul">
+
+		</ul>
+		<div class="bottomlist">
+			<div class="bottomitem active" data-city="">全部</div>
+			<div class="bottomitem" data-city="我的">我的城市</div>
+			<div class="bottomitem" data-city="北京市">北京市</div>
+			<div class="bottomitem" data-city="上海市">上海市</div>
+			<div class="bottomitem" data-city="山东省东营市">山东省东营市</div>
+			<div class="bottomitem" data-city="山东省淄博市">山东省淄博市</div>
+			<div class="bottomitem" data-city="山东省青岛市">山东省青岛市</div>
+			<div class="bottomitem" data-city="山东省济南市">山东省济南市</div>
+			<div class="bottomitem" data-city="河南省濮阳市">河南省濮阳市</div>
+			<div class="bottomitem" data-city="河南省南阳市">河南省南阳市</div>
+			<div class="bottomitem" data-city="河南省洛阳市">河南省洛阳市</div>
+			<div class="bottomitem" data-city="河南省郑州市">河南省郑州市</div>
+			<div class="bottomitem" data-city="湖北省潜江市">湖北省潜江市</div>
+			<div class="bottomitem" data-city="湖北省武汉市">湖北省武汉市</div>
+			<div class="bottomitem" data-city="湖北省荆门市">湖北省荆门市</div>
+			<div class="bottomitem" data-city="江苏省扬州市">江苏省扬州市</div>
+			<div class="bottomitem" data-city="江苏省仪征市">江苏省仪征市</div>
+			<div class="bottomitem" data-city="江苏省南京市">江苏省南京市</div>
+			<div class="bottomitem" data-city="江苏省徐州市">江苏省徐州市</div>
+			<div class="bottomitem" data-city="新疆乌鲁木齐市">新疆乌鲁木齐市</div>
+			<div class="bottomitem" data-city="新建自治区阿克苏市">新建自治区阿克苏市</div>
+			<div class="bottomitem" data-city="四川省成都市">四川省成都市</div>
+			<div class="bottomitem" data-city="广东省茂名市">广东省茂名市</div>
+			<div class="bottomitem" data-city="广东省广州市">广东省广州市</div>
+			<div class="bottomitem" data-city="浙江省宁波市">浙江省宁波市</div>
+			<div class="bottomitem" data-city="浙江省杭州市">浙江省杭州市</div>
+		</div>
+	</section>
+	<!-- 地图 -->
+	<!-- <section class="map" style="display: none;">
+				<img class="js-back-3 back" src="img/back.png" />
+				<div id="map"></div>
+				<div class="mapcontrol" style="display: none;">
+				<div data-id="driving"><img src="img/car.png" /></div>
+				<div data-id="transfer"><img src="img/bus.png" /></div>
+				<div data-id="riding"><img src="img/ride.png" /></div>
+				<div data-id="walking"><img src="img/walk.png" /></div>
+			</div>
+				<div id="panel"></div>
+		</section> -->
+	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
+	<script src="js/swiper.animate1.0.3.min.js"></script>
+	<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+	<script src="https://cdn.bootcss.com/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+	<script src="https://cdn.bootcss.com/textillate/0.4.0/jquery.textillate.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="http://webapi.amap.com/maps?v=1.4.7&key=e59b8629b465f0bb7e356fa26adf3374&plugin=AMap.Riding,AMap.Walking,AMap.Driving,AMap.Transfer"></script>
+	<script>
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+			WeixinJSBridge.call('hideOptionMenu');
+		});
+
+		function GetQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]);
+			return null;
+		}
+		var code = GetQueryString("code")
+		var openid
+		var city
+		var cityclass
+		if (code == null) {
+			$.ajax({
+				url: "http://hong.bjsidao.com/sinopec/code",
+				type: "post",
+				dataType: "json",
+				data: {
+					url: window.location.href
+				},
+				success: function (res) {
+					window.location.href = res.url
+				}
+			});
+		} else {
+			$.ajax({
+				url: "http://hong.bjsidao.com/sinopec/auth",
+				type: "post",
+				dataType: "json",
+				data: {
+					code: code
+				},
+				success: function (res) {
+					openid = res.openid
+					switch (res.code) {
+						case 100:
+							setTimeout(function () {
+								$(".js-loading").fadeOut(600)
+								$(".js-hyts").fadeIn(600)
+							}, 5000);
+							break;
+						default:
+							setTimeout(function () {
+								$(".js-loading").fadeOut(600)
+								$(".js-index").fadeIn(600)
+								setTimeout(function () {
+									$(".js-index").fadeOut(600)
+									$(".js-phone").fadeIn(600)
+								}, 7000);
+							}, 5000);
+					}
+					city = res.city
+					if (typeof (city) == 'undefined') {
+						return
+					}
+					if (city.indexOf('北京') > -1) {
+						cityclass = 'beijing'
+					}
+					if (city.indexOf('东营') > -1) {
+						cityclass = 'dongying'
+					}
+					if (city.indexOf('淄博') > -1) {
+						cityclass = 'zibo'
+					}
+					if (city.indexOf('青岛') > -1) {
+						cityclass = 'qingdao'
+					}
+					if (city.indexOf('济南') > -1) {
+						cityclass = 'jinan'
+					}
+					if (city.indexOf('濮阳') > -1) {
+						cityclass = 'fuyang'
+					}
+					if (city.indexOf('南阳') > -1) {
+						cityclass = 'nanyang'
+					}
+					if (city.indexOf('洛阳') > -1) {
+						cityclass = 'luoyang'
+					}
+					if (city.indexOf('郑州') > -1) {
+						cityclass = 'zhengzhou'
+					}
+					if (city.indexOf('潜江') > -1) {
+						cityclass = 'qianjiang'
+					}
+					if (city.indexOf('武汉') > -1) {
+						cityclass = 'wuhan'
+					}
+					if (city.indexOf('荆门') > -1) {
+						cityclass = 'jingmen'
+					}
+					if (city.indexOf('上海') > -1) {
+						cityclass = 'shanghai'
+					}
+					if (city.indexOf('扬州') > -1) {
+						cityclass = 'yangzhou'
+					}
+					if (city.indexOf('仪征') > -1) {
+						cityclass = 'yizheng'
+					}
+					if (city.indexOf('南京') > -1) {
+						cityclass = 'nanjing'
+					}
+					if (city.indexOf('徐州') > -1) {
+						cityclass = 'xuzhou'
+					}
+					if (city.indexOf('乌鲁木齐') > -1) {
+						cityclass = 'wulumuqi'
+					}
+					if (city.indexOf('成都') > -1) {
+						cityclass = 'chengdu'
+					}
+					if (city.indexOf('茂名') > -1) {
+						cityclass = 'maoming'
+					}
+					if (city.indexOf('广州') > -1) {
+						cityclass = 'guangzhou'
+					}
+					if (city.indexOf('宁波') > -1) {
+						cityclass = 'ningbo'
+					}
+					if (city.indexOf('杭州') > -1) {
+						cityclass = 'hangzhou'
+					}
+					if (city.indexOf('安庆') > -1) {
+						cityclass = 'anqing'
+					}
+					if (city.indexOf('阿克苏') > -1) {
+						cityclass = 'akesu'
+					}
+				}
+			});
+		}
+	</script>
+	<script>
+		var map = new AMap.Map('map', {
+			resizeEnable: true,
+			center: [118.800522, 32.083656],
+			zoom: 15
+		});
+
+		var marker = new AMap.Marker({
+			position: new AMap.LngLat(118.800522, 32.083656), // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+			title: '南京辰茂新世纪大酒店'
+		});
+
+		map.add(marker);
+		var infoWindow = new AMap.InfoWindow({ //创建信息窗体
+			isCustom: true, //使用自定义窗体
+			content: '<div class = "mapbox"><div class="maptext">南京辰茂新世纪大酒店<br/>南京市龙蟠路133号</div><div class="mapclick" onclick="guihualuxian()">路线</div></div>', //信息窗体的内容可以是任意html片段
+			offset: new AMap.Pixel(5, -45)
+		});
+		infoWindow.open(map, {
+			P: 32.083656,
+			O: 118.800522,
+			lng: 118.800522,
+			lat: 32.083656
+		});
+
+		function guihualuxian() {
+			map.plugin('AMap.Geolocation', function () {
+				var geolocation = new AMap.Geolocation({
+					// 是否使用高精度定位，默认：true
+					enableHighAccuracy: true,
+					// 设置定位超时时间，默认：无穷大
+					timeout: 3000,
+					// 定位按钮的停靠位置的偏移量，默认：Pixel(10, 20)
+					buttonOffset: new AMap.Pixel(10, 20),
+					//  定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+					zoomToAccuracy: false,
+					//  定位按钮的排放位置,  RB表示右下
+					buttonPosition: 'RB'
+				})
+
+				geolocation.getCurrentPosition()
+				AMap.event.addListener(geolocation, 'complete', onComplete)
+				AMap.event.addListener(geolocation, 'error', onError)
+
+				function onComplete(data) {
+					var position = data.position
+					window.location.href = "https://uri.amap.com/navigation?from=" + position.lng + "," + position.lat +
+						",startpoint&to=118.800522,32.083656,endpoint&mode=car&policy=1&src=mypage&coordinate=gaode&callnative=1";
+				}
+
+				function onError(data) {
+					alert('获取定位失败！');
+				}
+			})
+		}
+	</script>
+</body>
+
+</html>

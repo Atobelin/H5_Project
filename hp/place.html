@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>惠普</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>  
+
+<body>
+    <div class="place section">
+        <!-- logo -->
+        <img src="imgs/logo.png" alt="" class="logo">
+        <!-- place内容 -->
+        <div class="box">
+            <img src="imgs/place-text.png" alt="" class="text animated zoomIn">
+            <div class="flex">
+                <div class="place-list">
+                    <input type="text" id="city" data-dropdown = "1" class="input" placeholder="请选择城市" readonly><span class=""></span>
+                    <ul class="js-city">
+                        <!-- <li>1</li>                  -->
+                    </ul>
+                </div>  
+                <div class="place-list">
+                    <input type="text" id="shop" data-dropdown = "1" class="input" placeholder="请选择门店" readonly><span class=""></span>
+                    <ul class="js-shop">                    
+                    </ul>
+                </div>              
+            </div>  
+            <a href="javascript:;" class="button js-next">下一步</a>           
+        </div>
+    </div>
+    <!-- 公共JS -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="js/common.js"></script>
+    <!-- 独立JS -->
+    <script>
+        var Ohref=window.location.href;
+        var arrhref=Ohref.split("?phone=");
+        // 电话
+        var phone = arrhref[1]
+        // console.log(phone);      
+        // 下拉框
+        $("#city").click(function(e) {
+            e.stopPropagation();
+                var dropDown = $(this).attr("data-dropdown")
+            if (dropDown == "1") {
+                // console.log('0');
+                $(this).parent().find('ul').slideDown(300)
+                    $("#shop").parent().find('ul').slideUp(300)
+                    $(this).attr("data-dropdown", "2")
+                $("#shop").attr("data-dropdown", "1")
+            }else if(dropDown == "2" && $(this).parent().find('ul').css("display") == "none"){
+                // console.log('1');
+                $(this).parent().find('ul').slideUp(300)
+                $(this).attr("data-dropdown", "1")
+            }else if (dropDown == "2" && $(this).parent().find('ul').css("display") != "none") {
+                // console.log('2');
+                $(this).attr("data-dropdown", "1")
+                $(this).parent().find('ul').slideUp(300)
+            }
+            $(this).parent().find('ul').css("overflow-y", "auto");          
+        });
+        $("#shop").click(function(e) {
+            e.stopPropagation();
+                var dropDown = $(this).attr("data-dropdown")
+            if (dropDown == "1") {
+                console.log('0');
+                $(this).parent().find('ul').slideDown(300)
+                    $("#city").parent().find('ul').slideUp(300)
+                $(this).attr("data-dropdown", "2")
+                $("#city").attr("data-dropdown", "1")
+            }else if(dropDown == "2" && $(this).parent().find('ul').css("display") == "none"){
+                console.log('1');
+                $(this).parent().find('ul').slideUp(300)
+                $(this).attr("data-dropdown", "1")
+            }else if (dropDown == "2" && $(this).parent().find('ul').css("display") != "none") {
+                console.log('2');
+                $(this).attr("data-dropdown", "1")
+                $(this).parent().find('ul').slideUp(300)
+            }
+            $(this).parent().find('ul').css("overflow-y", "auto");          
+        }); 
+        // 点击空白关闭
+        $(document).click(function() {
+                $("#city").attr("data-dropdown", "1")
+            $("#shop").attr("data-dropdown", "1")
+            $(".place-list ul").slideUp(300);
+        });
+        $.ajax({
+                type: 'POST',
+                url: 'http://hpapi.hongyu.ren/site/get-citys',
+                data: {},
+                dataType: 'json',
+                success: function(data){
+                    if (data.status == 100) {
+                        var html = ''
+                        list = data.data
+                        // console.log(list);
+                        for(i = 0;i<list.length;i++){
+                            var city = list[i].city
+                            // console.log(city);
+                            html += '<li class="js-city-li">'+city+'</li>'
+                        }
+                        $(".js-city").append(html)  
+                        $(".js-city-li").click(function() {
+                            dropDown = 1;
+                            $(this).parent().slideToggle(300);
+                            var value = $(this).text();
+                            $(this).parent().parent().find('.input').val(value);
+                            var id = $(this).index()
+                            var shop = list[id].shop
+                            var shop_html = ''
+                            for(j = 0;j< shop.length;j++){
+                                shop_html += '<li class="js-shop-li">'+shop[j]+'</li>'
+                            }
+                            $(".js-shop").html(shop_html)
+                            $("#shop").val('请选择门店')
+                            $(".js-shop-li").click(function() {
+                                dropDown = 1;
+                                $(this).parent().slideToggle(300);
+                                var value = $(this).text();
+                                $(this).parent().parent().find('.input').val(value);
+                            });                         
+                        });                     
+                    }else{
+                         // layer.msg(data.data.err_msg)
+                    }
+                },
+                error: function(xhr, type){
+                    // layer.msg('请求超时!');
+                    console.log('请求超时');
+                }
+            }) 
+        // 下一步
+        $(".js-next").click(function() {
+            var city_input = $("#city").val()
+            var shop_input = $("#shop").val()
+            if (city_input == '') {
+                layer.tips('请选择您的城市!', '#city', {
+                    tips: [1, '#007598'] //还可配置颜色
+                });
+                return false;
+            }
+            if (shop_input == '' || shop_input == '请选择门店') {
+                layer.tips('请选择您的门店!', '#shop', {
+                    tips: [1, '#007598'] //还可配置颜色
+                });
+                return false;
+            }   
+            $.ajax({
+                type: 'POST',
+                url: 'http://hpapi.hongyu.ren/site/city',
+                data: {
+                    phone : phone,
+                    city : city_input,
+                    shop : shop_input
+                },
+                dataType: 'json',
+                success: function(data){
+                    if (data.status == 100) {
+                       window.location.href = "star.html?phone="+phone;
+                    }else{
+                        layer.msg(data.data.err_msg);
+                     }
+                },
+                error: function(xhr, type){
+                    // layer.msg('请求超时!');
+                    console.log('请求超时');
+                }
+            })              
+        });     
+    </script>
+</body>
+
+</html>

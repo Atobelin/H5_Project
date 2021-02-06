@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="UTF-8">
+    <title>惠普</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- 公共样式 -->
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!-- 独立样式 -->
+</head>  
+
+<body>
+	<div class="way section js-way">
+		<!-- logo -->
+		<img src="imgs/logo.png" alt="" class="logo">
+		<!-- way内容 -->
+		<div class="box">
+			<img src="imgs/way-text.png" alt="" class="text">
+			<div class="way-box">
+				<div class="way-list">
+					<div class="img-box"><img src="imgs/way-1.jpg" alt=""></div>
+					<a  href="javascript:;" class="js-go-video video-1" data="video/1.mp4">
+						(点击进入) <span>设计创作</span>
+					</a>
+				</div>
+				<div class="way-list">
+					<div class="img-box"><img src="imgs/way-2.jpg" alt=""></div>
+					<a  href="javascript:;" class="js-go-video video-2" data="video/2.mp4">
+						(点击进入) <span>游戏体验</span>
+					</a>
+				</div>				
+				<div class="way-list">
+					<div class="img-box"><img src="imgs/way-3.jpg" alt=""></div>
+					<a  href="javascript:;" class="js-go-video video-3" data="video/3.mp4">
+						(点击进入) <span>工作学习</span>
+					</a>
+				</div>				
+			</div>
+		</div>
+	</div>
+	<!-- 公共JS -->
+	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+		var Ohref=window.location.href;
+		var arrhref=Ohref.split("?code=");
+		var code = arrhref[1]    	
+		$(".js-go-video").click(function() {
+			var src = $(this).attr("data")
+			// console.log(src);
+			var html = ''
+			html += '<video src="'+src+'" class="video js-video"></video>'
+			$(".js-way").append(html)	
+			$(".js-video").show()
+			$(".js-video").trigger("play");
+			$(".js-video").bind('ended', function(){
+				if (src == 'video/1.mp4') {
+					location.href="resultF.html?code="+code;
+				}else if(src == 'video/2.mp4') {
+					location.href="resultS.html?code="+code;
+				}else if(src == 'video/3.mp4') {
+					location.href="resultT.html?code="+code;
+				}
+			});			
+		});
+    </script>
+</body>
+
+</html>

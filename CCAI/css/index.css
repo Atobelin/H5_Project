@@ -1,0 +1,1363 @@
+html {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+	width: 100%;
+	font-family: "Helvetica neue", Helvetica, "lantinghei sc", 'Microsoft Yahei', '微软雅黑', sans-serif !important;
+	;
+	font-size: 16px;
+	-ms-overflow-style: scrollbar;
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+input,
+button,
+select,
+textarea {
+	outline: none
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+fieldset,
+img {
+	border: 0
+}
+
+li {
+	list-style: none
+}
+
+caption,
+th {
+	text-align: left
+}
+
+th {
+	vertical-align: baseline
+}
+
+* {
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #575757;
+	font-size: 16px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.tr3 {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-xs-1,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.btn-group-vertical>.btn-group::after,
+.btn-group-vertical>.btn-group::before,
+.btn-toolbar::after,
+.btn-toolbar::before,
+.clearfix::after,
+.clearfix::before,
+.container-fluid::after,
+.container-fluid::before,
+.container::after,
+.container::before,
+.dl-horizontal dd::after,
+.dl-horizontal dd::before,
+.form-horizontal .form-group::after,
+.form-horizontal .form-group::before,
+.modal-footer::after,
+.modal-footer::before,
+.modal-header::after,
+.modal-header::before,
+.nav::after,
+.nav::before,
+.navbar-collapse::after,
+.navbar-collapse::before,
+.navbar-header::after,
+.navbar-header::before,
+.navbar::after,
+.navbar::before,
+.pager::after,
+.pager::before,
+.panel-body::after,
+.panel-body::before,
+.row::after,
+.row::before {
+	display: none
+}
+
+/*-----------------动画------------------------------*/
+.delay500 {
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+
+.delay800 {
+	animation-delay: 0.8s;
+	-webkit-animation-delay: 0.8s;
+}
+
+.delay1000 {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+}
+
+.delay1200 {
+	animation-delay: 1.2s;
+	-webkit-animation-delay: 1.2s;
+}
+
+.delay1500 {
+	animation-delay: 1.5s;
+	-webkit-animation-delay: 1.5s;
+}
+
+.delay1600 {
+	animation-delay: 1.6s;
+	-webkit-animation-delay: 1.6s;
+}
+
+.delay2000 {
+	animation-delay: 2s;
+	-webkit-animation-delay: 2s;
+}
+
+.du500 {
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+}
+
+/*动画*/
+.rotatemusic {
+	-webkit-animation-name: rotatemusic;
+	animation-name: rotatemusic;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+}
+
+@keyframes rotatemusic {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotatemusic {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+/* 旋转 */
+.rotateCircle1 {
+	animation: rotateCircle1 12s infinite linear 0s;
+	-webkit-animation: rotateCircle1 12s infinite linear 0s;
+}
+
+@keyframes rotateCircle1 {
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotateCircle1 {
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.rotateCircle2 {
+	animation: rotateCircle2 12s infinite linear 0s;
+	-webkit-animation: rotateCircle2 12s infinite linear 0s;
+}
+
+@keyframes rotateCircle2 {
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes rotateCircle2 {
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+/* 线条闪动 */
+.opacityLine1 {
+	animation: opacityLine1 1s infinite linear 0s;
+	-webkit-animation: opacityLine1 1s infinite linear 0s;
+}
+
+.opacityLine2 {
+	animation: opacityLine1 1.5s infinite linear 0s;
+	-webkit-animation: opacityLine1 1.5s infinite linear 0s;
+}
+
+.opacityLine3 {
+	animation: opacityLine1 3s infinite linear 0s;
+	-webkit-animation: opacityLine1 3s infinite linear 0s;
+}
+
+@keyframes opacityLine1 {
+
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes opacityLine1 {
+
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* 背景闪动 */
+.opacityBg {
+	animation: opacityBg 1s infinite linear 0s;
+	-webkit-animation: opacityBg 1s infinite linear 0s;
+}
+
+
+@keyframes opacityBg {
+
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes opacityBg {
+
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+/* 按钮闪动 */
+.opacityButton {
+	animation: opacityButton 2s infinite linear 0s;
+	-webkit-animation: opacityButton 2s infinite linear 0s;
+}
+
+
+@keyframes opacityButton {
+
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes opacityButton {
+
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+/* 模块运动 */
+.moveBox1 {
+	animation: moveBox1 2s infinite linear 0s;
+	-webkit-animation: moveBox1 2s infinite linear 0s;
+}
+
+
+@keyframes moveBox1 {
+
+	0% {
+		transform: translateX(0)
+	}
+
+	50% {
+		transform: translateX(0.1rem)
+	}
+
+	100% {
+		transform: translateX(0)
+	}
+}
+
+@-webkit-keyframes moveBox1 {
+
+	0% {
+		transform: translateX(0)
+	}
+
+	50% {
+		transform: translateX(0.1rem)
+	}
+
+	100% {
+		transform: translateX(0)
+	}
+}
+
+.moveBox2 {
+	animation: moveBox2 2s infinite linear 0s;
+	-webkit-animation: moveBox2 2s infinite linear 0s;
+}
+
+
+@keyframes moveBox2 {
+
+	0% {
+		transform: translateY(0)
+	}
+
+	50% {
+		transform: translateY(0.05rem)
+	}
+
+	100% {
+		transform: translateY(0)
+	}
+}
+
+@-webkit-keyframes moveBox2 {
+
+	0% {
+		transform: translateY(0)
+	}
+
+	50% {
+		transform: translateY(0.05rem)
+	}
+
+	100% {
+		transform: translateY(0)
+	}
+}
+
+.moveBox3 {
+	animation: moveBox3 2s infinite linear 0s;
+	-webkit-animation: moveBox3 2s infinite linear 0s;
+}
+
+
+@keyframes moveBox3 {
+
+	0% {
+		transform: translateY(0)
+	}
+
+	50% {
+		transform: translateY(-0.1rem)
+	}
+
+	100% {
+		transform: translateY(0)
+	}
+}
+
+@-webkit-keyframes moveBox3 {
+
+	0% {
+		transform: translateY(0)
+	}
+
+	50% {
+		transform: translateY(-0.1rem)
+	}
+
+	100% {
+		transform: translateY(0)
+	}
+}
+
+/* loading动画 */
+.double-bounce1 {
+	animation: double-bounce1 2s infinite ease-in-out 0s;
+	-webkit-animation: double-bounce1 2s infinite ease-in-out 0s;
+}
+
+@keyframes double-bounce1 {
+
+	0%,
+	100% {
+		transform: scale(0);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes double-bounce1 {
+
+	0%,
+	100% {
+		transform: scale(0);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+}
+
+.double-bounce2 {
+	animation: double-bounce2 2s infinite ease-in-out 0s;
+	-webkit-animation: double-bounce2 2s infinite ease-in-out 0s;
+}
+
+@keyframes double-bounce2 {
+
+	0%,
+	100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0);
+	}
+}
+
+@-webkit-keyframes double-bounce2 {
+
+	0%,
+	100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0);
+	}
+}
+
+.gangMove1 {
+	animation: gangMove1 2s infinite ease-in-out 0s;
+	-webkit-animation: gangMove1 2s infinite ease-in-out 0s;
+}
+
+@keyframes gangMove1 {
+
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(3rem);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes gangMove1 {
+
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(3rem);
+		opacity: 0;
+	}
+}
+
+.gangMove2 {
+	animation: gangMove2 2s infinite ease-in-out 0.5s;
+	-webkit-animation: gangMove2 2s infinite ease-in-out 0.5s;
+}
+
+@keyframes gangMove2 {
+
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(-3rem);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes gangMove2 {
+
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(-3rem);
+		opacity: 0;
+	}
+}
+
+/* 音乐 */
+.rotatemusic {
+	-webkit-animation-name: rotatemusic;
+	animation-name: rotatemusic;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+}
+
+@keyframes rotatemusic {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotatemusic {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+/* page-1字体动画 */
+.movePage1text1 {
+	animation: movePage1text1 1.5s forwards;
+	-webkit-animation: movePage1text1 1.5s forwards;
+}
+
+@keyframes movePage1text1 {
+
+	0% {
+		width: 130%
+	}
+
+	100% {
+		width: 100%
+	}
+}
+
+@-webkit-keyframes movePage1text1 {
+
+	0% {
+		width: 130%
+	}
+
+	100% {
+		width: 100%
+	}
+}
+
+/* -------------------------------------------公共---------------------------------*/
+* {
+	-webkit-user-select: none;
+	touch-action: pan-y;
+}
+
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+input {
+	-webkit-user-select: auto;
+}
+
+img {
+	/*pointer-events: none;*/
+}
+
+.none {
+	display: none
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	top: 0;
+	overflow: hidden;
+}
+
+.bg {
+	width: 100%;
+	position: fixed;
+	height: 100%;
+}
+
+.back {
+	position: absolute;
+	width: 0.37rem;
+	left: 0.31rem;
+	top: 0.31rem;
+	z-index: 2;
+}
+
+.music {
+	width: 0.37rem;
+	height: 0.37rem;
+	top: 0.31rem;
+	right: 0.31rem;
+	z-index: 10;
+	position: absolute;
+	pointer-events: auto;
+	display: block;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* loading */
+.page-loading .double-box {
+	width: 0.8rem;
+	height: 0.8rem;
+	position: relative;
+	margin: auto;
+	margin-top: 4.2rem;
+	margin-bottom: 0.4rem;
+
+}
+
+.page-loading .double-bounce1,
+.page-loading .double-bounce2 {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #0062e0;
+	opacity: .6;
+	position: absolute
+}
+
+.page-loading .number {
+	font-size: 0.09rem;
+	width: 100%;
+	text-align: center;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	color: #0062e0;
+	position: relative;
+	display: block
+}
+
+/* page-1 */
+.page-1 .img-1 {
+	width: 2.5rem;
+	position: absolute;
+	top: 0.8rem;
+	left: 0.7rem;
+}
+
+.page-1 .text-box {
+	width: 3.55rem;
+	position: absolute;
+	left: 0.7rem;
+	top: 2rem;
+	height: 2rem;
+	overflow: hidden;
+}
+
+.page-1 .text-box .relative {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.page-1 .text-1 {
+	width: 120%;
+}
+
+.page-1 .text-2 {
+	width: 120%;
+	margin-top: 0.2rem;
+}
+
+.page-1 .button-box {
+	width: 1.5rem;
+	height: 0.7rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 7.4rem;
+}
+
+.page-1 .button-box .relative {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.page-1 .button-box .button1,
+.page-1 .button-box .button2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* page-2 */
+.page-2 .img-1 {
+	position: absolute;
+	width: 2.5rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 0.6rem;
+}
+
+.page-2 .text-box {
+	width: 4.5rem;
+	position: relative;
+	height: 5.5rem;
+	margin: auto;
+	margin-top: 1.5rem;
+}
+
+.page-2 .text-box .text-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.page-2 .text-box .img-gang1 {
+	width: 0.15rem;
+	position: absolute;
+	top: 0.8rem;
+	left: 0.05rem;
+}
+
+.page-2 .text-box .img-gang2 {
+	width: 0.15rem;
+	position: absolute;
+	bottom: 0.8rem;
+	right: 0.05rem;
+}
+
+.page-2 .text-box .img-circle1 {
+	width: 0.3rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.page-2 .text-box .img-circle2 {
+	width: 0.3rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.page-2 .text-box .textHidden {
+	width: 85%;
+	display: block;
+	margin: auto;
+	padding-top: 0.5rem;
+	position: relative;
+	height: 5.4rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/* overflow-y: auto; */
+	-webkit-overflow-scrolling: touch;
+}
+
+.page-2 .text-box .textHidden .text {
+	width: 100%;
+}
+
+.page-2 .button-box {
+	width: 1.8rem;
+	height: 0.7rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 7.8rem;
+}
+
+.page-2 .button-box .relative {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.page-2 .button-box .button1,
+.page-2 .button-box .button2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* page-3 */
+.page-3 .circle-box {
+	width: 4.6rem;
+	height: 4.6rem;
+	position: relative;
+	margin: auto;
+	margin-top: 3rem;
+	margin-right: 0.34rem;
+}
+
+.page-3 .circle-box .img-1 {
+	position: absolute;
+	width: 100%;
+	height: 100%
+}
+
+.page-3 .circle-box .img-2 {
+	position: absolute;
+	width: 2.9rem;
+	top: 0.85rem;
+	right: 0.85rem;
+}
+
+.page-3 .circle-box .relative {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 0, 0, 0.2);
+	font-family: SourceHanSansCN-Regular;
+	color: #fff;
+	font-size: 0.18rem;
+}
+
+.page-3 .circle-box .text-box-1 {
+	position: absolute;
+	width: 1.36rem;
+	height: 0.52rem;
+	top: -0.4rem;
+	left: 0;
+	z-index: 1;
+}
+
+.page-3 .circle-box .text-box .text-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.page-3 .circle-box .text-box .text {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.page-3 .circle-box .text-box-1 .text img {
+	width: 0.34rem;
+	height: 0.34rem;
+	position: absolute;
+	top: 0.08rem;
+	left: 0.12rem;
+}
+
+.page-3 .circle-box .text-box-1 .text span {
+	position: absolute;
+	top: 0.14rem;
+	right: 0.12rem;
+}
+
+.page-3 .circle-box .text-box-1 .line {
+	width: 0.8rem;
+	position: absolute;
+	bottom: -0.35rem;
+	right: -0.15rem;
+}
+
+.page-3 .circle-box .text-box-2 {
+	width: 1.35rem;
+	height: 0.51rem;
+	position: absolute;
+	top: 4.3rem;
+	left: 0.15rem;
+	z-index: 1;
+}
+
+.page-3 .circle-box .text-box-2 .text {
+	line-height: 0.51rem;
+	text-align: center;
+}
+
+.page-3 .circle-box .text-box-2 .line {
+	position: absolute;
+	width: 1.08rem;
+	height: 0.68rem;
+	top: -0.73rem;
+	right: -0.53rem;
+}
+
+.page-3 .circle-box .text-box-3 {
+	width: 1.36rem;
+	height: 0.52rem;
+	position: absolute;
+	top: 3.9rem;
+	right: 0.2rem;
+	z-index: 1;
+}
+
+.page-3 .circle-box .text-box-3 .text {
+	line-height: 0.52rem;
+	text-align: center;
+}
+
+.page-3 .circle-box .text-box-3 .line {
+	position: absolute;
+	width: 0.74rem;
+	height: 0.29rem;
+	top: -0.35rem;
+	right: 0.78rem;
+}
+
+.page-3 .circle-box .text-box-4 {
+	width: 1.36rem;
+	height: 0.86rem;
+	position: absolute;
+	top: -0.45rem;
+	right: 0.1rem;
+	z-index: 1;
+}
+
+.page-3 .circle-box .text-box-4 .text {
+	line-height: 1.1rem;
+	text-align: center;
+}
+
+.page-3 .circle-box .text-box-4 .line {
+	position: absolute;
+	width: 1.16rem;
+	top: 0.33rem;
+	left: -1.22rem;
+}
+
+.page-3 .circle-box .text-box-4 .map {
+	width: 1.89rem;
+	position: absolute;
+	top: -0.9rem;
+	right: 0.15rem;
+}
+
+.page-3 .circle-box .title {
+	width: 2.08rem;
+	position: absolute;
+	top: 2.1rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.page-3 .circle-box .text-box-5 {
+	position: absolute;
+	top: 2.7rem;
+	left: 0.5rem;
+}
+
+.page-3 .circle-box .text-box-5 .line {
+	position: absolute;
+	width: 0.54rem;
+}
+
+.page-3 .circle-box .text-box-5 .icon-line {
+	position: absolute;
+	width: 0.54rem;
+	top: -0.23rem;
+	left: -0.5rem;
+}
+
+.page-3 .circle-box .text-box-6 {
+	position: absolute;
+	top: 3.8rem;
+	left: 2.3rem;
+}
+
+.page-3 .circle-box .text-box-6 .line {
+	position: absolute;
+	width: 0.29rem;
+}
+
+.page-3 .circle-box .text-box-6 .icon-line {
+	position: absolute;
+	width: 0.54rem;
+	top: 1.1rem;
+	left: 0;
+}
+
+.page-3 .circle-box .cover {
+	width: 4rem;
+	top: -1rem;
+	position: absolute;
+
+}
+
+/* page-4 */
+.page-4 .img-1 {
+	position: absolute;
+	width: 2.5rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 0.6rem;
+}
+
+.page-4 .text-box {
+	margin: auto;
+	position: relative;
+	margin-top: 1.65rem;
+}
+
+.page-4 .text-box .title1 {
+	display: block;
+	width: 1.5rem;
+	margin: auto;
+}
+
+.page-4 .text-box .img-box {
+	height: 5.8rem;
+	padding-top: 0.2rem;
+	width: 4.8rem;
+	margin: auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/* overflow-y: auto; */
+	-webkit-overflow-scrolling: touch;
+}
+
+.page-4 .text-box .img-box .img {
+	width: 100%;
+	/* display: block */
+}
+
+/* page-5 */
+.page-5 .img-1 {
+	position: absolute;
+	width: 2.5rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 0.6rem;
+}
+
+.page-5 .text-box {
+	width: 4.5rem;
+	position: relative;
+	height: 6.8rem;
+	margin: auto;
+	margin-top: 1.5rem;
+}
+
+.page-5 .text-box .text-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.page-5 .text-box .img-gang1 {
+	width: 0.15rem;
+	position: absolute;
+	top: 0.8rem;
+	left: 0.05rem;
+}
+
+.page-5 .text-box .img-gang2 {
+	width: 0.15rem;
+	position: absolute;
+	bottom: 0.8rem;
+	right: 0.05rem;
+}
+
+.page-5 .text-box .img-circle1 {
+	width: 0.3rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.page-5 .text-box .img-circle2 {
+	width: 0.3rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.page-5 .text-box .textHidden {
+	width: 80%;
+	display: block;
+	margin: auto;
+	position: relative;
+	height: 5.4rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/* overflow-y: auto; */
+	-webkit-overflow-scrolling: touch;
+	top: 0.6rem;
+}
+
+.page-5 .text-box .textHidden .text {
+	width: 100%;
+}
+
+.page-5 .text-box .data-box {
+	position: absolute;
+	top: 0.9rem;
+	left: -0.4rem;
+	position: absolute
+}
+
+.page-5 .text-box .data {
+	color: #fff;
+	font-size: 0.25rem;
+	width: 01rem;
+	text-align: center;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	margin-bottom: 0.1rem;
+}
+
+.page-5 .text-box .data .relative {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	;
+}
+
+.page-5 .text-box .data img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.page-5 .text-box .data span {
+	display: block;
+	margin: auto;
+	position: relative;
+}
+
+
+/* 苹果X */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	.page-3 .circle-box {
+		margin-top: 4rem
+	}
+
+	.page-1 .button-box {
+		top: 9.7rem
+	}
+
+	.page-2 .text-box {
+		margin-top: 2rem
+	}
+
+	.page-2 .button-box {
+		top: 8.8rem;
+	}
+
+	.page-5 .text-box {
+		height: 8.5rem
+	}
+
+	.page-4 .text-box .img-box {
+		height: 7.8rem;
+	}
+
+	.page-5 .text-box .textHidden {
+		height: 7.1rem;
+	}
+}
+
+/* 华为 */
+@media screen and (max-height: 600px) {
+	.page-3 .circle-box {
+		margin-top: 2.5rem
+	}
+
+	.page-2 .button-box {
+		top: 7.4rem
+	}
+
+	.page-5 .text-box {
+		height: 6.5rem
+	}
+}

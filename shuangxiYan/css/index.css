@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/*@import url('//at.alicdn.com/t/font_704525_dhomo5z5i6s.css');*/
+
+
+html{overflow-y: auto;overflow-x: hidden}
+body{overflow-x:hidden;width: 100%;font-family: "Helvetica neue", Helvetica, "lantinghei sc", 'Microsoft Yahei', '微软雅黑', sans-serif !important;;font-size: 16px;-ms-overflow-style: scrollbar;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-weight:normal;}
+input,button,select,textarea{outline:none}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+li{list-style:none}
+caption,th{text-align:left}
+th{vertical-align:baseline}
+*{outline:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;}
+a{text-decoration:none;color: #575757;font-size: 16px;}
+a:hover{text-decoration:none;}
+.tr3{-webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {position: relative; min-height: 1px; padding-right: 0; padding-left: 0; }
+.btn-group-vertical>.btn-group::after, .btn-group-vertical>.btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {display: none}
+/* -------------------------------------------公共---------------------------------*/
+body{
+	background-image: url(../imgs/bg.png);
+	width: 100vw;
+	height: 100vh;
+	overflow:hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow:hidden;
+}
+img{
+	pointer-events: none
+}
+.page{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.page-1 .quan{
+	width: 7.4rem;
+    position: absolute;
+    top: 0;
+    left: -0.5rem;
+    z-index: 1;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+}
+.page-1 .map{
+	    width: 7.1rem;
+    position: absolute;
+    top: 0.5rem;
+    left: -0.5rem;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+.page-1 .title{
+	width: 1.07rem;
+	position: absolute;
+	top: 9.06rem;
+	left: 2.67rem;
+	animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;	
+}
+.page-1 .yx{
+	    width: 1.85rem;
+    position: absolute;
+    top: 3.53rem;
+    left: 2.38rem;
+	animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;    
+}
+
+.page-2 .map{
+	width: 6.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.page-2 .two-title{
+	width: 1.24rem;
+    position: absolute;
+    top: 0.21rem;
+    left: 0.2rem;
+}
+.page-2 .chuan-1{
+    width: 1.9rem;
+    position: absolute;
+    top: 9.47rem;
+    right: 0.5rem;
+	animation: shan 2s linear infinite;
+    -moz-animation: shan 2s linear infinite;
+    -webkit-animation: shan 2s linear infinite;    
+}
+.page-2 .chuan-2{
+	width: 0.8rem;
+    position: absolute;
+    top: 9.6rem;
+    left: 0.5rem;
+animation: shan 3s linear infinite;
+    -moz-animation: shan 3s linear infinite;
+    -webkit-animation: shan 3s linear infinite;     
+}
+.page-2 .chuan-3{
+	    width: 1.24rem;
+    position: absolute;
+    top: 8.02rem;
+    left: 1.61rem;
+animation: zhuan 5s linear infinite;
+    -moz-animation: zhuan 5s linear infinite;
+    -webkit-animation: zhuan 5s linear infinite;    
+}
+.page-2 #video{
+	width: 5.81rem;
+    height: 3.27rem;
+    margin: auto;
+    display: block;
+    margin-top: 3.31rem;
+    border-radius: 0.6rem;
+	position: relative;
+}
+
+.page-3 .three-title{
+	position: absolute;
+    top: 4.43rem;
+    left: 0.87rem;
+    width: 4.65rem;
+}
+@keyframes shan
+{
+	0%{opacity: 1;transform: scale(1);}
+	50%{opacity: 0.7;transform: scale(1.1);}
+	100%{opacity: 1;transform: scale(1);}
+}
+@-moz-keyframes shan/* Firefox */
+{
+	0%{opacity: 1;transform: scale(1);}
+	50%{opacity: 0.7;transform: scale(1.1);}
+	100%{opacity: 1;transform: scale(1);}
+}
+@-webkit-keyframes shan/* Safari 和 Chrome */
+{
+	0%{opacity: 1;transform: scale(1);}
+	50%{opacity: 0.7;transform: scale(1.1);}
+	100%{opacity: 1;transform: scale(1);}
+}
+@keyframes zhuan
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(360deg);}
+}
+@-moz-keyframes zhuan/* Firefox */
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(360deg);}
+}
+@-webkit-keyframes zhuan/* Safari 和 Chrome */
+{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(360deg);}
+}
+
+
+@media screen and (max-height: 630px){
+    .page-1 .quan{
+        width: 6.4rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        right: 0;
+        margin: auto;
+    }
+    .page-1 .map{
+            width: 6.1rem;
+        position: absolute;
+        top: 0.4rem;
+        left: 0.15rem;
+        animation-delay: 0.5s;
+        -webkit-animation-delay: 0.5s;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+    }
+    .page-1 .title {
+        width: 1.07rem;
+        position: absolute;
+        top: 7.3rem;
+        left: 0;
+        animation-delay: 1s;
+        -webkit-animation-delay: 1s;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        right: 0;
+        margin: auto;
+    }
+    .page-1 .yx {
+        width: 1.85rem;
+        position: absolute;
+        top: 2.53rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        animation-delay: 1.2s;
+        -webkit-animation-delay: 1.2s;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+    }
+    .page-2 .chuan-1 {
+        width: 1.9rem;
+        position: absolute;
+        top: 8.2rem;
+        right: 0.5rem;
+        animation: shan 2s linear infinite;
+        -moz-animation: shan 2s linear infinite;
+        -webkit-animation: shan 2s linear infinite;
+    }
+    .page-2 .chuan-2 {
+        width: 0.8rem;
+        position: absolute;
+        top: 8.4rem;
+        left: 0.5rem;
+        animation: shan 3s linear infinite;
+        -moz-animation: shan 3s linear infinite;
+        -webkit-animation: shan 3s linear infinite;
+    }
+    .page-2 .chuan-3 {
+        width: 1.24rem;
+        position: absolute;
+        top: 7.2rem;
+        left: 1.61rem;
+        animation: zhuan 5s linear infinite;
+        -moz-animation: zhuan 5s linear infinite;
+        -webkit-animation: zhuan 5s linear infinite;
+    }
+}

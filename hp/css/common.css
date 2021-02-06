@@ -1,0 +1,665 @@
+@charset "UTF-8";
+@import url('lanhei/lanhei.css');
+@import url('tehei/tehei.css');
+
+
+html{overflow-y: auto;overflow-x: hidden}
+body{overflow-x:hidden;width: 100%;font-family: "Helvetica neue", Helvetica, "lantinghei sc", 'Microsoft Yahei', '微软雅黑', sans-serif !important;;font-size: 16px;-ms-overflow-style: scrollbar;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-weight:normal;}
+input,button,select,textarea{outline:none}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+li{list-style:none}
+caption,th{text-align:left}
+th{vertical-align:baseline}
+*{outline:none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;}
+a{text-decoration:none;color: #575757;font-size: 16px;}
+a:hover{text-decoration:none;}
+.tr3{-webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {position: relative; min-height: 1px; padding-right: 0; padding-left: 0; }
+.btn-group-vertical>.btn-group::after, .btn-group-vertical>.btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {display: none}
+/*------------------------------------*/
+.d1{
+	animation-delay:1s;
+	-webkit-animation-delay:1s; /* Safari 和 Chrome */
+}
+.d15{
+	animation-delay:1.5s;
+	-webkit-animation-delay:1.5s; /* Safari 和 Chrome */
+}
+.d2{
+	animation-delay:2s;
+	-webkit-animation-delay:2s; /* Safari 和 Chrome */
+}
+.d3{
+	animation-delay:3s;
+	-webkit-animation-delay:3s; /* Safari 和 Chrome */
+}
+/*------------------------------*/
+.section{
+	width: 100vw;
+	height: 100vh;
+	min-width: 1920px;
+	min-height: 1080px;
+	background-image: url(../imgs/bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+.logo{
+    width: 4.5%;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+}
+.button{
+	font-family: "方正兰亭特黑简";
+	height: 66px;
+	width: 376px;
+	display: block;
+	background-color: #007598;
+	box-shadow: 0px 14px 18px 0px 
+		rgba(27, 139, 204, 0.3);
+	border-radius: 100px;
+	line-height: 75px;
+    cursor:pointer;
+    text-align: center;
+    font-size: 41px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #ffffff;
+	    transition: 0.5s;
+}
+.button:hover{
+	background: #fff;
+	color: #007598;
+}
+/*index*/
+.index {
+	background-image: url(../imgs/index-bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;	
+}
+.index .text-1{
+	position: absolute;
+    width: 23.8%;
+    left: 25.5%;
+    top: 35%;
+}
+.index .button{
+	position: absolute;
+    top: 58%;
+    left: 28%;
+}
+/*.input*/
+.input{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.input .text{
+	    display: block;
+    width: 17.3%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2.5%
+}
+.input .button{
+	display: block;
+    margin: auto;
+    margin-top: 2%;
+}
+.input .input-box{
+	    width: 37.6%;
+    height: 90px;
+    background: #fff;
+    border-radius: 50px;
+    margin: auto;
+	margin-top: 1%;
+	position: relative;
+}
+.input .input-box input{
+	width: 100%;
+    height: 100%;
+    padding-left: 90px;
+    font-stretch: normal;
+    line-height: 100%;
+    letter-spacing: 1px;
+    color: rgba(0, 99, 141, 0.5);
+    border: 0;
+    background: rgba(255, 255, 255, 0);
+    font-size: 37px;
+}
+.input .input-box input::-webkit-input-placeholder{
+	color: rgba(0, 99, 141, 0.5);
+	letter-spacing: 1px;
+	font-size: 37px;
+}
+.input .input-box .number{
+    font-size: 37px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    color: rgba(0, 99, 141, 1);
+    position: absolute;
+    right: 5%;
+    height: 70px;
+    line-height: 70px;
+    top: 10px;
+    padding-left: 2%;
+    border-left: 1px solid #007598;
+    cursor:pointer;
+    transition: 0.5s;
+}
+.input .input-box .number.active{
+	color: rgba(0, 99, 141, 0.5);
+}
+/*.place*/
+.place{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.place .text{
+	    display: block;
+    width: 29%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 7%;
+}
+.place .flex{
+	    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.place .place-list{
+	width: 100%;
+	margin: auto;
+	position: relative;
+	margin-bottom: 10%;
+}
+.place .place-list ul{
+	    background: #fff;
+    border-radius: 8px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 68px;
+    padding-top: 12px;
+    max-height: 219px;
+    overflow: auto;
+    /*height: 0;*/
+    display: none;
+    z-index: 10
+}
+.place .place-list ul li{
+	font-size: 32px;
+    color: rgba(0, 99, 141, 0.5);
+    line-height: 50px;
+    border-top: 1px solid rgba(204, 204, 204, 0.5);
+    cursor: pointer;
+}
+.place .place-list .input{
+	    width: 100%;
+    font-stretch: normal;
+    color: rgba(0, 99, 141, 0.5);
+    border: 0;
+    font-size: 37px;
+    height: 80px;
+    background: #fff;
+    border-radius: 8px;
+    line-height: 80px;
+    cursor: pointer;
+}
+.place .place-list input::-webkit-input-placeholder{
+	color: rgba(0, 99, 141, 0.5);
+	font-size: 37px;
+}
+.place .button{
+	margin: auto;
+}
+/*滚动条样式*/
+.place .place-list ul::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 2px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 2px;
+        }
+        .place .place-list ul::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 50px;
+            -webkit-box-shadow: inset 0 0 3px #efececa1;
+            background: rgba(0,0,0,0.2);
+        }
+        .place .place-list ul::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0);
+            border-radius: 50px;
+            background: rgba(0,0,0,0);
+        }
+/*star*/
+.star{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.star .text{
+	display: block;
+	margin:auto;
+	width: 30.2%;
+	margin-bottom: 5%;
+}
+.star .button{
+	margin: auto;
+}
+.star .box{
+	    width: 65%;
+    margin: auto;
+}
+.star .box p{
+	font-size: 37px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 45px;
+	letter-spacing: 0px;
+	color: #ffffff;
+	text-align: left;
+	padding-bottom: 4%;
+}
+.star .check-box{
+	    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3%;
+}
+.star .check-list{
+	font-size: 37px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 45px;
+	letter-spacing: 0px;
+	color: #ffffff;
+	position: relative;
+	padding-left: 60px;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 2%;
+	cursor: pointer;
+}
+.star .check-list::before{
+	position: absolute;
+	width: 39px;
+	height: 39px;
+	left: 0;
+	top: 3px;
+	border-radius: 100px;
+	background: #fff;
+	content: ''
+}
+.star .check-list.active::after{
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	left: 5.2px;
+	top: 8.5px;
+	border-radius: 100px;
+	background: #007598;
+	content: ''
+}
+.star .question-list{
+	display: none;
+}
+.star .check-list input{
+	    font-size: 37px;
+    background: rgba(255, 255, 255, 0);
+    border: 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding-left: 20px;
+}
+
+/*way*/
+.way{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.way .box{
+	width: 96%;
+    margin: auto;
+}
+.way .text{
+    width: 41.2%;
+    margin-bottom: 2%;
+}
+.way .way-box{
+	display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 40px 3px
+}
+.way .way-box .way-list{
+	display: block;
+	width: 33.25%;
+	background: #007598;
+}
+.way .way-box .way-list .img-box{
+	width: 100%;
+	line-height: 0;
+	height: 505px;
+}
+.way .way-box .way-list .img-box img{
+	width: 100%;
+	height: 100%;
+}
+.way .way-box .way-list a{
+	color: #fff;
+    font-size: 38px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    display: block;
+    padding-top: 85px;
+    padding-bottom: 75px;
+     transition: 0.5s;
+}
+.way .way-box .way-list a:hover{
+	font-size: 32px;
+}
+.way .way-box .way-list a span{
+	font-size: 58px;
+	letter-spacing: 1px;
+	color: #ffffff;
+}
+.way .video{
+	    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    object-fit: fill;
+    bottom: 0;
+    display: none;
+}
+/*resultF*/
+.resultF {
+	background-image: url(../imgs/index-bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;	
+}
+.resultF .resultF-text{
+	    position: absolute;
+    width: 39.4%;
+    top: 36%;
+    left: 11%;
+}
+.resultF .button{
+	position: absolute;
+    left: 12%;
+    bottom: 19%;
+}
+/*RESULTs*/
+.resultS{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.resultS .box{
+	    position: relative;
+    margin-top: 10%;
+}
+.resultS .line-1{
+	    position: absolute;
+    width: 29%;
+    bottom: -20%;
+    right: 3%;
+}
+.resultS .flex{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.resultS .flex a{
+	display: block;
+	width: 50%;
+	line-height: 0;
+	height: 522px;
+	cursor: pointer;
+	transition: 0.5s;
+	overflow:hidden;
+	position: relative;
+}
+.resultS .flex a img.bg{
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+	transform: scale(1);
+}
+.resultS .flex a .click{
+	    position: absolute;
+    right: 1%;
+    bottom: 2%;
+    width: 8%
+}
+.resultS .text-box{
+	position: relative;
+}
+/*.resultS .text-box .line-2{
+	position: absolute;
+}
+.resultS .text-box .line-3{
+	position: absolute;
+}*/
+.resultS .text-box .text{
+	       width: 71.5%;
+    margin-top: -4%;
+}
+.resultS .button{
+	    position: absolute;
+    right: 7%;
+    bottom: 12%;
+}
+/*RESULTT*/
+.resultT{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.resultT .box{
+	width: 100%;
+}
+.resultT .box .img-box{
+	    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.resultT .box .img-box a{
+	    display: block;
+    width: 30%;
+}
+.resultT .box .img-box a img{
+	    width: 90%;
+	    transition: 0.5s;
+	    transform: scale(1);
+}
+.resultT .box .img-box a img:hover{
+	transform: scale(1.05);
+}
+.resultT .box .img-box a .name{
+	font-size: 62px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #ce4125;
+	margin-top: 2%;
+}
+.resultT .box .img-box a .name.name-right{
+	color: #237b4b;
+}
+.resultT .box .img-box a .content{
+	font-size: 50px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #006893;
+}
+.resultT .box .text{
+	margin-top: 1%;
+}
+.resultT .button{
+    position: absolute;
+    right: 7%;
+    bottom: 12%;
+}
+/*end*/
+.end{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.end .text{
+	width: 24%;
+	margin-bottom: 5%;
+}
+.end .number-box{
+	width: 100%;
+	    margin-bottom: 6%;
+}
+.end .number-box span{
+height: 100px;
+    line-height: 95px;
+    display: inline-block;
+    background: #007598;
+    border-radius: 100px;
+    margin: auto;
+    padding: 10px 55px;
+    font-size: 66px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-family: "方正兰亭特黑简";
+}
+.end .line-box {
+	width: 41%;
+	margin: auto;
+	position: relative;
+}
+.end .line-box .math{
+	    width: 54px;
+    font-family: "方正兰亭特黑简";
+    height: 54px;
+    display: block;
+    background: #d4d4d4;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 100px;
+    line-height: 56px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.13);
+    position: absolute;
+    top: 15px;
+    right: 19px;
+	
+}
+.end .line-box .line{
+	width: 100%
+}
+.end .line-box .math-q-1{
+	width: 72px;
+    height: 72px;
+    right: 10px;
+    top: 6px;
+    background-color: rgba(212, 212, 212, 0.5);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
+    opacity: 0.8;
+    position: absolute;
+    border-radius: 100px;
+	animation: opacity5 3s linear infinite;
+    -moz-animation: opacity5 3s linear infinite;
+    -webkit-animation: opacity5 3s linear infinite;    
+}
+.end .line-box .math-q-2{
+	    width: 85px;
+    height: 85px;
+    background-color: rgba(212, 212, 212, 0.3);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.04);
+    opacity: 0.6;
+    position: absolute;
+    border-radius: 100px;
+    right: 4px;
+    top: 0px;
+	animation: opacity5 2s linear infinite;
+    -moz-animation: opacity5 2s linear infinite;
+    -webkit-animation: opacity5 2s linear infinite;    
+}
+@keyframes opacity0
+{
+	0%{opacity: 1}
+	50%{opacity: 0.6}
+	100%{opacity: 1}	
+}
+@-moz-keyframes opacity0/* Firefox */
+{
+	0%{opacity: 1}
+	50%{opacity: 0.6}
+	100%{opacity: 1}
+}
+@-webkit-keyframes opacity0/* Safari 和 Chrome */
+{
+	0%{opacity: 1}
+	50%{opacity: 0.6}
+	100%{opacity: 1}
+}
+@keyframes opacity5
+{
+	0%{transform: scale(1);opacity: 0.8}
+	80%{transform: scale(1.1);opacity: 0}
+	90%{transform: scale(1);opacity: 0}
+	100%{transform: scale(1);opacity: 0.8}	
+}
+@-moz-keyframes opacity5/* Firefox */
+{
+	0%{transform: scale(1);opacity: 0.8}
+	80%{transform: scale(1.1);opacity: 0}
+	90%{transform: scale(1);opacity: 0}
+	100%{transform: scale(1);opacity: 0.8}
+}
+@-webkit-keyframes opacity5/* Safari 和 Chrome */
+{
+	0%{transform: scale(1);opacity: 0.8}
+	80%{transform: scale(1.1);opacity: 0}
+	90%{transform: scale(1);opacity: 0}
+	100%{transform: scale(1);opacity: 0.8}
+}
+@keyframes opacity3
+{
+	0%{transform: scale(1);opacity: 0.6}
+	25%{transform: scale(1.05);opacity: 0}
+	50%{transform: scale(1);opacity: 0}
+	100%{transform: scale(1);opacity: 0.6}	
+}
+@-moz-keyframes opacity3/* Firefox */
+{
+	0%{transform: scale(1);opacity: 0.6}
+	25%{transform: scale(1.05);opacity: 0}
+	50%{transform: scale(1);opacity: 0}
+	100%{transform: scale(1);opacity: 0.6}
+}
+@-webkit-keyframes opacity3/* Safari 和 Chrome */
+{
+	0%{transform: scale(1);opacity: 0.6}
+	25%{transform: scale(1.05);opacity: 0}
+	50%{transform: scale(1);opacity: 0}
+	100%{transform: scale(1);opacity: 0.6}
+}

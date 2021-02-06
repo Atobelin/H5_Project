@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="UTF-8">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<!-- 公共样式 -->
+		<link href="https://cdn.bootcss.com/Swiper/4.4.1/css/swiper.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- 独立样式 -->
+	</head>
+
+	<body class="page">
+		<audio src="imgs/music.mp3" preload="auto" id="music"></audio>
+		<audio src="imgs/click.mp3" preload="auto" id="cmusic"></audio>
+		<img src="imgs/music-albums.png" class="music" >
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide page-1">
+					<div class="relative">
+						<img src="imgs/logo-left.png" alt="" class="logo-left ani" swiper-animate-effect="fadeInLeft"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0">
+						<img src="imgs/logo-right.png" alt="" class="logo-right ani" swiper-animate-effect="fadeInRight"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+						<!-- 如果需要导航按钮 -->
+						<div class="swiper-button-next"></div>
+						<img src="imgs/index-line.png" alt="" class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+						 swiper-animate-delay="0.7s">
+						<img src="imgs/index-text-bg.png" alt="" class="text-bg">
+						<div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+							<img src="imgs/index-text.png" alt="" class="text ani infinite" style="animation-timing-function: linear;-webkit-animation-timing-function: linear;" swiper-animate-effect="pulse" swiper-animate-duration="1.5s"
+								swiper-animate-delay="0.5s">
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide page-2">
+					<div class="relative">
+						<img src="imgs/logo-left.png" alt="" class="logo-left ani" swiper-animate-effect="fadeInLeft"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0">
+						<img src="imgs/logo-right.png" alt="" class="logo-right ani" swiper-animate-effect="fadeInRight"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+						<!-- 如果需要导航按钮 -->
+						<div class="swiper-button-next"></div>
+						<img src="imgs/page-2-img.png" alt="" class="img">
+						<img src="imgs/page-2-line.png" alt="" class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+						 swiper-animate-delay="1.2s">
+						<img src="imgs/page-2-text-bg-1.png" alt="" class="text-bg-1 ani" swiper-animate-effect="fadeIn"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+						<img src="imgs/page-2-text-1.png" alt="" class="text-1 ani" swiper-animate-effect="fadeIn"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+						<img src="imgs/page-2-text-bg-2.png" alt="" class="text-bg-2 ani" swiper-animate-effect="fadeInRight"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+						<img src="imgs/page-2-text-2.png" alt="" class="text-2 ani" swiper-animate-effect="zoomIn"
+						 swiper-animate-duration="1s" swiper-animate-delay="1s">
+					</div>
+				</div>
+				<div class="swiper-slide page-2 page-3">
+					<div class="relative">
+						<img src="imgs/logo-left.png" alt="" class="logo-left ani" swiper-animate-effect="fadeInLeft"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0">
+						<img src="imgs/logo-right.png" alt="" class="logo-right ani" swiper-animate-effect="fadeInRight"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+						<!-- 如果需要导航按钮 -->
+						<div class="swiper-button-next"></div>
+						<img src="imgs/page-3-img.png" alt="" class="img">
+						<img src="imgs/page-2-line.png" alt="" class="line ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+						 swiper-animate-delay="1.2s">
+						<img src="imgs/page-2-text-bg-1.png" alt="" class="text-bg-1 ani" swiper-animate-effect="fadeIn"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.4s">
+						<img src="imgs/page-3-text-1.png" alt="" class="text-1 ani" swiper-animate-effect="fadeIn"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+						<img src="imgs/page-2-text-bg-2.png" alt="" class="text-bg-2 ani" swiper-animate-effect="fadeInRight"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+						<img src="imgs/page-3-text-2.png" alt="" class="text-2 ani" swiper-animate-effect="zoomIn"
+						 swiper-animate-duration="1s" swiper-animate-delay="1s">
+					</div>
+				</div>
+				<div class="swiper-slide page-4">
+					<div class="relative">
+						<!-- 如果需要导航按钮 -->
+						<div class="swiper-button-next"></div>
+						<img src="imgs/page-4-bg.png" alt="" class="bg">
+						<img src="imgs/page-4-box.png" alt="" class="box ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s"
+						 swiper-animate-delay="0">
+						<video poster="imgs/video.jpg" src="imgs/video.mp4" preload="" webkit-playsinline="" playsinline="" controls="" x-webkit-airplay="allow" x5-playsinline="" id="video" class="ani" swiper-animate-effect="fadeIn"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"></video>
+					</div>
+				</div>
+				<div class="swiper-slide page-5">
+					<div class="relative">
+						<img src="imgs/logo-left.png" alt="" class="logo-left ani" swiper-animate-effect="fadeInLeft"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0">
+						<img src="imgs/logo-right.png" alt="" class="logo-right ani" swiper-animate-effect="fadeInRight"
+						 swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+						<img src="imgs/page-5-line.png" alt="" class="line">
+						<img src="imgs/page-5-title.png" alt="" class="img-title ani" swiper-animate-effect="zoomIn"
+						 swiper-animate-duration="0.8s" swiper-animate-delay="0.5s">
+						<img src="imgs/page-5-bg.png" alt="" class="bg ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s"
+						 swiper-animate-delay="0.7s">
+						<div class="content-box ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+							<div class="list">
+								<div class="list-text">姓名</div>
+								<div class="list-box"><img src="imgs/page-5-input-box.png" alt=""><input type="text" placeholder="请填写姓名" id="name"></div>
+							</div>
+							<div class="list" style="margin-bottom: 0">
+								<div class="list-text">性别</div>
+								<div class="list-box js-sex" id="sex">
+									<span class="active" data-id="1">男士</span>
+									<span data-id="0">女士</span>
+								</div>
+							</div>
+							<div class="list">
+								<div class="list-text">手机</div>
+								<div class="list-box"><img src="imgs/page-5-input-box.png" alt=""><input type="text" placeholder="填写手机号" id="tel"></div>
+							</div>
+							<div class="list">
+								<div class="list-text">经销店</div>
+								<div class="list-box" style="height: auto;display: flex;justify-content: space-between;flex-wrap: wrap;">
+									<div class="relative" style="width: 47%;    margin-left: 0.05rem;">
+										<img src="imgs/page-5-input-box.png" alt="">
+										<select class="js-province">
+										</select>
+										<img src="imgs/icon.png" alt="" class="icon">
+									</div>
+									<div class="relative" style="width: 47%;margin-right: 0.05rem;">
+										<img src="imgs/page-5-input-box.png" alt="">
+										<select class="js-city">
+										</select>
+										<img src="imgs/icon.png" alt="" class="icon">
+									</div>
+									<div class="relative">
+										<img src="imgs/page-5-input-box.png" alt="">
+										<select class="js-shop">
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="list" style="margin-bottom: 0">
+								<div class="list-left">是否为一汽丰田车主？</div>
+								<div class="list-right js-sex " id="owner">
+									<span class="active" data-id="1">是</span>
+									<span data-id="0">否</span>
+								</div>
+							</div>
+							<div class="list js-check">
+								<div class="list-text"><span class="check " style="width: 0.4rem;position: relative;height: 0.4rem;margin: auto;display: inline-block;"></span></div>
+								<div class="list-box" style="height: auto;height: 0.85rem;">
+									<img src="imgs/page-check.png" alt="" class="check" style="width: 100%;height: 100%;">
+								</div>
+							</div>
+							<img src="imgs/page-5-button.png" alt="" class="button js-send">
+						</div>
+					</div>
+					<div class="tan-box js-tan-box">
+						<img src="imgs/tan-img.png" alt="" class="tan-img">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- 公共JS -->
+	<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+		(function(doc, win, undefined) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (clientWidth === undefined) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+			if (doc.addEventListener === undefined) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false)
+		})(document, window);
+	</script>
+	<script src="https://cdn.bootcss.com/Swiper/4.4.1/js/swiper.min.js"></script>
+	<script src="js/swiper.animate1.0.3.min.js"></script>
+	<script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+	<script src="js/code.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		var musicstatus = 0
+		// music
+		$(document).ready(function() {
+			audioAutoPlay();
+		});
+		function audioAutoPlay() {
+			var audio = document.getElementById('music');
+			var caudio = document.getElementById('cmusic');
+			audio.volume = 0.6;
+			document.addEventListener("WeixinJSBridgeReady", function() {
+				audio.play();
+				$(".music").addClass("musicrotate")
+				musicstatus = 1
+				caudio.play();
+				caudio.pause();
+			}, false);
+			audio.onended = function() {
+				audio.currentTime = 0;
+				audio.play();
+			}
+		}
+		$(".music").click(function () {
+			if(musicstatus){
+				$(".music").removeClass("musicrotate")
+				document.getElementById('music').pause()
+				musicstatus = 0
+			}else{
+				$(".music").addClass("musicrotate")
+				document.getElementById('music').play()
+				musicstatus = 1
+			}
+		})
+		var mySwiper = new Swiper('.swiper-container', {
+			direction: 'vertical', // 垂直切换选项
+			// 如果需要前进后退按钮
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			on: {
+				init: function() {
+					swiperAnimateCache(this); //隐藏动画元素 
+					swiperAnimate(this); //初始化完成开始动画
+				},
+				slideChangeTransitionEnd: function() {
+					swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+					var caudio = document.getElementById('cmusic');
+					caudio.play();
+					video.pause()
+					if(musicstatus){
+						music.play()
+					}
+				}
+			}
+		})
+			var video = document.getElementById("video")
+			var music = document.getElementById("music")
+			video.onplay=function(){
+				music.pause()
+			}
+			video.onpause=function(){
+				if(musicstatus){
+					music.play()
+				}
+			}
+		// 性别
+		$(".js-sex span").click(function() {
+			$(this).addClass('active')
+			$(this).siblings('').removeClass('active')
+		});
+		$(".js-check").click(function() {
+			if ($(this).find(".check").hasClass('active')) {
+				$(this).find(".check").removeClass('active')
+			}else{
+				$(this).find(".check").addClass('active')
+			}
+		});
+		// 省市关联
+		
+		// 省
+		var province_html = ''
+		var lastprovince = ''
+		for (var i = 0; i < _data.length; i++) {
+			var province = _data[i].province
+			if (province != lastprovince) {
+				province_html += '<option value ="' + province + '">' + province + '</option>'
+			}
+			lastprovince = province
+		}
+		$(".js-province").html(province_html)
+		
+		// 市
+		function changecity(currentprovince) {
+			var city_html = ''
+			var lastcity = ''
+			for (var i = 0; i < _data.length; i++) {
+				var province = _data[i].province
+				var city = _data[i].city
+				if (province == currentprovince && city != lastcity) {
+					city_html += '<option value ="' + city + '">' + city + '</option>'
+				}
+				lastcity = city
+			}
+			$(".js-city").html(city_html)
+		}
+		var currentprovince = '请选择'
+		changecity(currentprovince)
+		
+		// 关联省市
+		$(".js-province").on("change", function () {
+			changecity($(".js-province  option:selected").text())
+			changeshop($(".js-city  option:selected").text())
+		})
+		
+		// 经销店
+		function changeshop(currentcity) {
+			var shop_html = ''
+			for (var i = 0; i < _data.length; i++) {
+				var shop = _data[i].name
+				var city = _data[i].city
+				if (city == currentcity) {
+					shop_html += '<option value ="' + shop + '">' + shop + '</option>'
+				}
+			}
+			$(".js-shop").html(shop_html)
+		}
+		var currentcity = '请选择'
+		changeshop(currentcity)
+		$(".js-city").on("change", function () {
+			changeshop($(".js-city  option:selected").text())
+		})
+		// 提交
+		$(".js-send").click(function() {
+			var name = $("#name").val()
+			var tel = $("#tel").val()
+			if (name == '') {
+				layer.msg('姓名不能为空！');
+				$('#name').focus();
+				return false;
+			}
+			if (tel == '') {
+				layer.msg('手机号码不能为空！');
+				$('#tel').focus();
+				return false;
+			}
+			if (!(/^1\d{10}$/.test(tel))) {
+				layer.msg('手机号码不合法！');
+				$('#tel').focus();
+				return false;
+			}
+			if ($(".js-shop option:selected").text() == "请选择") {
+				layer.msg('请选择经销店');
+				return false;
+			}
+			if ($(".js-check .check").hasClass('active')) {
+
+			}else{
+				layer.msg('确认已阅读！');
+				$('.js-check').focus();
+				return false;				
+			}
+			 var sex = $("#sex span.active").data("id")
+			 var province = $(".js-province option:selected").text()
+			 var city = $(".js-city option:selected").text()
+			 var store = $(".js-shop option:selected").text()
+			 var owner = $("#owner span.active").data("id")
+			 // console.log(name);
+			 // console.log(sex);
+			 // console.log(tel);
+			 // console.log(province);
+			 // console.log(city);
+			 // console.log(store);
+			 // console.log(owner);
+			$.ajax({
+                type: 'POST',
+                url: 'https://html5.bjsidao.com/api/zhongxin/saveToyotaUsers',
+                data: {
+                    name : name,
+                    sex : sex,
+                    phone : tel,
+                    province: province,
+                    city: city,
+                    store: store,
+                    isOwner: owner
+                },
+                dataType: 'json',
+                success: function(data){
+                    if (data.code == 0) {
+                       console.log(data.msg);
+                       $(".js-tan-box").fadeIn(500)
+                    }else{
+                        layer.msg(data.msg);
+                     }
+                },
+                error: function(data){
+                    // layer.msg('请求超时!');
+                    console.log(data);
+                    console.log('请求超时');
+                }
+            })			
+		});
+	</script>
+
+</html>
